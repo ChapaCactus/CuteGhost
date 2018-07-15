@@ -13,7 +13,7 @@ namespace CCG
         #endregion
 
         #region constants
-        private const float MoveBuff = 150;
+        private const float MoveBuff = 0.01f;
         #endregion
 
         #region properties
@@ -28,7 +28,7 @@ namespace CCG
         private void Update()
         {
             var horizontal = Input.GetAxisRaw("Horizontal");
-            var speed = (horizontal / MoveBuff);
+            var speed = (horizontal * MoveBuff);
             transform.localPosition += new Vector3(speed, 0, 0);
 
             if (horizontal != 0)
