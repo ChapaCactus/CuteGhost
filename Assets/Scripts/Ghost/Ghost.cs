@@ -45,13 +45,17 @@ namespace CCG
         #endregion
 
         #region private methods
-        private void OnInsightEnter()
+        private void OnInsightEnter(GhostSight.TargetTag target)
         {
+            UIManager.I.OnInsightTarget(target);
+
             Debug.Log("OnInsightEnter");
         }
 
         private void OnInsightExit()
         {
+            UIManager.I.OnInsightTarget(GhostSight.TargetTag.NotTarget);
+
             Debug.Log("OnInsightExit");
         }
         #endregion

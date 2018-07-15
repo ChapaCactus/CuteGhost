@@ -29,7 +29,7 @@ namespace CCG
         public Dictionary<TargetTag, Container> npcDic { get; private set; }
 
         private CircleCollider2D collider2d { get; set; }
-        private Action onInsightEnter { get; set; }
+        private Action<TargetTag> onInsightEnter { get; set; }
         private Action onInsightExit { get; set; }
         #endregion
 
@@ -71,7 +71,7 @@ namespace CCG
             if (!isFound)
             {
                 targets.Add(collision.gameObject);
-                onInsightEnter();
+                onInsightEnter(tag);
             }
         }
 
@@ -100,7 +100,7 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void SetCallbacks(Action onInsightEnter, Action onInsightExit)
+        public void SetCallbacks(Action<TargetTag> onInsightEnter, Action onInsightExit)
         {
             this.onInsightEnter = onInsightEnter;
             this.onInsightExit = onInsightExit;
