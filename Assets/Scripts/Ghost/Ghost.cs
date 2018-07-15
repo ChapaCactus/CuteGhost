@@ -10,6 +10,9 @@ namespace CCG
         #region variables
         [SerializeField]
         private GhostView view = new GhostView();
+
+        [SerializeField]
+        private GhostSight sight;
         #endregion
 
         #region constants
@@ -22,7 +25,10 @@ namespace CCG
         #region unity callbacks
         private void Awake()
         {
+            Assert.IsNotNull(sight);
+
             view.PlayMoveAnimation();
+            sight.SetCallbacks(OnInsightEnter, OnInsightExit);
         }
 
         private void Update()
@@ -39,6 +45,15 @@ namespace CCG
         #endregion
 
         #region private methods
+        private void OnInsightEnter()
+        {
+            Debug.Log("OnInsightEnter");
+        }
+
+        private void OnInsightExit()
+        {
+            Debug.Log("OnInsightExit");
+        }
         #endregion
     }
 }
