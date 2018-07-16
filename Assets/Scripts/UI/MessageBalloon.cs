@@ -32,9 +32,9 @@ namespace CCG
             gameObject.SetActive(isActive);
         }
 
-        public void SetPosition(Vector2 pos)
+        public void SetLocalPosition(Vector2 pos)
         {
-            transform.position = pos;
+            transform.localPosition = pos;
         }
 
         public void SetText(string message)

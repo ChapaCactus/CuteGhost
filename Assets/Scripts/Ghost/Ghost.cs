@@ -12,7 +12,7 @@ namespace CCG
         private GhostView view = new GhostView();
 
         [SerializeField]
-        private GhostSight sight;
+        private GhostSight sight = null;
         #endregion
 
         #region constants
@@ -45,20 +45,16 @@ namespace CCG
         #endregion
 
         #region private methods
-        private void OnInsightEnter(GhostSight.TargetTag target)
+        private void OnInsightEnter(GhostSight.Result result)
         {
-            UIManager.I.OnInsightTarget(target);
-            TextManager.I.RequestCreateMessageBalloon(gameObject, balloon =>
-            {
-
-            });
+            UIManager.I.OnInsightTarget(result);
 
             Debug.Log("OnInsightEnter");
         }
 
         private void OnInsightExit()
         {
-            UIManager.I.OnInsightTarget(GhostSight.TargetTag.NotTarget);
+            UIManager.I.OnExitInsightTarget();
 
             Debug.Log("OnInsightExit");
         }

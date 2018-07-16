@@ -4,18 +4,33 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using DG.Tweening;
+using Google2u;
 
 namespace CCG
 {
     public class NPC : MonoBehaviour
     {
+        #region variables
+        [SerializeField]
+        private QuestMaster.rowIds questId;
+        #endregion
+
         #region unity callback
         private void Awake()
         {
-            transform.DOLocalMoveY(1f, 1)
-                     .SetLoops(-1, LoopType.Yoyo)
-                     .SetEase(Ease.Linear)
-                     .SetRelative();
+        }
+        #endregion
+
+        #region public methods
+        public void Talk()
+        {
+            var row = QuestMaster.Instance.GetRow(questId);
+            var message = row._Description;
+
+            TextManager.I.RequestCreateMessageBalloon(gameObject, balloon =>
+            {
+                balloon.SetText(message);
+            });
         }
         #endregion
     }

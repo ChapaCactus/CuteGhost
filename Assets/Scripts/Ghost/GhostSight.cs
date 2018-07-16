@@ -14,6 +14,18 @@ namespace CCG
         {
             public List<GameObject> list { get; set; } = new List<GameObject>();
         }
+
+        public class Result
+        {
+            public TargetTag targetTag { get; private set; }
+            public GameObject target { get; private set; }
+
+            public Result(TargetTag targetTag, GameObject target)
+            {
+                this.targetTag = targetTag;
+                this.target = target;
+            }
+        }
         #endregion
 
         #region enums
@@ -29,7 +41,7 @@ namespace CCG
         public Dictionary<TargetTag, Container> npcDic { get; private set; }
 
         private CircleCollider2D collider2d { get; set; }
-        private Action<TargetTag> onInsightEnter { get; set; }
+        private Action<Result> onInsightEnter { get; set; }
         private Action onInsightExit { get; set; }
         #endregion
 
@@ -71,7 +83,8 @@ namespace CCG
             if (!isFound)
             {
                 targets.Add(collision.gameObject);
-                onInsightEnter(tag);
+                var result = new Result(tag, collision.gameObject);
+                onInsightEnter(result);
             }
         }
 
@@ -100,7 +113,7 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void SetCallbacks(Action<TargetTag> onInsightEnter, Action onInsightExit)
+        public void SetCallbacks(Action<Result> onInsightEnter, Action onInsightExit)
         {
             this.onInsightEnter = onInsightEnter;
             this.onInsightExit = onInsightExit;

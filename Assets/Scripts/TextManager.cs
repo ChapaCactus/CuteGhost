@@ -17,7 +17,7 @@ namespace CCG
             {
                 // 座標を発言者に合わせて返す
                 var screenPos = Utilities.GetScreenPosition(speaker.transform.position);
-                balloon.transform.localPosition = screenPos;
+                balloon.SetLocalPosition(screenPos);
 
                 onCreate(balloon);
             });

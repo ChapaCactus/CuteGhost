@@ -14,14 +14,16 @@ namespace CCG
 
         #region variables
         [SerializeField]
-        private Text actionButtonText;
+        private Button actionButton = null;
+        [SerializeField]
+        private Text actionButtonText = null;
 
         [SerializeField]
-        private Canvas canvas;
+        private Canvas canvas = null;
         [SerializeField]
-        private Camera mainCamera;
+        private Camera mainCamera = null;
         [SerializeField]
-        private Camera uiCamera;
+        private Camera uiCamera = null;
         #endregion
 
         #region properties
@@ -38,17 +40,27 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void OnInsightTarget(GhostSight.TargetTag target)
+        public void OnInsightTarget(GhostSight.Result result)
         {
-            switch(target)
+            switch(result.targetTag)
             {
                 case GhostSight.TargetTag.NPC:
                     SetActionButtonText("Talk");
-                    break;
-                case GhostSight.TargetTag.NotTarget:
-                    SetActionButtonText(DefaultActionButtonText);
+                    actionButton.onClick.RemoveAllListeners();
+                    actionButton.onClick.AddListener(() =>
+                    {
+                        // ACTボタン押下で会話
+                        var npc = result.target.GetComponent<NPC>();
+                        npc.Talk();
+                    });
                     break;
             }
+        }
+
+        public void OnExitInsightTarget()
+        {
+            SetActionButtonText(DefaultActionButtonText);
+            actionButton.onClick.RemoveAllListeners();
         }
 
         public void SetActionButtonText(string text)
