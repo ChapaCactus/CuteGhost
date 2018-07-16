@@ -17,8 +17,9 @@ namespace Google2u
 		public string _Name;
 		public string _Type;
 		public int _Target;
+		public string _Talk;
 		public string _Description;
-		public QuestMasterRow(string __ID, string __Name, string __Type, string __Target, string __Description) 
+		public QuestMasterRow(string __ID, string __Name, string __Type, string __Target, string __Talk, string __Description) 
 		{
 			_Name = __Name.Trim();
 			_Type = __Type.Trim();
@@ -29,10 +30,11 @@ namespace Google2u
 				else
 					Debug.LogError("Failed To Convert _Target string: "+ __Target +" to int");
 			}
+			_Talk = __Talk.Trim();
 			_Description = __Description.Trim();
 		}
 
-		public int Length { get { return 4; } }
+		public int Length { get { return 5; } }
 
 		public string this[int i]
 		{
@@ -57,6 +59,9 @@ namespace Google2u
 					ret = _Target.ToString();
 					break;
 				case 3:
+					ret = _Talk.ToString();
+					break;
+				case 4:
 					ret = _Description.ToString();
 					break;
 			}
@@ -78,6 +83,9 @@ namespace Google2u
 				case "Target":
 					ret = _Target.ToString();
 					break;
+				case "Talk":
+					ret = _Talk.ToString();
+					break;
 				case "Description":
 					ret = _Description.ToString();
 					break;
@@ -91,6 +99,7 @@ namespace Google2u
 			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
 			ret += "{" + "Type" + " : " + _Type.ToString() + "} ";
 			ret += "{" + "Target" + " : " + _Target.ToString() + "} ";
+			ret += "{" + "Talk" + " : " + _Talk.ToString() + "} ";
 			ret += "{" + "Description" + " : " + _Description.ToString() + "} ";
 			return ret;
 		}
@@ -118,7 +127,7 @@ namespace Google2u
 
 		private QuestMaster()
 		{
-			Rows.Add( new QuestMasterRow("ID_001", "彼に伝えて", "Talk", "1", "カレにつたえてほしいの。　またあそぼうって。"));
+			Rows.Add( new QuestMasterRow("ID_001", "彼に伝えて", "Talk", "1", "ID_001", "カレにつたえてほしいの。　またあそぼうって。"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

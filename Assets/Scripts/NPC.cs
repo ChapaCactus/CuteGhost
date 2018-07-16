@@ -16,22 +16,20 @@ namespace CCG
         #endregion
 
         #region unity callback
-        private void Awake()
-        {
-        }
         #endregion
 
         #region public methods
-        public void Talk()
+        public void Talk(Action onEndTalk)
         {
-            var row = QuestMaster.Instance.GetRow(questId);
-            var message = row._Description;
+            var questRow = QuestMaster.Instance.GetRow(questId);
+            var talkId = questRow._Talk;
+            var talkRow = TalkMaster.Instance.GetRow(talkId);
 
-            TextManager.I.RequestCreateMessageBalloon(gameObject, balloon =>
-            {
-                balloon.SetText(message);
-            });
+            TalkManager.I.StartTalk(gameObject, talkRow, onEndTalk);
         }
+        #endregion
+
+        #region private methods
         #endregion
     }
 }

@@ -14,7 +14,23 @@ namespace CCG
 
         #region variables
         [SerializeField]
-        private Text text;
+        private Text text = null;
+        #endregion
+
+        #region properties
+        private GameObject speaker { get; set; }
+        #endregion
+
+        #region unity callbacks
+        private void LateUpdate()
+        {
+            if(speaker != null)
+            {
+                var screenPos = Utilities.GetScreenPosition(speaker.transform.position);
+                screenPos += new Vector2(0, 50);
+                SetLocalPosition(screenPos);
+            }
+        }
         #endregion
 
         #region public methods
@@ -25,6 +41,11 @@ namespace CCG
             var result = go.GetComponent<MessageBalloon>();
 
             onCreate(result);
+        }
+
+        public void SetSpeaker(GameObject speaker)
+        {
+            this.speaker = speaker;
         }
 
         public void SetActive(bool isActive)

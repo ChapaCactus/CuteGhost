@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class Ghost : MonoBehaviour
+    public class Ghost : SingletonMonoBehaviour<Ghost>
     {
         #region variables
         [SerializeField]
@@ -20,6 +20,7 @@ namespace CCG
         #endregion
 
         #region properties
+        public bool isTalking { get; private set; } = false;
         #endregion
 
         #region unity callbacks
@@ -33,6 +34,11 @@ namespace CCG
 
         private void Update()
         {
+            if(isTalking)
+            {
+                return;
+            }
+
             var horizontal = Input.GetAxisRaw("Horizontal");
             var speed = (horizontal * MoveBuff);
             transform.localPosition += new Vector3(speed, 0, 0);
@@ -41,6 +47,13 @@ namespace CCG
             {
                 view.Flip(horizontal < 0);
             }
+        }
+        #endregion
+
+        #region public methods
+        public void SetIsTalking(bool isTalking)
+        {
+            this.isTalking = isTalking;
         }
         #endregion
 

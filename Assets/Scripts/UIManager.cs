@@ -42,16 +42,14 @@ namespace CCG
         #region public methods
         public void OnInsightTarget(GhostSight.Result result)
         {
-            switch(result.targetTag)
+            switch (result.targetTag)
             {
                 case GhostSight.TargetTag.NPC:
                     SetActionButtonText("Talk");
                     actionButton.onClick.RemoveAllListeners();
                     actionButton.onClick.AddListener(() =>
                     {
-                        // ACTボタン押下で会話
-                        var npc = result.target.GetComponent<NPC>();
-                        npc.Talk();
+                        OnClickTalkButton(result);
                     });
                     break;
             }
@@ -88,6 +86,24 @@ namespace CCG
         private void InitUI()
         {
             actionButtonText.text = DefaultActionButtonText;
+        }
+
+        private void OnClickTalkButton(GhostSight.Result result)
+        {
+            // 会話中なら読み進める
+            if (TalkManager.I.IsTalking())
+            {
+                TalkManager.I.Next();
+            }
+            else
+            {
+                // 会話開始
+                var npc = result.target.GetComponent<NPC>();
+                npc.Talk(() =>
+                {
+                    // End Talk
+                });
+            }
         }
         #endregion
     }

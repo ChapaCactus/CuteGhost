@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 87230809}
   - component: {fileID: 87230808}
   m_Layer: 0
-  m_Name: TextManager
+  m_Name: TalkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

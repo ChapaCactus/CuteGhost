@@ -12,7 +12,7 @@ namespace CCG
     {
         #region variables
         [SerializeField]
-        private SpriteRenderer spriteRenderer;
+        private SpriteRenderer spriteRenderer = null;
         #endregion
 
         #region public methods
