@@ -48,6 +48,10 @@ namespace CCG
         private void OnInsightEnter(GhostSight.TargetTag target)
         {
             UIManager.I.OnInsightTarget(target);
+            TextManager.I.RequestCreateMessageBalloon(gameObject, balloon =>
+            {
+
+            });
 
             Debug.Log("OnInsightEnter");
         }
