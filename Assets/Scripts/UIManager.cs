@@ -14,6 +14,9 @@ namespace CCG
 
         #region variables
         [SerializeField]
+        private Bands bands = null;
+
+        [SerializeField]
         private Button actionButton = null;
         [SerializeField]
         private Text actionButtonText = null;
@@ -79,6 +82,11 @@ namespace CCG
         public Camera GetUICamera()
         {
             return uiCamera;
+        }
+
+        public Bands GetBands()
+        {
+            return bands;
         }
         #endregion
 

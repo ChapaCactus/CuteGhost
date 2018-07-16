@@ -74,6 +74,7 @@ namespace CCG
                 state = State.Start;
 
                 Ghost.I.SetIsTalking(true);
+                UIManager.I.GetBands().FrameIn(true, true);
             }
 
             private void OnTalking()
@@ -86,6 +87,7 @@ namespace CCG
                 state = State.End;
 
                 Ghost.I.SetIsTalking(false);
+                UIManager.I.GetBands().FrameOut(true, true);
             }
             #endregion
         }
