@@ -15,11 +15,24 @@ namespace CCG
         #region variables
         [SerializeField]
         private Text actionButtonText;
+
+        [SerializeField]
+        private Canvas canvas;
+        [SerializeField]
+        private Camera mainCamera;
+        [SerializeField]
+        private Camera uiCamera;
+        #endregion
+
+        #region properties
+        public RectTransform canvasRect { get; private set; }
         #endregion
 
         #region unity callbacks
         private void Awake()
         {
+            canvasRect = canvas.GetComponent<RectTransform>();
+
             InitUI();
         }
         #endregion
@@ -41,6 +54,21 @@ namespace CCG
         public void SetActionButtonText(string text)
         {
             actionButtonText.text = text;
+        }
+
+        public Canvas GetCanvas()
+        {
+            return canvas;
+        }
+
+        public Camera GetMainCamera()
+        {
+            return mainCamera;
+        }
+
+        public Camera GetUICamera()
+        {
+            return uiCamera;
         }
         #endregion
 
