@@ -12,7 +12,7 @@ namespace CCG
     {
         #region variables
         [SerializeField]
-        private QuestMaster.rowIds questId;
+        private QuestMaster.rowIds questId = QuestMaster.rowIds.ID_001;
         #endregion
 
         #region unity callback
