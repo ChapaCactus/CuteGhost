@@ -22,6 +22,9 @@ namespace CCG
         private Text actionButtonText = null;
 
         [SerializeField]
+        private AnnounceText announceText = null;
+
+        [SerializeField]
         private Canvas canvas = null;
         [SerializeField]
         private Camera mainCamera = null;
@@ -43,6 +46,11 @@ namespace CCG
         #endregion
 
         #region public methods
+        public void ShowAnnounceMessage(string message, float fadeDelay = 1)
+        {
+            announceText.ShowMessage(message, fadeDelay);
+        }
+
         public void OnInsightTarget(GhostSight.Result result)
         {
             switch (result.targetTag)

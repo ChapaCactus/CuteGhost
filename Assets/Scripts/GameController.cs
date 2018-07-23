@@ -12,6 +12,11 @@ namespace CCG
         {
             Global.Init();
         }
+
+        private void Start()
+        {
+            UIManager.I.ShowAnnounceMessage("はじまり　はじまり", 1);
+        }
         #endregion
     }
 }

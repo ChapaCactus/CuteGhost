@@ -16,6 +16,10 @@ namespace CCG
         {
             questManager = new QuestManager();
         }
+
+        public static void StartGame()
+        {
+        }
         #endregion
     }
 }
