@@ -48,6 +48,10 @@ namespace CCG
             switch (result.targetTag)
             {
                 case GhostSight.TargetTag.NPC:
+                    // NPC表示設定
+                    var npc  = result.target.GetComponent<NPC>();
+                    npc.ShowMark(true);
+
                     SetActionButtonText("Talk");
                     actionButton.onClick.RemoveAllListeners();
                     actionButton.onClick.AddListener(() =>
@@ -58,10 +62,19 @@ namespace CCG
             }
         }
 
-        public void OnExitInsightTarget()
+        public void OnExitInsightTarget(GhostSight.Result result)
         {
             SetActionButtonText(DefaultActionButtonText);
             actionButton.onClick.RemoveAllListeners();
+
+            switch(result.targetTag)
+            {
+                case GhostSight.TargetTag.NPC:
+                    // NPC表示設定
+                    var npc = result.target.GetComponent<NPC>();
+                    npc.ShowMark(false);
+                    break;
+            }
         }
 
         public void SetActionButtonText(string text)

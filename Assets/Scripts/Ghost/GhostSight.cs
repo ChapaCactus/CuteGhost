@@ -42,7 +42,7 @@ namespace CCG
 
         private CircleCollider2D collider2d { get; set; }
         private Action<Result> onInsightEnter { get; set; }
-        private Action onInsightExit { get; set; }
+        private Action<Result> onInsightExit { get; set; }
         #endregion
 
         #region unity callbacks
@@ -107,13 +107,14 @@ namespace CCG
             if (isFound)
             {
                 targets.Remove(collision.gameObject);
-                onInsightExit();
+                var result = new Result(tag, collision.gameObject);
+                onInsightExit(result);
             }
         }
         #endregion
 
         #region public methods
-        public void SetCallbacks(Action<Result> onInsightEnter, Action onInsightExit)
+        public void SetCallbacks(Action<Result> onInsightEnter, Action<Result> onInsightExit)
         {
             this.onInsightEnter = onInsightEnter;
             this.onInsightExit = onInsightExit;

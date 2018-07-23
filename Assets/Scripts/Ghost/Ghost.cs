@@ -7,16 +7,16 @@ namespace CCG
 {
     public class Ghost : SingletonMonoBehaviour<Ghost>
     {
+        #region constants
+        private const float MoveBuff = 0.01f;
+        #endregion
+
         #region variables
         [SerializeField]
         private GhostView view = new GhostView();
 
         [SerializeField]
         private GhostSight sight = null;
-        #endregion
-
-        #region constants
-        private const float MoveBuff = 0.01f;
         #endregion
 
         #region properties
@@ -65,9 +65,9 @@ namespace CCG
             Debug.Log("OnInsightEnter");
         }
 
-        private void OnInsightExit()
+        private void OnInsightExit(GhostSight.Result result)
         {
-            UIManager.I.OnExitInsightTarget();
+            UIManager.I.OnExitInsightTarget(result);
 
             Debug.Log("OnInsightExit");
         }
