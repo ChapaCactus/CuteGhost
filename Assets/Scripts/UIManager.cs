@@ -128,10 +128,7 @@ namespace CCG
             {
                 // 会話開始
                 var npc = result.target.GetComponent<NPC>();
-                npc.Talk(() =>
-                {
-                    // End Talk
-                });
+                npc.Talk();
             }
         }
         #endregion

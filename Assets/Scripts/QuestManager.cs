@@ -23,6 +23,29 @@ namespace CCG
             offeredQuestList = new List<QuestVO>();
             completedQuestList = new List<QuestVO>();
         }
+
+        /// <summary>
+        /// クエストを受領
+        /// </summary>
+        public void OfferQuest(QuestMaster.rowIds rowId)
+        {
+            if(offeredQuestList == null)
+            {
+                offeredQuestList = new List<QuestVO>();
+            }
+
+            var isOffered = offeredQuestList.Any(offered => offered.id == rowId);
+            if (isOffered)
+            {
+                Debug.Log("既に受領しているクエストです");
+                return;
+            }
+            
+            var vo = QuestVO.Create(rowId);
+            offeredQuestList.Add(vo);
+
+            Debug.Log($"Offered Quest {rowId}");
+        }
         #endregion
 
         #region private methods

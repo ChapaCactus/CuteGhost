@@ -63,13 +63,13 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void Talk(Action onEndTalk)
+        public void Talk()
         {
             var questRow = QuestMaster.Instance.GetRow(questId);
             var talkId = questRow._Talk;
             var talkRow = TalkMaster.Instance.GetRow(talkId);
 
-            TalkManager.I.StartTalk(gameObject, talkRow, onEndTalk);
+            TalkManager.I.StartTalk(gameObject, talkRow, OnEndTalk);
         }
 
         public void ShowMark(bool isShow)
@@ -79,6 +79,18 @@ namespace CCG
         #endregion
 
         #region private methods
+        private void OnEndTalk()
+        {
+            var questRow = QuestMaster.Instance.GetRow(questId);
+
+            // クエスト受領
+            Global.questManager.OfferQuest(questId);
+
+            // 受領アナウンス再生
+            var questTitle = questRow._Name;
+            var questTitleCombine = $"クエスト「{questTitle}」\nを受領した。";
+            UIManager.I.ShowAnnounceMessage(questTitleCombine);
+        }
         #endregion
     }
 }
