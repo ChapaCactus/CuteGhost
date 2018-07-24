@@ -15,6 +15,7 @@ namespace CCG
         public static void Init()
         {
             questManager = new QuestManager();
+            questManager.Init();
         }
 
         public static void StartGame()

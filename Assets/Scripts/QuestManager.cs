@@ -10,6 +10,11 @@ namespace CCG
 {
     public class QuestManager
     {
+        #region constants
+        private const string OfferedQuestListSaveKey = "OfferedQuestList";
+        private const string CompletedQuestListSaveKey = "CompletedQuestList";
+        #endregion
+
         #region properties
         public List<QuestVO> allQuestList { get; private set; }
         public List<QuestVO> offeredQuestList { get; private set; }
@@ -19,9 +24,9 @@ namespace CCG
         #region public methods
         public void Init()
         {
-            allQuestList = LoadAllQuest();
-            offeredQuestList = new List<QuestVO>();
-            completedQuestList = new List<QuestVO>();
+            allQuestList = LoadAllQuestFromMaster();
+
+            Load();
         }
 
         /// <summary>
@@ -45,6 +50,8 @@ namespace CCG
             offeredQuestList.Add(vo);
 
             Debug.Log($"Offered Quest {rowId}");
+
+            Save();
         }
         #endregion
 
@@ -52,7 +59,7 @@ namespace CCG
         /// <summary>
         /// 全てのクエストを読み込む
         /// </summary>
-        private List<QuestVO> LoadAllQuest()
+        private List<QuestVO> LoadAllQuestFromMaster()
         {
             var idValues = Enum.GetValues(typeof(QuestMaster.rowIds))
                                .Cast<QuestMaster.rowIds>()
@@ -75,6 +82,30 @@ namespace CCG
             {
                 
             }
+        }
+
+        private void Save()
+        {
+            var offeredIdList = offeredQuestList.Select(quest => quest.id)
+                                                .ToList();
+            var completedIdList = completedQuestList.Select(quest => quest.id)
+                                                    .ToList();
+            
+            ES3.Save<List<QuestMaster.rowIds>>(OfferedQuestListSaveKey, offeredIdList);
+            ES3.Save<List<QuestMaster.rowIds>>(CompletedQuestListSaveKey, completedIdList);
+        }
+
+        private void Load()
+        {
+            var offeredIdList = ES3.Load<List<QuestMaster.rowIds>>(OfferedQuestListSaveKey
+                                                                   , defaultValue: new List<QuestMaster.rowIds>());
+            var completedIdList = ES3.Load<List<QuestMaster.rowIds>>(CompletedQuestListSaveKey
+                                                                     , defaultValue: new List<QuestMaster.rowIds>());
+
+            offeredQuestList = offeredIdList.Select(id => QuestVO.Create(id))
+                                            .ToList();
+            completedQuestList = completedIdList.Select(id => QuestVO.Create(id))
+                                                .ToList();
         }
         #endregion
     }
