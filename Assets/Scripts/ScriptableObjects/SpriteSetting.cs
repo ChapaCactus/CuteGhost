@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    [CreateAssetMenu(menuName = "Assets/Create/SpriteSetting")]
+    [CreateAssetMenu(menuName = "Create/SpriteSetting")]
     public class SpriteSetting : ScriptableObject
     {
         #region variables

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -10,45 +11,23 @@ namespace CCG
 {
     public class NPC : MonoBehaviour
     {
-        #region inner classes
-        [Serializable]
-        public class View
-        {
-            [SerializeField]
-            private Transform markPosition = null;
-
-            public SpriteRenderer mark { get; private set; }
-
-            public void SetMark(SpriteRenderer mark)
-            {
-                this.mark = mark;
-
-                this.mark.transform.SetParent(markPosition, false);
-                this.mark.transform.localPosition = Vector2.zero;
-            }
-
-            public void ShowMark(bool isShow)
-            {
-                Assert.IsNotNull(mark);
-                if(mark == null)
-                {
-                    return;
-                }
-
-                mark.enabled = isShow;
-            }
-        }
-        #endregion
-
         #region variables
         [SerializeField]
         private QuestMaster.rowIds questId = QuestMaster.rowIds.ID_001;
 
         [SerializeField]
-        private View view = new View();
+        private Transform markPosition = null;
+
+        [SerializeField]
+        private SpriteRenderer spriteRenderer = null;
+        [SerializeField]
+        private SpriteSetting spriteSetting = null;
         #endregion
 
         #region properties
+        public SpriteRenderer Mark { get; private set; }
+        // アニメーション
+        private Coroutine Animation { get; set; } = null;
         #endregion
 
         #region unity callback
@@ -57,8 +36,14 @@ namespace CCG
             // マークセット&初期化
             var prefab = Resources.Load("Prefabs/Effect/ExclamationMark") as GameObject;
             var mark = Instantiate(prefab, null).GetComponent<SpriteRenderer>();
-            view.SetMark(mark);
-            view.ShowMark(false);
+            SetMark(mark);
+            ShowMark(false);
+        }
+
+        private void Start()
+        {
+            // Idleアニメーションを再生しておく
+            PlayIdleAnimation();
         }
         #endregion
 
@@ -72,9 +57,28 @@ namespace CCG
             TalkManager.I.StartTalk(gameObject, talkRow, OnEndTalk);
         }
 
+        public void SetMark(SpriteRenderer mark)
+        {
+            Mark = mark;
+
+            Mark.transform.SetParent(markPosition, false);
+            Mark.transform.localPosition = Vector2.zero;
+        }
+
         public void ShowMark(bool isShow)
         {
-            view.ShowMark(isShow);
+            Assert.IsNotNull(Mark);
+            if (Mark == null)
+            {
+                return;
+            }
+
+            Mark.enabled = isShow;
+        }
+
+        public void SetSprite(Sprite sprite)
+        {
+            spriteRenderer.sprite = sprite;
         }
         #endregion
 
@@ -90,6 +94,36 @@ namespace CCG
             var questTitle = questRow._Name;
             var questTitleCombine = $"クエスト「{questTitle}」\nを受領した。";
             UIManager.I.ShowAnnounceMessage(questTitleCombine);
+        }
+
+        private void PlayIdleAnimation()
+        {
+            if (Animation != null)
+            {
+                StopCoroutine(Animation);
+            }
+
+            Animation = StartCoroutine(AnimationLoop(spriteSetting.IdleSprites));
+        }
+
+        private IEnumerator AnimationLoop(List<Sprite> sprites)
+        {
+            var span = new WaitForSeconds(0.3f);
+            var playIndex = 0;
+
+            while (true)
+            {
+                var sprite = sprites[playIndex];
+                SetSprite(sprite);
+
+                playIndex++;
+                if (playIndex >= sprites.Count)
+                {
+                    playIndex = 0;
+                }
+
+                yield return span;
+            }
         }
         #endregion
     }
