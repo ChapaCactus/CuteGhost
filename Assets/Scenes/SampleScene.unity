@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 26705940}
   - component: {fileID: 26705942}
   - component: {fileID: 26705941}
+  - component: {fileID: 26705943}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -188,6 +189,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26705939}
   m_CullTransparentMesh: 0
+--- !u!114 &26705943
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 26705939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: UGWRX63th0eI0oiVeKb0yA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+    component: {fileID: 26705940}
+  - name: CanvasRenderer
+    id: sCzm6z4kWUyafOHqzpqeEA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+    component: {fileID: 26705942}
+  - name: Text
+    id: nfZja6Op3UexT1QTIpTGIg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+    component: {fileID: 26705941}
+  activeSelfVariable:
+    name: activeSelf
+    id: ZHDTqkiGe06OoVIphMJRFQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+  nameVariable:
+    name: name
+    id: 1uY6SWb90U29mDVrJt1V2w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+  tagVariable:
+    name: tag
+    id: frjvRDWojUa2EsujZyY4JA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+  layerVariable:
+    name: layer
+    id: LvzvL1EG7kaoaGrC10qSqA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+  parentVariable:
+    name: parent
+    id: GCa0eeEpYEyEesF9L97Urw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 26705939}
+    _autoSave: {fileID: 26705943}
+  id: DSdZyNWXzEeX0WCBJaXPlw
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.27647728, g: 0.7764773, b: 0.27647728, a: 1}
+  transform: {fileID: 26705940}
 --- !u!1 &87230807
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87230809}
   - component: {fileID: 87230808}
+  - component: {fileID: 87230810}
   m_Layer: 0
   m_Name: TalkManager
   m_TagString: Untagged
@@ -226,8 +352,119 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &87230810
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 87230807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: hDqi1GwBjEW0VqwUfeFzQg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+    component: {fileID: 87230809}
+  - name: TalkManager
+    id: isKr1W0RL0evfZPLq5ySHA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.TalkManager, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+    component: {fileID: 87230808}
+  activeSelfVariable:
+    name: activeSelf
+    id: lI1rfOC9pEGyg7N8CpTjbA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+  nameVariable:
+    name: name
+    id: J4h10GLbvkuDhMkOuJdKbA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+  tagVariable:
+    name: tag
+    id: EZ5g9kWgIEadl1rIYAnGRg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+  layerVariable:
+    name: layer
+    id: PMiIHUXjUUiS7hkjAxSxuQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+  parentVariable:
+    name: parent
+    id: QDwnJICNokSvbi4lT1o5Pw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 87230807}
+    _autoSave: {fileID: 87230810}
+  id: 9x9YhBIzK0y1BRDZLFfsfQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.3590863, g: 0.6090863, b: 0.8590863, a: 1}
+  transform: {fileID: 87230809}
 --- !u!1 &130500678
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130500680}
   - component: {fileID: 130500679}
+  - component: {fileID: 130500681}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -276,8 +514,119 @@ Transform:
   m_Children:
   - {fileID: 1214846947}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130500681
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130500678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: wGwmbhRrNEuwe2bng7jo0w
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+    component: {fileID: 130500680}
+  - name: UIManager
+    id: w9Q79q2F70apPWFR1dBZbQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.UIManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+    component: {fileID: 130500679}
+  activeSelfVariable:
+    name: activeSelf
+    id: aDhe51JjT02dBGal1Xq1zQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+  nameVariable:
+    name: name
+    id: ZHAnmHUodUKUeU09JOTzhA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+  tagVariable:
+    name: tag
+    id: 3YpruTRwfEeM08pLoEskyw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+  layerVariable:
+    name: layer
+    id: i0h5WXosV0eAUgf1fTOf0g
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+  parentVariable:
+    name: parent
+    id: 1CmdRWjyhkGPsQW8p3FNEQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 130500678}
+    _autoSave: {fileID: 130500681}
+  id: GMTEPX13F06bvbu7yJLacA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.52177274, g: 0.27177277, b: 0.77177274, a: 1}
+  transform: {fileID: 130500680}
 --- !u!1 &177033147
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +638,7 @@ GameObject:
   - component: {fileID: 177033151}
   - component: {fileID: 177033150}
   - component: {fileID: 177033149}
+  - component: {fileID: 177033152}
   m_Layer: 5
   m_Name: SettingButton
   m_TagString: Untagged
@@ -390,6 +740,143 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177033147}
   m_CullTransparentMesh: 0
+--- !u!114 &177033152
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 177033147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: BB9oZ3Q8PES41bEh9B0WHw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+    component: {fileID: 177033148}
+  - name: CanvasRenderer
+    id: 8LyS4jXzoE10cW11i4VSWA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+    component: {fileID: 177033151}
+  - name: Image
+    id: xVW6Tww6jkmdb4DjAaI4Ow
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+    component: {fileID: 177033150}
+  - name: Button
+    id: hddHmHCyr0aHJjopIcFeug
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+    component: {fileID: 177033149}
+  activeSelfVariable:
+    name: activeSelf
+    id: RG7t0E5Q9UuMWLINdPa0Og
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+  nameVariable:
+    name: name
+    id: PHflfHHWfUO9FJ6dwA9Fhg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+  tagVariable:
+    name: tag
+    id: H8GN16M0dkCW7fTXWC1EwA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+  layerVariable:
+    name: layer
+    id: geVBm8YclEeXUIjWtcbIyw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+  parentVariable:
+    name: parent
+    id: 5KXKEGGN0ECMzaOm2v8flQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 177033147}
+    _autoSave: {fileID: 177033152}
+  id: kItLZLmx5EqLkiXl7ZkJTQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.89466214, g: 0.62505436, b: 0.39858374, a: 1}
+  transform: {fileID: 177033148}
 --- !u!1 &245221422
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +887,7 @@ GameObject:
   - component: {fileID: 245221424}
   - component: {fileID: 245221423}
   - component: {fileID: 245221425}
+  - component: {fileID: 245221426}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -434,7 +922,7 @@ Transform:
   - {fileID: 1708395504}
   - {fileID: 1018661221}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &245221425
 Rigidbody2D:
@@ -456,6 +944,130 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &245221426
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245221422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: nipLknGYuUq9HEeLbaYVsg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+    component: {fileID: 245221424}
+  - name: Ghost
+    id: e6fySRif00qLxhwBLAao4w
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.Ghost, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+    component: {fileID: 245221423}
+  - name: Rigidbody2D
+    id: Xn0DaxXTFUKq2qzM2gH3KQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Rigidbody2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+    component: {fileID: 245221425}
+  activeSelfVariable:
+    name: activeSelf
+    id: OEmHTKeKh0iCWpjcCBr5Rg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+  nameVariable:
+    name: name
+    id: 1sdLZD19UE6e51T7atzzlw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+  tagVariable:
+    name: tag
+    id: wrZR0rT2f0SMX1iTvEslYA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+  layerVariable:
+    name: layer
+    id: l2wlTFuq0k6LLxCbvc2WoQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+  parentVariable:
+    name: parent
+    id: n06R0m1VH0G46zG0PnHlsA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 245221422}
+    _autoSave: {fileID: 245221426}
+  id: O6sS1GfDOUi8dvlfhVezLw
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.41298524, g: 0.9129852, b: 0.41298524, a: 1}
+  transform: {fileID: 245221424}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +1081,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -611,6 +1224,169 @@ MonoBehaviour:
   RightFocus: 0.35
   TopFocus: 0.25
   BottomFocus: 0.25
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: Wk3rNtHTdkGU3Yppm85nqg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420032}
+  - name: Camera
+    id: 9fdAx7WPCkWMIwwJ4fYkiQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Camera, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420031}
+  - name: AudioListener
+    id: eySULFVRQk1LheZTxK90ug
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.AudioListener, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420029}
+  - name: ProCamera2D
+    id: 6QN64GzNXE1PXeJ8W0en8g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2D, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420030}
+  - name: ProCamera2DPixelPerfect
+    id: rJJkBtjxA0qfbpxUtMTg0Q
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2DPixelPerfect,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420033}
+  - name: ProCamera2DForwardFocus
+    id: 1yYLeZyWwk6aif0XFRljqA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2DForwardFocus,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+    component: {fileID: 519420034}
+  activeSelfVariable:
+    name: activeSelf
+    id: xsC7aeLKoE2JP1nJUN0zzA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+  nameVariable:
+    name: name
+    id: SumVjwy4NU6O1CSlaVwnrw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+  tagVariable:
+    name: tag
+    id: FnIfLmPDtE2TjfpP5mr21w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+  layerVariable:
+    name: layer
+    id: iJVMnqVAQEKxZdkY1s1flQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+  parentVariable:
+    name: parent
+    id: 6W8PuUocgUGAqwedKJE0Jg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 519420028}
+    _autoSave: {fileID: 519420035}
+  id: 7GO2zKwz4kORdsmA0wGonQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.347336, g: 0.847336, b: 0.847336, a: 1}
+  transform: {fileID: 519420032}
 --- !u!1 &543492085
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +1398,7 @@ GameObject:
   - component: {fileID: 543492089}
   - component: {fileID: 543492088}
   - component: {fileID: 543492087}
+  - component: {fileID: 543492090}
   m_Layer: 5
   m_Name: ClearAllSaveDataButton
   m_TagString: Untagged
@@ -723,6 +1500,143 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543492085}
   m_CullTransparentMesh: 0
+--- !u!114 &543492090
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543492085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: aKsicjdLY0SiT9f0Ukpn3A
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+    component: {fileID: 543492086}
+  - name: CanvasRenderer
+    id: AN8ekKpsrkSzzMHq2oNANw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+    component: {fileID: 543492089}
+  - name: Image
+    id: NIJlfTJ8JUeHGmKaBjjkFw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+    component: {fileID: 543492088}
+  - name: Button
+    id: 4m13wmlFaEe9DKiQnBLXaA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+    component: {fileID: 543492087}
+  activeSelfVariable:
+    name: activeSelf
+    id: mIMUuRy840OkyEAcf9p8Ow
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+  nameVariable:
+    name: name
+    id: 8D1Ve8SIpkGY1jwi2lpxtA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+  tagVariable:
+    name: tag
+    id: kdc3lH7GT0C5j71PUjcivg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+  layerVariable:
+    name: layer
+    id: ZaOjDPZa9kabSzw6Z4FXKg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+  parentVariable:
+    name: parent
+    id: WMhymKTX7E6RYmakdrIhFQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 543492085}
+    _autoSave: {fileID: 543492090}
+  id: 7iNLKbdqh0mpG8gkPEzv9w
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.7537845, g: 0.25378448, b: 0.5037845, a: 1}
+  transform: {fileID: 543492086}
 --- !u!1 &557214267
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +1647,7 @@ GameObject:
   - component: {fileID: 557214268}
   - component: {fileID: 557214270}
   - component: {fileID: 557214269}
+  - component: {fileID: 557214271}
   m_Layer: 5
   m_Name: UICamera
   m_TagString: Untagged
@@ -805,6 +1720,130 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &557214271
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557214267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: B0uLVBCs4UKU1tiKM3zpOg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+    component: {fileID: 557214268}
+  - name: Camera
+    id: Q80Hb1SSZUqr1N0FV7eSjQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Camera, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+    component: {fileID: 557214270}
+  - name: AudioListener
+    id: 5ydjFlRwf0Oo5NEVVuU7aA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.AudioListener, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+    component: {fileID: 557214269}
+  activeSelfVariable:
+    name: activeSelf
+    id: fWVL0uqN0E2thHAaQDAm3A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+  nameVariable:
+    name: name
+    id: Lxza6AWAf0ui7ijfsBLPfg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+  tagVariable:
+    name: tag
+    id: nlx3aYKawkO11i1hACtFIw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+  layerVariable:
+    name: layer
+    id: QofvFj4BbUOXezEwnirjTQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+  parentVariable:
+    name: parent
+    id: MTQoULTN4kuwPmH4lK2IxA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 557214267}
+    _autoSave: {fileID: 557214271}
+  id: dGb1w201LEOGGJHDiQPDmQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.80915505, g: 0.30915505, b: 0.55915505, a: 1}
+  transform: {fileID: 557214268}
 --- !u!1 &560027181
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +1854,7 @@ GameObject:
   - component: {fileID: 560027184}
   - component: {fileID: 560027183}
   - component: {fileID: 560027182}
+  - component: {fileID: 560027185}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -865,8 +1905,132 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560027185
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560027181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: sd285ASFTU6QFEo6kEv0Jg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+    component: {fileID: 560027184}
+  - name: EventSystem
+    id: oGzr0Cr4VUqcK4majGe91g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.EventSystems.EventSystem, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+    component: {fileID: 560027183}
+  - name: StandaloneInputModule
+    id: cqx0w7Ijp06z30itysYEDg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.EventSystems.StandaloneInputModule, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+    component: {fileID: 560027182}
+  activeSelfVariable:
+    name: activeSelf
+    id: 9qUz6oLlzUS5lxC9zyoGNA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+  nameVariable:
+    name: name
+    id: DTBJE77r0ECkMHdUQ7WnWg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+  tagVariable:
+    name: tag
+    id: nBscJlRnJk6Pmm5LV2Mcbw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+  layerVariable:
+    name: layer
+    id: glItHY0lCE2cwF2iJpqZCA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+  parentVariable:
+    name: parent
+    id: eNl4NCGTMUKd4SLaV0sc2A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 560027181}
+    _autoSave: {fileID: 560027185}
+  id: 011CF0YbQEiTQrFxBnghhA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.79337984, g: 0.29337984, b: 0.79337984, a: 1}
+  transform: {fileID: 560027184}
 --- !u!1 &565216048
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +2042,7 @@ GameObject:
   - component: {fileID: 565216050}
   - component: {fileID: 565216049}
   - component: {fileID: 565216052}
+  - component: {fileID: 565216053}
   m_Layer: 0
   m_Name: DashDaikon
   m_TagString: NPC
@@ -968,7 +2133,7 @@ Transform:
   m_Children:
   - {fileID: 1069432711}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &565216052
 MonoBehaviour:
@@ -985,6 +2150,143 @@ MonoBehaviour:
   markPosition: {fileID: 1069432711}
   spriteRenderer: {fileID: 565216050}
   spriteSetting: {fileID: 11400000, guid: 56d640453b3454261b23cb37d631e437, type: 2}
+--- !u!114 &565216053
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565216048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: h7VROvavE0a6toIUG0hoIg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+    component: {fileID: 565216051}
+  - name: SpriteRenderer
+    id: 5Lth6b10Ikegyg2d95FvYw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+    component: {fileID: 565216050}
+  - name: BoxCollider2D
+    id: MFAuH00aJUm7sXDsZfcVvQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.BoxCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+    component: {fileID: 565216049}
+  - name: NPC
+    id: ODGCH0gAWke2pfNfwkSBbA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.NPC, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+    component: {fileID: 565216052}
+  activeSelfVariable:
+    name: activeSelf
+    id: N50Cu8rOPEyR0nuW5R3KJA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+  nameVariable:
+    name: name
+    id: Ysst21Ad0EOPY8mw2P006g
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+  tagVariable:
+    name: tag
+    id: IfyIr41Ia0euCLyBeI3qgQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+  layerVariable:
+    name: layer
+    id: KoNh8VR46kiSD8rU3nTr2A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+  parentVariable:
+    name: parent
+    id: 3gEJ0yhOaECs0YZ31cqk8A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 565216048}
+    _autoSave: {fileID: 565216053}
+  id: hdTWA0VhoUG4j0H7g1FONA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.93320596, g: 0.6635981, b: 0.43712753, a: 1}
+  transform: {fileID: 565216051}
 --- !u!1 &709029990
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +2298,7 @@ GameObject:
   - component: {fileID: 709029994}
   - component: {fileID: 709029993}
   - component: {fileID: 709029992}
+  - component: {fileID: 709029995}
   m_Layer: 5
   m_Name: ActionButton
   m_TagString: Untagged
@@ -1097,6 +2400,143 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709029990}
   m_CullTransparentMesh: 0
+--- !u!114 &709029995
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709029990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: erEZQUwV1E6eRbGXUttfIw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+    component: {fileID: 709029991}
+  - name: CanvasRenderer
+    id: bpZbc2DrJEqgECLeQlG0qQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+    component: {fileID: 709029994}
+  - name: Image
+    id: UWHZTcGdW0G151fYJyNMYw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+    component: {fileID: 709029993}
+  - name: Button
+    id: lPrsEvQekE6vl1hW61IJvQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+    component: {fileID: 709029992}
+  activeSelfVariable:
+    name: activeSelf
+    id: KtAoOlCDIkq63FQk60btkg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+  nameVariable:
+    name: name
+    id: bKkepi6AFE1uOFMgqfHYUg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+  tagVariable:
+    name: tag
+    id: knVWeVIySki0FeDjMIAyJA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+  layerVariable:
+    name: layer
+    id: pyy2YO0umE6cTIHntUpDTQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+  parentVariable:
+    name: parent
+    id: 2AUmOnmTVUqli08ey8CWWQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 709029990}
+    _autoSave: {fileID: 709029995}
+  id: 915g7rms6ESiOBrh6Owk9w
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.81053513, g: 0.31053513, b: 0.31053513, a: 1}
+  transform: {fileID: 709029991}
 --- !u!1 &838305725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +2546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838305727}
   - component: {fileID: 838305726}
+  - component: {fileID: 838305728}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1135,266 +2576,119 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &896533228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 896533232}
-  - component: {fileID: 896533231}
-  - component: {fileID: 896533230}
-  - component: {fileID: 896533229}
-  m_Layer: 0
-  m_Name: Easy Save 3 Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &896533229
+--- !u!114 &838305728
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 896533228}
+  m_GameObject: {fileID: 838305725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9107aee0ced90422da95f0b31680501f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: 5643da41-cad3-4e2e-8530-55e783e18edf
-  saveEvent: 1
-  loadEvent: 1
-  settings:
-    _location: 0
-    path: SaveData.es3
-    encryptionType: 0
-    encryptionPassword: password
-    directory: 0
-    format: 0
-    bufferSize: 2048
-    typeChecking: 1
-    safeReflection: 1
-    memberReferenceMode: 0
-    referenceMode: 2
-    assemblyNames:
-    - Assembly-CSharp
-    - Assembly-CSharp-firstpass
-    showAdvancedSettings: 0
-  autoSaves: []
---- !u!114 &896533230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 896533228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a83408fcc9044c4fbc7e5d09a369ab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openReferences: 0
-  openPrefabs: 0
-  idRef:
-    _Keys: b9dca5d58fc893757485f0fabb205f65a9b0c19fd1b72721c9c08c7abfaba474f0e55a9049c61c7c27236578df4aba22c934ba143ec8df014b7bf230c3e74a1fd79af62a3a31e36ece3dc7f41da001137baeb28af08f3646c55c45ced3ebb840d9464e7941e45c69524b470001eae31484f9558e662bef469c4f1069884ebe46f707cd63ef7b555e0c1b39a54836444f3f5a51cc4146a6043695ddf1d4f3e0600b8e0afa1c7f2508a4f6824bf24afe2d6ca0d6d2030efa3c512d657aa7b8cd01fc999aba2c4a324080a58fc8360d087e940a5d74c9b2640494cd4b4ae5a0b05cc4844f58af430020926aada281cdf95f36e4e69d5b5838510160d9a00117a520f63304b1beb0ce27f5811ea0fb3e7d61c7ab80ca874db71c425ea5efe25ede7b3c73674b2d55e219b30e91dc77d94c40de3a67ac976fa7577ce7f41c55bd0a5260996587d63134713698826a216b6c69116511a8f631e355e4402fba9f3a3c7119e43c103ed4160f6fd876ffec3d3619aba1d144304db66e7ebb6c1661ee10045b11513c2e5b2b3cb1fec7e1451b9658f6e9f1029707bf332ecd8efa412c705de97aa3daecf9ea508a6a0ad0eb674b61dbebde8803f29363d1850e60cd30fa2290db343f408ebb10d542792cfcef4869e710e0a9b117a509e73f0967eb8a83469ad29e3963745d4cd031a2ba93409f3f3388b822ee5b2b5780c1a8ff7aabda5fc7bfc7cf8d81cc5b91d225808b148a2821b6668cbc5acb0a020947dae2a23823a8bc0b2b86304e4e44a24c3f7e541d6b4dd0dec3454ea26c0c42317cc60e8734f5b62830f6a15e5006b4d15fa60b895528b38e12c474dd095e771f43fed288361a1734357c4e62548e72416e83bc3a17cc87a3799c9af87f27e070913e5db0283d087abe3fbed27517e2a036b54c8c5ec3f78888d1f1657f1fb40e9cddd115303fe75474c907a9755919907f3a2e35739431acc91ac6054b5d05220c3291ac18072e083107e86b454e12e2ea82e4b90f8265d0f08220b478e209d2ce29b5a737938788f3d9fb937b630e83f81ce43642be318d98619c9a27e2811210ba396e689454a805a339ca7a2eabab6f5b526a3940148d5b4340982fde5029a5f15cc92a61e49c37c3ce617a99ec95490ed5346fea26af303935542a1327d8acf0db772d1f7e30bf105d0370b312c357aa4f214c7c6671e7f4059c2b6f8edb64094b75438a97d46f5a8ba174dcc182d98e027f3c078b3089698f39181dfbd060c79885018906e1422390a706f81a3b4a788a466d0f9f6b947cffac19d1ed515fbb40ad44c57f9e6a1b3ea075e42a8283ca83906cb56351282cf18577b4fb1311e207c2476cf70ef728b0884d3fe178a68130e4557ebeaa58ee85174afae949dfd5706d2398c50f3d6d776b04da04e84b78dff61be0688fa1b21a3618203b02c198568731391e9bc9777cf20338655f4441c081052183d86ceef88a6c2454df757582c90e619d8fa23673104a39ed4814914241772d0b1e3c927e603158f75add638271499c51a5de4f243b52738ea6db419efd1d1267476a638c7c21fec14a3e1832e7445f9278409d622709cfccae20253b734706c20f353523520f2b7c23ef9186943fa8623ad3173eba50c1c1656821a40339cb6dbb25bde3863b3f696b1986179a5660eec88776465e447c5ff5f789bb307987164500bd460274178aed7f562c29285dbbc9106c8baf7bf18857a111714e7c38f19170d199981aeb536feb59deee507b2a667fe2ce1041b27391f1e4160949eebd41f1e443602e9645306225bb013f809f5f6e55c733755761bc4ec291b624
-    _Values:
-    - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
-    - {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-    - {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
-    - {fileID: 11500000, guid: e090c2b6ed37d44fd8813322ffaacaf2, type: 3}
-    - {fileID: 11500000, guid: 104299572f2fc416c8ff97ac4c0ceb40, type: 3}
-    - {fileID: 11500000, guid: 17577239430844efcbdda516df8c1f8e, type: 3}
-    - {fileID: 11500000, guid: 12cc26b60e8ec4d76abe659a2eab79de, type: 3}
-    - {fileID: 11500000, guid: d63c10bc77a21415c809281377e164df, type: 3}
-    - {fileID: 26705939}
-    - {fileID: 26705940}
-    - {fileID: 26705942}
-    - {fileID: 26705941}
-    - {fileID: 709029991}
-    - {fileID: 87230807}
-    - {fileID: 87230809}
-    - {fileID: 87230808}
-    - {fileID: 130500678}
-    - {fileID: 130500680}
-    - {fileID: 130500679}
-    - {fileID: 1250345899}
-    - {fileID: 709029992}
-    - {fileID: 1646010096}
-    - {fileID: 1214846946}
-    - {fileID: 519420031}
-    - {fileID: 557214270}
-    - {fileID: 1214846947}
-    - {fileID: 245221422}
-    - {fileID: 245221424}
-    - {fileID: 245221423}
-    - {fileID: 245221425}
-    - {fileID: 1018661222}
-    - {fileID: 1708395504}
-    - {fileID: 1334613755}
-    - {fileID: 1417196681}
-    - {fileID: 1417196683}
-    - {fileID: 1417196682}
-    - {fileID: 1879718717}
-    - {fileID: 1646010092}
-    - {fileID: 1646010095}
-    - {fileID: 1646010094}
-    - {fileID: 1708395503}
-    - {fileID: 1879718716}
-    - {fileID: 1879718720}
-    - {fileID: 1879718719}
-    - {fileID: 1879718718}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 1708395505}
-    - {fileID: 1018661221}
-    - {fileID: 519420028}
-    - {fileID: 519420032}
-    - {fileID: 519420029}
-    - {fileID: 519420030}
-    - {fileID: 519420033}
-    - {fileID: 519420034}
-    - {fileID: 557214267}
-    - {fileID: 557214268}
-    - {fileID: 557214269}
-    - {fileID: 560027181}
-    - {fileID: 560027184}
-    - {fileID: 560027183}
-    - {fileID: 560027182}
-    - {fileID: 565216048}
-    - {fileID: 565216051}
-    - {fileID: 565216050}
-    - {fileID: 565216049}
-    - {fileID: 565216052}
-    - {fileID: 1069432711}
-    - {fileID: 709029990}
-    - {fileID: 709029994}
-    - {fileID: 709029993}
-    - {fileID: 838305725}
-    - {fileID: 838305727}
-    - {fileID: 838305726}
-    - {fileID: 919486634}
-    - {fileID: 919486635}
-    - {fileID: 919486637}
-    - {fileID: 919486636}
-    - {fileID: 1250345898}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 1018661220}
-    - {fileID: 1018661223}
-    - {fileID: 1069432710}
-    - {fileID: 1176333464}
-    - {fileID: 1176333465}
-    - {fileID: 1176333467}
-    - {fileID: 1176333466}
-    - {fileID: 1214846943}
-    - {fileID: 1214846945}
-    - {fileID: 1214846944}
-    - {fileID: 1646010093}
-    - {fileID: 1250345897}
-    - {fileID: 1334613754}
-    - {fileID: 1334613757}
-    - {fileID: 1334613756}
-    - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 21300000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
-    - {fileID: 21300000, guid: d5ffbdc0e79ae40dfa12bb8c6dd0bff8, type: 3}
-    - {fileID: 21300000, guid: 5c0474a021e954f1ea4720073812d558, type: 3}
-    - {fileID: 11400000, guid: 2c50d3c468e3f461fa78a895489d5529, type: 2}
-    - {fileID: 2800000, guid: 5c0474a021e954f1ea4720073812d558, type: 3}
-    - {fileID: 2800000, guid: d5ffbdc0e79ae40dfa12bb8c6dd0bff8, type: 3}
-    - {fileID: 2800000, guid: 67c8808fdefd0477fa15756c5b37b2bc, type: 3}
-    - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
-    - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 10906, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 2800000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
-    - {fileID: 2100000, guid: 31f4769b656a142ed9c205c5ee638419, type: 2}
-    - {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-    - {fileID: 2800000, guid: 7b0315efdbbfa475c904b184ffc705ab, type: 3}
-    - {fileID: 11500000, guid: bffcfedf1d1214872bc8e3ea98b9dfa8, type: 3}
-    - {fileID: 11500000, guid: 02a8cd769f9ab46ff96c84ba466c8a29, type: 3}
-    - {fileID: 11500000, guid: bbc22c1c157e743df9fec93bc19fb23d, type: 3}
-    - {fileID: 11500000, guid: 76981503cacba42c798c7994461ce41c, type: 3}
-    - {fileID: 177033151}
-    - {fileID: 1116002721}
-    - {fileID: 1489691191}
-    - {fileID: 543492085}
-    - {fileID: 1190979360}
-    - {fileID: 1037397840}
-    - {fileID: 1190979359}
-    - {fileID: 1116002722}
-    - {fileID: 177033150}
-    - {fileID: 177033149}
-    - {fileID: 1190979361}
-    - {fileID: 1116002723}
-    - {fileID: 1190979358}
-    - {fileID: 543492088}
-    - {fileID: 543492086}
-    - {fileID: 543492089}
-    - {fileID: 1489691189}
-    - {fileID: 1116002720}
-    - {fileID: 1489691188}
-    - {fileID: 1489691190}
-    - {fileID: 177033148}
-    - {fileID: 177033147}
-    - {fileID: 1037397837}
-    - {fileID: 543492087}
-    - {fileID: 1037397839}
-    - {fileID: 1037397838}
-    - {fileID: 21300000, guid: 7b0315efdbbfa475c904b184ffc705ab, type: 3}
-    - {fileID: 11500000, guid: 3504d5775ff7142d9aa7af3452c9bf48, type: 3}
-    - {fileID: 11500000, guid: 7c28313ae8ef748b48ea32caef20ac19, type: 3}
-    - {fileID: 11400000, guid: 56d640453b3454261b23cb37d631e437, type: 2}
-    - {fileID: 21300000, guid: cacf33c64be284fcea7365d932cadd4b, type: 3}
-    - {fileID: 21300000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
-    - {fileID: 2800000, guid: cacf33c64be284fcea7365d932cadd4b, type: 3}
-    - {fileID: 2800000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
-  prefabs: []
---- !u!114 &896533231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 896533228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8714d999c5ae749538494c1347e5a3ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: 'The Easy Save 3 Manager is required in any scenes which use Easy Save,
-    and is automatically added to your scene when you enter Play mode.
-
-
-    To stop this from automatically being added to your scene, go to ''Window > Easy
-    Save 3 > Settings'' and deselect the ''Auto Add Manager to Scene'' checkbox.'
---- !u!4 &896533232
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 896533228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  variableCache: []
+  components:
+  - name: Transform
+    id: JJTcRh5msUOL0IDI3Aq2ww
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+    component: {fileID: 838305727}
+  - name: GameController
+    id: Z7f9Qg5afk23GuTwL8FMEw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.GameController, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+    component: {fileID: 838305726}
+  activeSelfVariable:
+    name: activeSelf
+    id: PmLxQyTvjkuHFxTaTubDpA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+  nameVariable:
+    name: name
+    id: btnv1I6P6kKfwugnf1PhkQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+  tagVariable:
+    name: tag
+    id: VJgoQ4CRPkeSqDQmQJc1hw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+  layerVariable:
+    name: layer
+    id: B0aF5w2GeEagVLSkwlz1sw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+  parentVariable:
+    name: parent
+    id: 1futbixJOkyYADH31VjuVA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 838305725}
+    _autoSave: {fileID: 838305728}
+  id: f9sgLO61rU2314oU1CZHRw
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.7249044, g: 0.47490445, b: 0.9749044, a: 1}
+  transform: {fileID: 838305727}
 --- !u!1 &919486634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +2699,7 @@ GameObject:
   - component: {fileID: 919486635}
   - component: {fileID: 919486637}
   - component: {fileID: 919486636}
+  - component: {fileID: 919486638}
   m_Layer: 5
   m_Name: UpperBand
   m_TagString: Untagged
@@ -1464,6 +2759,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 919486634}
   m_CullTransparentMesh: 0
+--- !u!114 &919486638
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919486634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: DBPIISSak0aBq14rTqpgwA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+    component: {fileID: 919486635}
+  - name: CanvasRenderer
+    id: VTfwl9CqnU2YySg4AnmVng
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+    component: {fileID: 919486637}
+  - name: Image
+    id: b9fPfpUGv0a8XDPV8Fy7nw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+    component: {fileID: 919486636}
+  activeSelfVariable:
+    name: activeSelf
+    id: x2ggC3EoBECE1azx1JhP6w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+  nameVariable:
+    name: name
+    id: UlaiBBqKfEqqJAynvByA3w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+  tagVariable:
+    name: tag
+    id: C1KQd7dbM0O0rPykE1QP6w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+  layerVariable:
+    name: layer
+    id: LQhLx0LhrEurKcZtuwZVbQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+  parentVariable:
+    name: parent
+    id: Xth9ctXCj0WifjHP6il1Vw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 919486634}
+    _autoSave: {fileID: 919486638}
+  id: SPITC0wPiEiJFdv0PBBb7w
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.9298451, g: 0.8906294, b: 0.43768826, a: 1}
+  transform: {fileID: 919486635}
 --- !u!1 &1018661220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +2893,7 @@ GameObject:
   - component: {fileID: 1018661221}
   - component: {fileID: 1018661223}
   - component: {fileID: 1018661222}
+  - component: {fileID: 1018661224}
   m_Layer: 0
   m_Name: Sight
   m_TagString: Untagged
@@ -1520,6 +2940,130 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &1018661224
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018661220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: JSxTinVzlkWltFqoyjIEUA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+    component: {fileID: 1018661221}
+  - name: CircleCollider2D
+    id: IYB0l70psUqiXF9FjZz10g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CircleCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+    component: {fileID: 1018661223}
+  - name: GhostSight
+    id: mtp3JfKOkU1I7eQYLSVO0w
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.GhostSight, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+    component: {fileID: 1018661222}
+  activeSelfVariable:
+    name: activeSelf
+    id: 9OYA4juSKECrOwHULHsnqQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+  nameVariable:
+    name: name
+    id: doDcemTlsEemF98d2LuCIA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+  tagVariable:
+    name: tag
+    id: wJOJFVS010yL6BUyC6xzrg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+  layerVariable:
+    name: layer
+    id: KKBRygJa30SZtJUVozXycw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+  parentVariable:
+    name: parent
+    id: dmf2H5Hdf0G01kiJGq8zhg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1018661220}
+    _autoSave: {fileID: 1018661224}
+  id: sNA1RiBj6Ua0eopwD37fEA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.75063384, g: 0.71141815, b: 0.25847697, a: 1}
+  transform: {fileID: 1018661221}
 --- !u!1 &1037397837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +3074,7 @@ GameObject:
   - component: {fileID: 1037397838}
   - component: {fileID: 1037397840}
   - component: {fileID: 1037397839}
+  - component: {fileID: 1037397841}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -1589,6 +3134,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037397837}
   m_CullTransparentMesh: 0
+--- !u!114 &1037397841
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037397837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: y5BLLVD7DkyM7fFKxRmUow
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+    component: {fileID: 1037397838}
+  - name: CanvasRenderer
+    id: IHQzGIlOHkqq2Fdidad2kA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+    component: {fileID: 1037397840}
+  - name: Image
+    id: l0lEbicr00OQ0wvES0tHZw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+    component: {fileID: 1037397839}
+  activeSelfVariable:
+    name: activeSelf
+    id: GCBOM0bi30azFNtKLtmyig
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+  nameVariable:
+    name: name
+    id: r2tBaHHJ4kKcmWFMrMnf1A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+  tagVariable:
+    name: tag
+    id: yhNMOQuVbk2Qrr0Ug1ZmfA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+  layerVariable:
+    name: layer
+    id: 8Qa2PI38G0iDQ7zOiSCOsQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+  parentVariable:
+    name: parent
+    id: PSoT4mwwbkO1nO78mvcIyg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1037397837}
+    _autoSave: {fileID: 1037397841}
+  id: l2cIOhZ6XUCeVRUipkMOWw
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.32352537, g: 0.82352537, b: 0.57352537, a: 1}
+  transform: {fileID: 1037397838}
 --- !u!1 &1069432710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +3266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1069432711}
+  - component: {fileID: 1069432712}
   m_Layer: 0
   m_Name: MarkPosition
   m_TagString: Untagged
@@ -1617,6 +3287,104 @@ Transform:
   m_Father: {fileID: 565216051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069432712
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069432710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: Dw613Y7PmEq88BrsJhEang
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+    component: {fileID: 1069432711}
+  activeSelfVariable:
+    name: activeSelf
+    id: XC5gkVcz5EuEt5wlxPa0TA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+  nameVariable:
+    name: name
+    id: sTZ1au8yVUanGDf19moruQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+  tagVariable:
+    name: tag
+    id: JFVuoUyJK0mYtRS4cTyySA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+  layerVariable:
+    name: layer
+    id: qla3RhkvuUirwP8EW5FUag
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+  parentVariable:
+    name: parent
+    id: nL1DcuJtR0K8wz9u90jZqA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1069432710}
+    _autoSave: {fileID: 1069432712}
+  id: ui6HaBdGbUudLjgw5zmDAw
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.3798226, g: 0.6298226, b: 0.8798226, a: 1}
+  transform: {fileID: 1069432711}
 --- !u!1 &1116002720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +3395,7 @@ GameObject:
   - component: {fileID: 1116002721}
   - component: {fileID: 1116002723}
   - component: {fileID: 1116002722}
+  - component: {fileID: 1116002724}
   m_Layer: 5
   m_Name: SettingPanel
   m_TagString: Untagged
@@ -1673,6 +3442,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116002720}
   m_CullTransparentMesh: 0
+--- !u!114 &1116002724
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116002720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: CRPqvLT0aEecCuRRdMx4DA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+    component: {fileID: 1116002721}
+  - name: CanvasRenderer
+    id: G166Y9uDG0GNRNMHknUZ7g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+    component: {fileID: 1116002723}
+  - name: SettingPanel
+    id: YsaG9btTM0ODMeaOJuegtQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.SettingPanel, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+    component: {fileID: 1116002722}
+  activeSelfVariable:
+    name: activeSelf
+    id: OElgv0pi50mMYgtOfpUi7g
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+  nameVariable:
+    name: name
+    id: bcs0vmVW6EGQEkvERwFI6Q
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+  tagVariable:
+    name: tag
+    id: EJkTns0ma0OQBZU90lpa0A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+  layerVariable:
+    name: layer
+    id: pXVefZWtqkSQaU84FSnoSQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+  parentVariable:
+    name: parent
+    id: FWJg8WXzAECQmxvQXzOT9g
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1116002720}
+    _autoSave: {fileID: 1116002724}
+  id: y2Av807by0aLrJGz6xHfow
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.6750004, g: 0.42500046, b: 0.9250004, a: 1}
+  transform: {fileID: 1116002721}
 --- !u!1 &1176333464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +3576,7 @@ GameObject:
   - component: {fileID: 1176333465}
   - component: {fileID: 1176333467}
   - component: {fileID: 1176333466}
+  - component: {fileID: 1176333468}
   m_Layer: 5
   m_Name: LowerBand
   m_TagString: Untagged
@@ -1742,6 +3636,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176333464}
   m_CullTransparentMesh: 0
+--- !u!114 &1176333468
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176333464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: DivTYqPjA0e1hV75p0ugJA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+    component: {fileID: 1176333465}
+  - name: CanvasRenderer
+    id: aN6zD4O7u0OodhoAf7tnIA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+    component: {fileID: 1176333467}
+  - name: Image
+    id: HSRfjBUtIUCdJslfan1HjA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+    component: {fileID: 1176333466}
+  activeSelfVariable:
+    name: activeSelf
+    id: FbD1CzZXOEyjoQtKs2C4cQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+  nameVariable:
+    name: name
+    id: UGzGay2lUEqwhQ0U2qpLYw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+  tagVariable:
+    name: tag
+    id: zAy7ZLcfE0W0fuddNE7FLQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+  layerVariable:
+    name: layer
+    id: 00HfjVSZ6U264u4PdwJtfA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+  parentVariable:
+    name: parent
+    id: PXvuEVffMkiKLztIGJItXw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1176333464}
+    _autoSave: {fileID: 1176333468}
+  id: 1K0CvjBkt0StTWwxCqihxA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.33868128, g: 0.8386813, b: 0.8386813, a: 1}
+  transform: {fileID: 1176333465}
 --- !u!1 &1190979358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +3770,7 @@ GameObject:
   - component: {fileID: 1190979359}
   - component: {fileID: 1190979361}
   - component: {fileID: 1190979360}
+  - component: {fileID: 1190979362}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1817,6 +3836,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1190979358}
   m_CullTransparentMesh: 0
+--- !u!114 &1190979362
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190979358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: 01AXtF9oEk10ONvKaxExng
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+    component: {fileID: 1190979359}
+  - name: CanvasRenderer
+    id: gKtILYdpwEq9MzrLWqKLtA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+    component: {fileID: 1190979361}
+  - name: Text
+    id: t07CXTbRH0yRCsfIE8wQpw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+    component: {fileID: 1190979360}
+  activeSelfVariable:
+    name: activeSelf
+    id: it8P1tsqi0KG8hAbyD54HQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+  nameVariable:
+    name: name
+    id: T9oUe6qUUky8TBDMfWkNxw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+  tagVariable:
+    name: tag
+    id: VImm2ZWFSkWV18Xa19rCSw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+  layerVariable:
+    name: layer
+    id: ysQEuACkbUamEuA5Mby5Ig
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+  parentVariable:
+    name: parent
+    id: wsfQrbQoSEqayTFxli9tvw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1190979358}
+    _autoSave: {fileID: 1190979362}
+  id: DGUn5AZjR06kRp6ZlKVe6w
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.955267, g: 0.455267, b: 0.455267, a: 1}
+  transform: {fileID: 1190979359}
 --- !u!1 &1214846943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,6 +3971,7 @@ GameObject:
   - component: {fileID: 1214846946}
   - component: {fileID: 1214846945}
   - component: {fileID: 1214846944}
+  - component: {fileID: 1214846948}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1916,6 +4060,143 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1214846948
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214846943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: QeQmYuz1oU6oHbhV4BRbDg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+    component: {fileID: 1214846947}
+  - name: Canvas
+    id: aR6FI5L280mN74u7DV8DyA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Canvas, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+    component: {fileID: 1214846946}
+  - name: CanvasScaler
+    id: AQK1QoUFgEatXMPrcLfB9w
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.CanvasScaler, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+    component: {fileID: 1214846945}
+  - name: GraphicRaycaster
+    id: A2YYY6LM2kSTRWHbTh8OKA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.GraphicRaycaster, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+    component: {fileID: 1214846944}
+  activeSelfVariable:
+    name: activeSelf
+    id: s3H6J3RfqUOQV9G36hUynw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+  nameVariable:
+    name: name
+    id: XpUANbP81Eum1bD9aR6Ymw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+  tagVariable:
+    name: tag
+    id: kbmzXxh2HEOby2UIaR3xwQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+  layerVariable:
+    name: layer
+    id: b4Ln2AR0AUy4lU9Fps841Q
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+  parentVariable:
+    name: parent
+    id: XCcfnPQ2f0SDbqm5HKJDNQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1214846943}
+    _autoSave: {fileID: 1214846948}
+  id: UcSnB55igUS1pWKuakwlbA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.4723809, g: 0.9723809, b: 0.7223809, a: 1}
+  transform: {fileID: 1214846947}
 --- !u!1 &1250345897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,6 +4206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250345898}
   - component: {fileID: 1250345899}
+  - component: {fileID: 1250345900}
   m_Layer: 5
   m_Name: Bands
   m_TagString: Untagged
@@ -1965,6 +4247,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperBand: {fileID: 919486636}
   lowerBand: {fileID: 1176333466}
+--- !u!114 &1250345900
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250345897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: EC50P0W8kU1jswPuQ9QDgA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+    component: {fileID: 1250345898}
+  - name: Bands
+    id: aszpmz1720ON8fNznJbkcQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.Bands, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+    component: {fileID: 1250345899}
+  activeSelfVariable:
+    name: activeSelf
+    id: FuobBP9oA0CeYMhqeofhQA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+  nameVariable:
+    name: name
+    id: uT4Q0BNYWEi09ocBxwnW9A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+  tagVariable:
+    name: tag
+    id: 3Jp0O5m1jkSQ8GMkpHXTaQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+  layerVariable:
+    name: layer
+    id: oFWHPrWPn0KADMWTIyF40A
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+  parentVariable:
+    name: parent
+    id: YJaWIkJTH0SkjDBjF4kbpw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1250345897}
+    _autoSave: {fileID: 1250345900}
+  id: ipbA07D9rEi2e8AjhNpdpQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.35301092, g: 0.35301092, b: 0.8530109, a: 1}
+  transform: {fileID: 1250345898}
 --- !u!1 &1334613754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,6 +4368,7 @@ GameObject:
   - component: {fileID: 1334613757}
   - component: {fileID: 1334613756}
   - component: {fileID: 1334613755}
+  - component: {fileID: 1334613758}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Untagged
@@ -6583,8 +8977,132 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1334613758
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334613754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: LMAbjbxRaE6ecPQtTDvG6g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+    component: {fileID: 1334613757}
+  - name: ParticleSystem
+    id: tbt3hJpndky0VitwVg1h0A
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+    component: {fileID: 1334613756}
+  - name: ParticleSystemRenderer
+    id: 6ZVKSbkTM0iYSIemL72nzg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.ParticleSystemRenderer, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+    component: {fileID: 1334613755}
+  activeSelfVariable:
+    name: activeSelf
+    id: cqZ0DVXe40OugbR5MHhqgQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+  nameVariable:
+    name: name
+    id: 9uYF8Tk1uUuYuqnXU0Dw3Q
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+  tagVariable:
+    name: tag
+    id: P0zXhjMdWEiQ1PmnGE2FYg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+  layerVariable:
+    name: layer
+    id: 3IUAgAzJhka8ckvE0K6Cyw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+  parentVariable:
+    name: parent
+    id: JszoNCXpxkyzKfYDumr9Rw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1334613754}
+    _autoSave: {fileID: 1334613758}
+  id: 84FszICdCUWiXzxwiX226g
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.9372712, g: 0.43727118, b: 0.6872712, a: 1}
+  transform: {fileID: 1334613757}
 --- !u!1 &1417196681
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,6 +9112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417196683}
   - component: {fileID: 1417196682}
+  - component: {fileID: 1417196684}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -6624,7 +9143,405 @@ Transform:
   m_Children:
   - {fileID: 1879718717}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1417196684
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417196681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: jSasSbuw0kyBC5Vknk8xCg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+    component: {fileID: 1417196683}
+  - name: Grid
+    id: iJVX0WBS50GtqLYS6gogkQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Grid, UnityEngine.GridModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+    component: {fileID: 1417196682}
+  activeSelfVariable:
+    name: activeSelf
+    id: cIyEMtXH5EmYUGEYbuzmMw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+  nameVariable:
+    name: name
+    id: yFzjj0tEMk2XorLmA156fg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+  tagVariable:
+    name: tag
+    id: o1wZTgfK8kyI8mFA55j5LQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+  layerVariable:
+    name: layer
+    id: P0sc0TIlOEu2d51QTEB4Ug
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+  parentVariable:
+    name: parent
+    id: Qp7fKwJtI0muWg65AAnbYw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1417196681}
+    _autoSave: {fileID: 1417196684}
+  id: BccT23lEDEiGZGUblB9o0A
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.79839504, g: 0.29839504, b: 0.29839504, a: 1}
+  transform: {fileID: 1417196683}
+--- !u!1 &1472251368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472251372}
+  - component: {fileID: 1472251371}
+  - component: {fileID: 1472251370}
+  - component: {fileID: 1472251369}
+  m_Layer: 0
+  m_Name: Easy Save 3 Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1472251369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472251368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9107aee0ced90422da95f0b31680501f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: cae384be-f136-47c9-bdd4-7c54f849b43b
+  saveEvent: 1
+  loadEvent: 1
+  settings:
+    _location: 0
+    path: SaveData.es3
+    encryptionType: 0
+    encryptionPassword: password
+    directory: 0
+    format: 0
+    bufferSize: 2048
+    typeChecking: 1
+    safeReflection: 1
+    memberReferenceMode: 0
+    referenceMode: 2
+    assemblyNames:
+    - Assembly-CSharp
+    - Assembly-CSharp-firstpass
+    showAdvancedSettings: 0
+  autoSaves: []
+--- !u!114 &1472251370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472251368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a83408fcc9044c4fbc7e5d09a369ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openReferences: 0
+  openPrefabs: 0
+  idRef:
+    _Keys: []
+    _Values:
+    - {fileID: 11500000, guid: 3504d5775ff7142d9aa7af3452c9bf48, type: 3}
+    - {fileID: 11400000, guid: 2c50d3c468e3f461fa78a895489d5529, type: 2}
+    - {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
+    - {fileID: 181648, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
+    - {fileID: 11500000, guid: d63c10bc77a21415c809281377e164df, type: 3}
+    - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 11400000, guid: 56d640453b3454261b23cb37d631e437, type: 2}
+    - {fileID: 11500000, guid: bffcfedf1d1214872bc8e3ea98b9dfa8, type: 3}
+    - {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+    - {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
+    - {fileID: 11484918, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
+    - {fileID: 11500000, guid: bbc22c1c157e743df9fec93bc19fb23d, type: 3}
+    - {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    - {fileID: 11500000, guid: e090c2b6ed37d44fd8813322ffaacaf2, type: 3}
+    - {fileID: 21300000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
+    - {fileID: 2800000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
+    - {fileID: 11500000, guid: 17577239430844efcbdda516df8c1f8e, type: 3}
+    - {fileID: 11500000, guid: 48ff16d2ac3a9c74b838a9c89b316154, type: 3}
+    - {fileID: 11500000, guid: 7c28313ae8ef748b48ea32caef20ac19, type: 3}
+    - {fileID: 424396, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
+    - {fileID: 478526, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 11500000, guid: 104299572f2fc416c8ff97ac4c0ceb40, type: 3}
+    - {fileID: 11466620, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 11500000, guid: 02a8cd769f9ab46ff96c84ba466c8a29, type: 3}
+    - {fileID: 21300000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
+    - {fileID: 2800000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
+    - {fileID: 2800000, guid: 67c8808fdefd0477fa15756c5b37b2bc, type: 3}
+    - {fileID: 11500000, guid: 76981503cacba42c798c7994461ce41c, type: 3}
+    - {fileID: 11500000, guid: 1999142b602a95149b0a62c346aa151e, type: 3}
+    - {fileID: 129910, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 11500000, guid: 12cc26b60e8ec4d76abe659a2eab79de, type: 3}
+    - {fileID: 1334613754}
+    - {fileID: 1334613757}
+    - {fileID: 1334613755}
+    - {fileID: 1334613758}
+    - {fileID: 2100000, guid: 31f4769b656a142ed9c205c5ee638419, type: 2}
+    - {fileID: 87230808}
+    - {fileID: 87230810}
+    - {fileID: 130500680}
+    - {fileID: 130500679}
+    - {fileID: 130500681}
+    - {fileID: 1250345899}
+    - {fileID: 709029992}
+    - {fileID: 177033149}
+    - {fileID: 1116002722}
+    - {fileID: 1646010096}
+    - {fileID: 1214846946}
+    - {fileID: 1214846947}
+    - {fileID: 177033147}
+    - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 1417196681}
+    - {fileID: 1417196683}
+    - {fileID: 1417196682}
+    - {fileID: 1417196684}
+    - {fileID: 1879718717}
+    - {fileID: 1489691188}
+    - {fileID: 1489691191}
+    - {fileID: 1489691190}
+    - {fileID: 1489691192}
+    - {fileID: 1525571939}
+    - {fileID: 1525571941}
+    - {fileID: 1525571940}
+    - {fileID: 1646010097}
+    - {fileID: 1708395506}
+    - {fileID: 1879718721}
+    - {fileID: 1646010092}
+    - {fileID: 1646010095}
+    - {fileID: 1646010094}
+    - {fileID: 1708395503}
+    - {fileID: 1879718716}
+    - {fileID: 1879718720}
+    - {fileID: 1879718719}
+    - {fileID: 1879718718}
+    - {fileID: 2800000, guid: d5ffbdc0e79ae40dfa12bb8c6dd0bff8, type: 3}
+    - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+    - {fileID: 709029990}
+    - {fileID: 709029994}
+    - {fileID: 709029993}
+    - {fileID: 709029995}
+    - {fileID: 838305725}
+    - {fileID: 838305727}
+    - {fileID: 838305726}
+    - {fileID: 838305728}
+    - {fileID: 919486634}
+    - {fileID: 919486635}
+    - {fileID: 919486637}
+    - {fileID: 919486636}
+    - {fileID: 919486638}
+    - {fileID: 1250345898}
+    - {fileID: 1018661220}
+    - {fileID: 1018661223}
+    - {fileID: 1018661224}
+    - {fileID: 1037397837}
+    - {fileID: 1037397838}
+    - {fileID: 1037397840}
+    - {fileID: 1037397839}
+    - {fileID: 1037397841}
+    - {fileID: 1069432710}
+    - {fileID: 1069432712}
+    - {fileID: 1116002720}
+    - {fileID: 1116002723}
+    - {fileID: 1116002724}
+    - {fileID: 1176333464}
+    - {fileID: 1176333465}
+    - {fileID: 1176333467}
+    - {fileID: 1176333466}
+    - {fileID: 1176333468}
+    - {fileID: 1190979358}
+    - {fileID: 1190979361}
+    - {fileID: 1190979360}
+    - {fileID: 1190979362}
+    - {fileID: 1214846943}
+    - {fileID: 1214846945}
+    - {fileID: 1214846944}
+    - {fileID: 1214846948}
+    - {fileID: 1646010093}
+    - {fileID: 1250345897}
+    - {fileID: 1250345900}
+    - {fileID: 21300000, guid: d5ffbdc0e79ae40dfa12bb8c6dd0bff8, type: 3}
+    - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 10906, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 245221425}
+    - {fileID: 245221426}
+    - {fileID: 1708395505}
+    - {fileID: 1018661222}
+    - {fileID: 1018661221}
+    - {fileID: 519420028}
+    - {fileID: 519420032}
+    - {fileID: 519420029}
+    - {fileID: 519420030}
+    - {fileID: 519420033}
+    - {fileID: 519420034}
+    - {fileID: 519420035}
+    - {fileID: 543492085}
+    - {fileID: 543492086}
+    - {fileID: 543492089}
+    - {fileID: 543492088}
+    - {fileID: 543492087}
+    - {fileID: 543492090}
+    - {fileID: 1190979359}
+    - {fileID: 1116002721}
+    - {fileID: 557214267}
+    - {fileID: 557214268}
+    - {fileID: 557214269}
+    - {fileID: 557214271}
+    - {fileID: 560027181}
+    - {fileID: 560027184}
+    - {fileID: 560027183}
+    - {fileID: 560027182}
+    - {fileID: 560027185}
+    - {fileID: 565216048}
+    - {fileID: 565216051}
+    - {fileID: 565216050}
+    - {fileID: 565216049}
+    - {fileID: 565216052}
+    - {fileID: 565216053}
+    - {fileID: 1069432711}
+    - {fileID: 1334613756}
+    - {fileID: 2800000, guid: 7b0315efdbbfa475c904b184ffc705ab, type: 3}
+    - {fileID: 26705939}
+    - {fileID: 26705940}
+    - {fileID: 26705942}
+    - {fileID: 26705941}
+    - {fileID: 26705943}
+    - {fileID: 709029991}
+    - {fileID: 87230807}
+    - {fileID: 87230809}
+    - {fileID: 130500678}
+    - {fileID: 21300000, guid: 7b0315efdbbfa475c904b184ffc705ab, type: 3}
+    - {fileID: 519420031}
+    - {fileID: 557214270}
+    - {fileID: 177033148}
+    - {fileID: 177033151}
+    - {fileID: 177033150}
+    - {fileID: 177033152}
+    - {fileID: 1489691189}
+    - {fileID: 245221422}
+    - {fileID: 245221424}
+    - {fileID: 245221423}
+    - {fileID: 1708395504}
+    - {fileID: 21300000, guid: cacf33c64be284fcea7365d932cadd4b, type: 3}
+    - {fileID: 2800000, guid: cacf33c64be284fcea7365d932cadd4b, type: 3}
+    - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  prefabs: []
+--- !u!114 &1472251371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472251368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8714d999c5ae749538494c1347e5a3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 'The Easy Save 3 Manager is required in any scenes which use Easy Save,
+    and is automatically added to your scene when you enter Play mode.
+
+
+    To stop this from automatically being added to your scene, go to ''Window > Easy
+    Save 3 > Settings'' and deselect the ''Auto Add Manager to Scene'' checkbox.'
+--- !u!4 &1472251372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472251368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489691188
 GameObject:
@@ -6636,6 +9553,7 @@ GameObject:
   - component: {fileID: 1489691189}
   - component: {fileID: 1489691191}
   - component: {fileID: 1489691190}
+  - component: {fileID: 1489691192}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6701,6 +9619,212 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489691188}
   m_CullTransparentMesh: 0
+--- !u!114 &1489691192
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489691188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: 6DMPOv7K5EKFGs1uqB0wsg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+    component: {fileID: 1489691189}
+  - name: CanvasRenderer
+    id: c0tuE5UbPkGJ678dv1R88g
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+    component: {fileID: 1489691191}
+  - name: Text
+    id: EChLksAHrEickayGnek9Zw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+    component: {fileID: 1489691190}
+  activeSelfVariable:
+    name: activeSelf
+    id: UnKRxgyBKE62YKryNmwq1w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+  nameVariable:
+    name: name
+    id: zrBR2OXYzEG3C1PNRJ0BAg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+  tagVariable:
+    name: tag
+    id: vTakAn5AwEem91ggK1OPCw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+  layerVariable:
+    name: layer
+    id: ZnZeHHSyPUOR47l9y4zmhg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+  parentVariable:
+    name: parent
+    id: NLsE1JDeokaU4xymwHRelA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1489691188}
+    _autoSave: {fileID: 1489691192}
+  id: Mr1d5X16lUm3b5MO30MLlA
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.4362109, g: 0.6862109, b: 0.9362109, a: 1}
+  transform: {fileID: 1489691189}
+--- !u!1 &1525571939
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 181648, guid: 7f22aeb4593a444b7a3c783dd2b58e8c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525571941}
+  - component: {fileID: 1525571940}
+  m_Layer: 0
+  m_Name: ES2 Auto Save Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1525571940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 11484918, guid: 7f22aeb4593a444b7a3c783dd2b58e8c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525571939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1999142b602a95149b0a62c346aa151e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadEvent: 0
+  saveEvent: 0
+  filePath: AutoSave.es2
+  tag: default
+  encrypt: 0
+  encryptionPassword: f2WYP35djvxP2pdR
+  encryptionType: 0
+  deletePrefabsOnLoad: 0
+  convertPrefabsToSceneObjectsOnImport: 1
+  sceneObjects:
+  - {fileID: 87230810}
+  - {fileID: 130500681}
+  - {fileID: 1214846948}
+  - {fileID: 557214271}
+  - {fileID: 709029995}
+  - {fileID: 26705943}
+  - {fileID: 1250345900}
+  - {fileID: 919486638}
+  - {fileID: 1176333468}
+  - {fileID: 1646010097}
+  - {fileID: 177033152}
+  - {fileID: 1489691192}
+  - {fileID: 1116002724}
+  - {fileID: 1037397841}
+  - {fileID: 543492090}
+  - {fileID: 1190979362}
+  - {fileID: 245221426}
+  - {fileID: 1708395506}
+  - {fileID: 1018661224}
+  - {fileID: 519420035}
+  - {fileID: 560027185}
+  - {fileID: 565216053}
+  - {fileID: 1069432712}
+  - {fileID: 838305728}
+  - {fileID: 0}
+  - {fileID: 1334613758}
+  - {fileID: 1417196684}
+  - {fileID: 1879718721}
+  globalManager: {fileID: 11466620, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+--- !u!4 &1525571941
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 424396, guid: 7f22aeb4593a444b7a3c783dd2b58e8c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525571939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646010092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6712,6 +9836,7 @@ GameObject:
   - component: {fileID: 1646010095}
   - component: {fileID: 1646010094}
   - component: {fileID: 1646010096}
+  - component: {fileID: 1646010097}
   m_Layer: 5
   m_Name: AnnounceText
   m_TagString: Untagged
@@ -6789,6 +9914,143 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1646010094}
+--- !u!114 &1646010097
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646010092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: RectTransform
+    id: EoKODgFPJUKw00nixmb5fg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+    component: {fileID: 1646010093}
+  - name: CanvasRenderer
+    id: GtAGjvn0bUa7LSKargjlSA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+    component: {fileID: 1646010095}
+  - name: Text
+    id: UsDJkY1O0kCjVrTbnKs6OQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+    component: {fileID: 1646010094}
+  - name: AnnounceText
+    id: TRR4e9NjMEqCc4uD52hFvw
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: CCG.AnnounceText, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+    component: {fileID: 1646010096}
+  activeSelfVariable:
+    name: activeSelf
+    id: ea8idOnHg0mG57X9Nbv9vg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+  nameVariable:
+    name: name
+    id: QSqKtI6v5UiK1Mcimuu11w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+  tagVariable:
+    name: tag
+    id: 0oQyxZpqCkyrpNw53B1fvA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+  layerVariable:
+    name: layer
+    id: QtD9f3krhUOAwf3m1aCvVA
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+  parentVariable:
+    name: parent
+    id: jXgWC7Q65ESuQs0SWOnE3g
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1646010092}
+    _autoSave: {fileID: 1646010097}
+  id: X4gJcHuDA0m3b422O6pSLg
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.8388793, g: 0.3388793, b: 0.8388793, a: 1}
+  transform: {fileID: 1646010093}
 --- !u!1 &1708395503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,6 +10060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708395504}
   - component: {fileID: 1708395505}
+  - component: {fileID: 1708395506}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -6864,6 +10127,117 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1708395506
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708395503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: 7WOLyJ9QIkuvGIKFqL1BBg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+    component: {fileID: 1708395504}
+  - name: SpriteRenderer
+    id: 6G2WeV2fQ0KVPA9LVse6KQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+    component: {fileID: 1708395505}
+  activeSelfVariable:
+    name: activeSelf
+    id: mF1mX8Oi0kC0EPFr1Tfyuw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+  nameVariable:
+    name: name
+    id: 7zJv3m7ISUyBvIosCkzIIg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+  tagVariable:
+    name: tag
+    id: eTpnbXFA7kaC0nxH5a9s8w
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+  layerVariable:
+    name: layer
+    id: tlQXhTgBCEmtxmoxqAThxw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+  parentVariable:
+    name: parent
+    id: scs001aZw0SfnBVpYwOALQ
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1708395503}
+    _autoSave: {fileID: 1708395506}
+  id: gbR8iflgS0SYkjYh30yD6Q
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.33780807, g: 0.33780807, b: 0.8378081, a: 1}
+  transform: {fileID: 1708395504}
 --- !u!1 &1879718716
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,6 +10249,7 @@ GameObject:
   - component: {fileID: 1879718720}
   - component: {fileID: 1879718719}
   - component: {fileID: 1879718718}
+  - component: {fileID: 1879718721}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -7604,3 +10979,140 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1879718721
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879718716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableCache: []
+  components:
+  - name: Transform
+    id: 5ofF9Kg710ChQzAgCqASGQ
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+    component: {fileID: 1879718717}
+  - name: Tilemap
+    id: RNH5wBqm30Kio9mces4wgA
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Tilemaps.Tilemap, UnityEngine.TilemapModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+    component: {fileID: 1879718720}
+  - name: TilemapRenderer
+    id: y70QD18q1E1s5gIQKrtlNg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Tilemaps.TilemapRenderer, UnityEngine.TilemapModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+    component: {fileID: 1879718719}
+  - name: TilemapCollider2D
+    id: 1SneBKZNgUqgUMziJptnsg
+    previousID: 
+    isComponent: 1
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 0
+    assemblyQualifiedTypeName: UnityEngine.Tilemaps.TilemapCollider2D, UnityEngine.TilemapModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+    component: {fileID: 1879718718}
+  activeSelfVariable:
+    name: activeSelf
+    id: qowmo0ixrECQPew4BZXBhw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+  nameVariable:
+    name: name
+    id: mQRflc7FkkCNw6VQUkL2dw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+  tagVariable:
+    name: tag
+    id: gZ7I6EUUXkGVySOra0csgw
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+  layerVariable:
+    name: layer
+    id: jQnwrYsHx0y8tJPxDa9QFg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+  parentVariable:
+    name: parent
+    id: 50UDCsPqtESXMXmslNCrvg
+    previousID: 
+    isComponent: 0
+    _selected: 0
+    saveButtonSelected: 0
+    isProperty: 1
+    assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    variableIDs: []
+    gameObject: {fileID: 1879718716}
+    _autoSave: {fileID: 1879718721}
+  id: EJg0oLJ2OE66NzLJJCAelQ
+  prefabID: 
+  isInitialised: 0
+  _selected: 0
+  saveButtonSelected: 0
+  color: {r: 0.3944492, g: 0.89444923, b: 0.3944492, a: 1}
+  transform: {fileID: 1879718717}

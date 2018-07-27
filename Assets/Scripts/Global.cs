@@ -29,9 +29,9 @@ namespace CCG
         /// </summary>
         public static void DeleteAllSaveData()
         {
-            var keys = ES3.GetKeys()
-                          .ToList();
-            keys.ForEach(key => ES3.DeleteKey(key));
+            //var keys = ES3.GetKeys()
+            //              .ToList();
+            //keys.ForEach(key => ES3.DeleteKey(key));
 
             Debug.Log("全セーブデータを削除しました。");
         }
