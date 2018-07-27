@@ -15,11 +15,17 @@ namespace CCG
         #region variables
         [SerializeField]
         private Bands bands = null;
-
+        // アクションボタン
         [SerializeField]
         private Button actionButton = null;
         [SerializeField]
         private Text actionButtonText = null;
+        // 設定ボタン
+        [SerializeField]
+        private Button settingButton = null;
+        // 設定パネル
+        [SerializeField]
+        private SettingPanel settingPanel = null;
 
         [SerializeField]
         private AnnounceText announceText = null;
@@ -40,6 +46,8 @@ namespace CCG
         private void Awake()
         {
             canvasRect = canvas.GetComponent<RectTransform>();
+
+            settingButton.onClick.AddListener(OnClickSettingButton);
 
             InitUI();
         }
@@ -114,7 +122,17 @@ namespace CCG
         #region private methods
         private void InitUI()
         {
+            settingPanel.SetActive(false);
+
             actionButtonText.text = DefaultActionButtonText;
+        }
+
+        /// <summary>
+        /// 設定ボタン押下時
+        /// </summary>
+        private void OnClickSettingButton()
+        {
+            settingPanel.SetActive(!settingPanel.gameObject.activeSelf);
         }
 
         private void OnClickTalkButton(GhostSight.Result result)
