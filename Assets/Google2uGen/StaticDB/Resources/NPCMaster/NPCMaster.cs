@@ -12,15 +12,21 @@ using System.Globalization;
 namespace Google2u
 {
 	[System.Serializable]
-	public class TalkMasterRow : IGoogle2uRow
+	public class NPCMasterRow : IGoogle2uRow
 	{
-		public string _Message;
-		public TalkMasterRow(string __ID, string __Message) 
+		public string _Name;
+		public string _Quest;
+		public string _NotOfferTalk;
+		public string _OfferedTalk;
+		public NPCMasterRow(string __ID, string __Name, string __Quest, string __NotOfferTalk, string __OfferedTalk) 
 		{
-			_Message = __Message.Trim();
+			_Name = __Name.Trim();
+			_Quest = __Quest.Trim();
+			_NotOfferTalk = __NotOfferTalk.Trim();
+			_OfferedTalk = __OfferedTalk.Trim();
 		}
 
-		public int Length { get { return 1; } }
+		public int Length { get { return 4; } }
 
 		public string this[int i]
 		{
@@ -36,7 +42,16 @@ namespace Google2u
 			switch( index )
 			{
 				case 0:
-					ret = _Message.ToString();
+					ret = _Name.ToString();
+					break;
+				case 1:
+					ret = _Quest.ToString();
+					break;
+				case 2:
+					ret = _NotOfferTalk.ToString();
+					break;
+				case 3:
+					ret = _OfferedTalk.ToString();
 					break;
 			}
 
@@ -48,8 +63,17 @@ namespace Google2u
 			var ret = System.String.Empty;
 			switch( colID )
 			{
-				case "Message":
-					ret = _Message.ToString();
+				case "Name":
+					ret = _Name.ToString();
+					break;
+				case "Quest":
+					ret = _Quest.ToString();
+					break;
+				case "NotOfferTalk":
+					ret = _NotOfferTalk.ToString();
+					break;
+				case "OfferedTalk":
+					ret = _OfferedTalk.ToString();
 					break;
 			}
 
@@ -58,35 +82,37 @@ namespace Google2u
 		public override string ToString()
 		{
 			string ret = System.String.Empty;
-			ret += "{" + "Message" + " : " + _Message.ToString() + "} ";
+			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
+			ret += "{" + "Quest" + " : " + _Quest.ToString() + "} ";
+			ret += "{" + "NotOfferTalk" + " : " + _NotOfferTalk.ToString() + "} ";
+			ret += "{" + "OfferedTalk" + " : " + _OfferedTalk.ToString() + "} ";
 			return ret;
 		}
 	}
-	public sealed class TalkMaster : IGoogle2uDB
+	public sealed class NPCMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001, ID_002
+			ID_001
 		};
 		public string [] rowNames = {
-			"ID_001", "ID_002"
+			"ID_001"
 		};
-		public System.Collections.Generic.List<TalkMasterRow> Rows = new System.Collections.Generic.List<TalkMasterRow>();
+		public System.Collections.Generic.List<NPCMasterRow> Rows = new System.Collections.Generic.List<NPCMasterRow>();
 
-		public static TalkMaster Instance
+		public static NPCMaster Instance
 		{
-			get { return NestedTalkMaster.instance; }
+			get { return NestedNPCMaster.instance; }
 		}
 
-		private class NestedTalkMaster
+		private class NestedNPCMaster
 		{
-			static NestedTalkMaster() { }
-			internal static readonly TalkMaster instance = new TalkMaster();
+			static NestedNPCMaster() { }
+			internal static readonly NPCMaster instance = new NPCMaster();
 		}
 
-		private TalkMaster()
+		private NPCMaster()
 		{
-			Rows.Add( new TalkMasterRow("ID_001", "あのぉ…"));
-			Rows.Add( new TalkMasterRow("ID_002", "たのみましたよ！"));
+			Rows.Add( new NPCMasterRow("ID_001", "ダイコンちゃん", "ID_001", "ID_001", "ID_002"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
@@ -113,9 +139,9 @@ namespace Google2u
 			}
 			return ret;
 		}
-		public TalkMasterRow GetRow(rowIds in_RowID)
+		public NPCMasterRow GetRow(rowIds in_RowID)
 		{
-			TalkMasterRow ret = null;
+			NPCMasterRow ret = null;
 			try
 			{
 				ret = Rows[(int)in_RowID];
@@ -126,9 +152,9 @@ namespace Google2u
 			}
 			return ret;
 		}
-		public TalkMasterRow GetRow(string in_RowString)
+		public NPCMasterRow GetRow(string in_RowString)
 		{
-			TalkMasterRow ret = null;
+			NPCMasterRow ret = null;
 			try
 			{
 				ret = Rows[(int)System.Enum.Parse(typeof(rowIds), in_RowString)];

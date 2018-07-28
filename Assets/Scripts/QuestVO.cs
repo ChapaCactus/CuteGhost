@@ -11,7 +11,7 @@ namespace CCG
     public class QuestVO
     {
         #region properties
-        public QuestMaster.rowIds id { get; private set; }
+        public string id { get; private set; }
         public int idInt { get; private set; }
         public string name { get; private set; }
         public string type { get; private set; }
@@ -20,7 +20,7 @@ namespace CCG
         #endregion
 
         #region public methods
-        public static QuestVO Create(QuestMaster.rowIds id)
+        public static QuestVO Create(string id)
         {
             var row = QuestMaster.Instance.GetRow(id);
 
@@ -40,10 +40,9 @@ namespace CCG
         /// <summary>
         /// QuestMasterIdをintに変換する
         /// </summary>
-        private static int ConvertRowIdToInt(QuestMaster.rowIds id)
+        private static int ConvertRowIdToInt(string id)
         {
-            var idString = id.ToString();
-            var number = Regex.Match(idString, @"\d+")
+            var number = Regex.Match(id, @"\d+")
                               .Value;
 
             return int.Parse(number);

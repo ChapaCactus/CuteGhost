@@ -32,7 +32,7 @@ namespace CCG
         /// <summary>
         /// クエストを受領
         /// </summary>
-        public void OfferQuest(QuestMaster.rowIds rowId)
+        public void OfferQuest(string rowId)
         {
             if(offeredQuestList == null)
             {
@@ -65,11 +65,11 @@ namespace CCG
                                .Cast<QuestMaster.rowIds>()
                                .ToList();
 
-            return idValues.Select(id => QuestVO.Create(id))
+            return idValues.Select(id => QuestVO.Create(id.ToString()))
                                 .ToList();
         }
 
-        private void CompleteQuest(QuestMaster.rowIds id)
+        private void CompleteQuest(string id)
         {
             bool alreadyCompleted = completedQuestList.Any(completed => completed.id == id);
             if(alreadyCompleted)
@@ -91,16 +91,16 @@ namespace CCG
             var completedIdList = completedQuestList.Select(quest => quest.id)
                                                     .ToList();
             
-            ES3.Save<List<QuestMaster.rowIds>>(OfferedQuestListSaveKey, offeredIdList);
-            ES3.Save<List<QuestMaster.rowIds>>(CompletedQuestListSaveKey, completedIdList);
+            ES3.Save<List<string>>(OfferedQuestListSaveKey, offeredIdList);
+            ES3.Save<List<string>>(CompletedQuestListSaveKey, completedIdList);
         }
 
         private void Load()
         {
-            var offeredIdList = ES3.Load<List<QuestMaster.rowIds>>(OfferedQuestListSaveKey
-                                                                   , defaultValue: new List<QuestMaster.rowIds>());
-            var completedIdList = ES3.Load<List<QuestMaster.rowIds>>(CompletedQuestListSaveKey
-                                                                     , defaultValue: new List<QuestMaster.rowIds>());
+            var offeredIdList = ES3.Load<List<string>>(OfferedQuestListSaveKey
+                                                                   , defaultValue: new List<string>());
+            var completedIdList = ES3.Load<List<string>>(CompletedQuestListSaveKey
+                                                                     , defaultValue: new List<string>());
 
             offeredQuestList = offeredIdList.Select(id => QuestVO.Create(id))
                                             .ToList();

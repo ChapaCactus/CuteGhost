@@ -13,7 +13,7 @@ namespace CCG
     {
         #region variables
         [SerializeField]
-        private QuestMaster.rowIds questId = QuestMaster.rowIds.ID_001;
+        private NPCMaster.rowIds id = NPCMaster.rowIds.ID_001;
 
         [SerializeField]
         private Transform markPosition = null;
@@ -25,7 +25,12 @@ namespace CCG
         #endregion
 
         #region properties
+        public string Name { get { return MasterData._Name; } }
+        public string QuestID { get { return MasterData._Quest; } }
+
         public SpriteRenderer Mark { get; private set; }
+
+        private NPCMasterRow MasterData { get; set; }
         // アニメーション
         private Coroutine Animation { get; set; } = null;
         #endregion
@@ -33,11 +38,16 @@ namespace CCG
         #region unity callback
         private void Awake()
         {
+            MasterData = NPCMaster.Instance.GetRow(id);
+
             // マークセット&初期化
             var prefab = Resources.Load("Prefabs/Effect/ExclamationMark") as GameObject;
             var mark = Instantiate(prefab, null).GetComponent<SpriteRenderer>();
             SetMark(mark);
             ShowMark(false);
+
+            // GameObject名変更
+            gameObject.name = $"NPC [{Name}]";
         }
 
         private void Start()
@@ -50,7 +60,7 @@ namespace CCG
         #region public methods
         public void Talk()
         {
-            var questRow = QuestMaster.Instance.GetRow(questId);
+            var questRow = QuestMaster.Instance.GetRow(QuestID);
             var talkId = questRow._Talk;
             var talkRow = TalkMaster.Instance.GetRow(talkId);
 
@@ -85,10 +95,10 @@ namespace CCG
         #region private methods
         private void OnEndTalk()
         {
-            var questRow = QuestMaster.Instance.GetRow(questId);
+            var questRow = QuestMaster.Instance.GetRow(QuestID);
 
             // クエスト受領
-            Global.questManager.OfferQuest(questId);
+            Global.questManager.OfferQuest(QuestID);
 
             // 受領アナウンス再生
             var questTitle = questRow._Name;
