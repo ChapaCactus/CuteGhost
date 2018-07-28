@@ -48,7 +48,7 @@ namespace CCG
 
             public void Next()
             {
-                if(messages == null)
+                if (messages == null)
                 {
                     return;
                 }
@@ -135,6 +135,7 @@ namespace CCG
                 if (talk.state == Talk.State.End)
                 {
                     onEndTalk.SafeCall();
+                    talk = null;
                 }
             }
         }
@@ -153,7 +154,7 @@ namespace CCG
 
         public bool IsTalking()
         {
-            if(talk == null)
+            if (talk == null)
             {
                 return false;
             }
