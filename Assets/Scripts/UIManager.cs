@@ -9,7 +9,7 @@ namespace CCG
     public class UIManager : SingletonMonoBehaviour<UIManager>
     {
         #region constants
-        private const string DefaultActionButtonText = "ACT";
+        private const string DefaultActionButtonText = "?";
         #endregion
 
         #region variables
@@ -54,6 +54,9 @@ namespace CCG
 
             IsLeftButtonDown = false;
             IsRightButtonDown = false;
+            // アクションボタン初期化
+            SetActionButtonText(DefaultActionButtonText);
+            actionButton.interactable = false;
 
             InitUI();
         }
@@ -88,6 +91,8 @@ namespace CCG
         public void OnInsightTarget()
         {
             SetActionButtonText("Talk");
+            actionButton.interactable = true;
+
             actionButton.onClick.RemoveAllListeners();
             actionButton.onClick.AddListener(() =>
             {
@@ -98,6 +103,8 @@ namespace CCG
         public void OnExitInsightTarget()
         {
             SetActionButtonText(DefaultActionButtonText);
+            actionButton.interactable = false;
+
             actionButton.onClick.RemoveAllListeners();
         }
 
