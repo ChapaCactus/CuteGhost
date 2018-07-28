@@ -111,9 +111,14 @@ namespace CCG
         #region private methods
         private void OnEndTalk()
         {
-            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
+            if(QuestID == "None")
+            {
+                // クエストを所持していないNPCなら何もしない
+                return;
+            }
 
             // クエストを受けていなければ受領
+            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
             if (!isQuestOffered)
             {
                 // クエスト受領
