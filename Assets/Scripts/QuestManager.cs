@@ -30,6 +30,14 @@ namespace CCG
         }
 
         /// <summary>
+        /// 受領済みクエストか調べる
+        /// </summary>
+        public bool CheckIsOfferedQuest(string id)
+        {
+            return offeredQuestList.Any(offered => offered.id == id);
+        }
+
+        /// <summary>
         /// クエストを受領
         /// </summary>
         public void OfferQuest(string rowId)

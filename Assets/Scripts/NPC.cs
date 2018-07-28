@@ -60,10 +60,11 @@ namespace CCG
         #region public methods
         public void Talk()
         {
-            var questRow = QuestMaster.Instance.GetRow(QuestID);
-            var talkId = questRow._Talk;
-            var talkRow = TalkMaster.Instance.GetRow(talkId);
-
+            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
+            // 受領済状態の会話 or 未受領状態の会話IDを取得
+            var talkID = isQuestOffered ? MasterData._OfferedTalk : MasterData._NotOfferTalk;
+            var talkRow = TalkMaster.Instance.GetRow(talkID);
+            // 会話開始
             TalkManager.I.StartTalk(gameObject, talkRow, OnEndTalk);
         }
 
@@ -95,15 +96,26 @@ namespace CCG
         #region private methods
         private void OnEndTalk()
         {
-            var questRow = QuestMaster.Instance.GetRow(QuestID);
+            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
 
-            // クエスト受領
-            Global.questManager.OfferQuest(QuestID);
+            // クエストを受けていなければ受領
+            if (!isQuestOffered)
+            {
+                // クエスト受領
+                Global.questManager.OfferQuest(QuestID);
 
-            // 受領アナウンス再生
-            var questTitle = questRow._Name;
-            var questTitleCombine = $"クエスト「{questTitle}」\nを受領した。";
-            UIManager.I.ShowAnnounceMessage(questTitleCombine);
+                // 受領アナウンス再生
+                var questRow = QuestMaster.Instance.GetRow(QuestID);
+                var questTitle = questRow._Name;
+                var questTitleCombine = $"クエスト「{questTitle}」\nを受領した。";
+                UIManager.I.ShowAnnounceMessage(questTitleCombine);
+            }
+            else
+            {
+                // 既にクエストを受けていれば何もしない
+                // TODO クエストクリアチェック？
+                // TODO クエスト詳細を開く？
+            }
         }
 
         private void PlayIdleAnimation()
