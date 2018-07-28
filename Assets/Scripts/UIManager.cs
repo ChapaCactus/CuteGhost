@@ -40,6 +40,9 @@ namespace CCG
 
         #region properties
         public RectTransform canvasRect { get; private set; }
+
+        public bool IsLeftButtonDown { get; private set; }
+        public bool IsRightButtonDown { get; private set; }
         #endregion
 
         #region unity callbacks
@@ -49,6 +52,9 @@ namespace CCG
 
             settingButton.onClick.AddListener(OnClickSettingButton);
 
+            IsLeftButtonDown = false;
+            IsRightButtonDown = false;
+
             InitUI();
         }
         #endregion
@@ -57,6 +63,26 @@ namespace CCG
         public void ShowAnnounceMessage(string message, float fadeDelay = 1)
         {
             announceText.ShowMessage(message, fadeDelay);
+        }
+
+        public void OnLeftButtonDown()
+        {
+            IsLeftButtonDown = true;
+        }
+
+        public void OnLeftButtonUp()
+        {
+            IsLeftButtonDown = false;
+        }
+
+        public void OnRightButtonDown()
+        {
+            IsRightButtonDown = true;
+        }
+
+        public void OnRightButtonUp()
+        {
+            IsRightButtonDown = false;
         }
 
         public void OnInsightTarget()

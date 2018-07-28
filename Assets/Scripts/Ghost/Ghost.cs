@@ -39,7 +39,9 @@ namespace CCG
                 return;
             }
 
-            var horizontal = Input.GetAxisRaw("Horizontal");
+            var horizontal = 0;
+            horizontal = UIManager.I.IsLeftButtonDown ? -1 : horizontal;
+            horizontal = UIManager.I.IsRightButtonDown ? 1 : horizontal;
             var speed = (horizontal * MoveBuff);
             transform.localPosition += new Vector3(speed, 0, 0);
 
