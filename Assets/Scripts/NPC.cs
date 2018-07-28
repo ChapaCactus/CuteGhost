@@ -9,7 +9,7 @@ using Google2u;
 
 namespace CCG
 {
-    public class NPC : MonoBehaviour
+    public class NPC : MonoBehaviour, IInsightable
     {
         #region variables
         [SerializeField]
@@ -58,6 +58,21 @@ namespace CCG
         #endregion
 
         #region public methods
+        public void Action()
+        {
+            Talk();
+        }
+
+        public void OnInsightEnter()
+        {
+            ShowMark(true);
+        }
+
+        public void OnInsightExit()
+        {
+            ShowMark(false);
+        }
+
         public void Talk()
         {
             var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);

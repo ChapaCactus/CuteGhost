@@ -58,16 +58,22 @@ namespace CCG
         #endregion
 
         #region private methods
-        private void OnInsightEnter(GhostSight.Result result)
+        private void OnInsightEnter(IInsightable insightable)
         {
-            UIManager.I.OnInsightTarget(result);
+            insightable.OnInsightEnter();
+
+            Global.SetInsightTarget(insightable);
+            UIManager.I.OnInsightTarget();
 
             Debug.Log("OnInsightEnter");
         }
 
-        private void OnInsightExit(GhostSight.Result result)
+        private void OnInsightExit(IInsightable insightable)
         {
-            UIManager.I.OnExitInsightTarget(result);
+            insightable.OnInsightExit();
+
+            Global.SetInsightTarget(null);
+            UIManager.I.OnExitInsightTarget();
 
             Debug.Log("OnInsightExit");
         }

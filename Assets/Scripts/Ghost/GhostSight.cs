@@ -14,18 +14,6 @@ namespace CCG
         {
             public List<GameObject> list { get; set; } = new List<GameObject>();
         }
-
-        public class Result
-        {
-            public TargetTag targetTag { get; private set; }
-            public GameObject target { get; private set; }
-
-            public Result(TargetTag targetTag, GameObject target)
-            {
-                this.targetTag = targetTag;
-                this.target = target;
-            }
-        }
         #endregion
 
         #region enums
@@ -41,8 +29,8 @@ namespace CCG
         public Dictionary<TargetTag, Container> npcDic { get; private set; }
 
         private CircleCollider2D collider2d { get; set; }
-        private Action<Result> onInsightEnter { get; set; }
-        private Action<Result> onInsightExit { get; set; }
+        private Action<IInsightable> onInsightEnter { get; set; }
+        private Action<IInsightable> onInsightExit { get; set; }
         #endregion
 
         #region unity callbacks
@@ -83,8 +71,8 @@ namespace CCG
             if (!isFound)
             {
                 targets.Add(collision.gameObject);
-                var result = new Result(tag, collision.gameObject);
-                onInsightEnter(result);
+                var target = collision.GetComponent<IInsightable>();
+                onInsightEnter(target);
             }
         }
 
@@ -107,14 +95,14 @@ namespace CCG
             if (isFound)
             {
                 targets.Remove(collision.gameObject);
-                var result = new Result(tag, collision.gameObject);
-                onInsightExit(result);
+                var target = collision.GetComponent<IInsightable>();
+                onInsightExit(target);
             }
         }
         #endregion
 
         #region public methods
-        public void SetCallbacks(Action<Result> onInsightEnter, Action<Result> onInsightExit)
+        public void SetCallbacks(Action<IInsightable> onInsightEnter, Action<IInsightable> onInsightExit)
         {
             this.onInsightEnter = onInsightEnter;
             this.onInsightExit = onInsightExit;

@@ -59,38 +59,20 @@ namespace CCG
             announceText.ShowMessage(message, fadeDelay);
         }
 
-        public void OnInsightTarget(GhostSight.Result result)
+        public void OnInsightTarget()
         {
-            switch (result.targetTag)
+            SetActionButtonText("Talk");
+            actionButton.onClick.RemoveAllListeners();
+            actionButton.onClick.AddListener(() =>
             {
-                case GhostSight.TargetTag.NPC:
-                    // NPC表示設定
-                    var npc  = result.target.GetComponent<NPC>();
-                    npc.ShowMark(true);
-
-                    SetActionButtonText("Talk");
-                    actionButton.onClick.RemoveAllListeners();
-                    actionButton.onClick.AddListener(() =>
-                    {
-                        OnClickTalkButton(result);
-                    });
-                    break;
-            }
+                OnClickTalkButton();
+            });
         }
 
-        public void OnExitInsightTarget(GhostSight.Result result)
+        public void OnExitInsightTarget()
         {
             SetActionButtonText(DefaultActionButtonText);
             actionButton.onClick.RemoveAllListeners();
-
-            switch(result.targetTag)
-            {
-                case GhostSight.TargetTag.NPC:
-                    // NPC表示設定
-                    var npc = result.target.GetComponent<NPC>();
-                    npc.ShowMark(false);
-                    break;
-            }
         }
 
         public void SetActionButtonText(string text)
@@ -135,7 +117,7 @@ namespace CCG
             settingPanel.SetActive(!settingPanel.gameObject.activeSelf);
         }
 
-        private void OnClickTalkButton(GhostSight.Result result)
+        private void OnClickTalkButton()
         {
             // 会話中なら読み進める
             if (TalkManager.I.IsTalking())
@@ -145,8 +127,7 @@ namespace CCG
             else
             {
                 // 会話開始
-                var npc = result.target.GetComponent<NPC>();
-                npc.Talk();
+                Global.InsightTarget.Action();
             }
         }
         #endregion

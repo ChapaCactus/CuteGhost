@@ -11,6 +11,8 @@ namespace CCG
     {
         #region properties
         public static QuestManager questManager { get; private set; }
+
+        public static IInsightable InsightTarget { get; private set; }
         #endregion
 
         #region public methods
@@ -18,10 +20,17 @@ namespace CCG
         {
             questManager = new QuestManager();
             questManager.Init();
+
+            SetInsightTarget(null);
         }
 
         public static void StartGame()
         {
+        }
+
+        public static void SetInsightTarget(IInsightable insighted)
+        {
+            InsightTarget = insighted;
         }
 
         /// <summary>
