@@ -207,8 +207,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -220,8 +222,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -233,8 +237,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -247,8 +253,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -260,8 +268,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -273,8 +283,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -286,8 +298,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -299,8 +313,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -310,8 +326,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.27647728, g: 0.7764773, b: 0.27647728, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.27647728
+    g: 0.7764773
+    b: 0.27647728
+    a: 1
   transform: {fileID: 26705940}
 --- !u!1 &87230807
 GameObject:
@@ -372,8 +394,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -385,8 +409,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.TalkManager, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -399,8 +425,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -412,8 +440,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -425,8 +455,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -438,8 +470,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -451,8 +485,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -462,8 +498,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.3590863, g: 0.6090863, b: 0.8590863, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.3590863
+    g: 0.6090863
+    b: 0.8590863
+    a: 1
   transform: {fileID: 87230809}
 --- !u!1 &130500678
 GameObject:
@@ -534,8 +576,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -547,8 +591,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.UIManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     variableIDs: []
@@ -561,8 +607,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -574,8 +622,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -587,8 +637,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -600,8 +652,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -613,8 +667,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -624,8 +680,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.52177274, g: 0.27177277, b: 0.77177274, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.52177274
+    g: 0.27177277
+    b: 0.77177274
+    a: 1
   transform: {fileID: 130500680}
 --- !u!1 &177033147
 GameObject:
@@ -758,8 +820,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -771,8 +835,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -784,8 +850,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -797,8 +865,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -811,8 +881,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -824,8 +896,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -837,8 +911,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -850,8 +926,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -863,8 +941,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -874,8 +954,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.89466214, g: 0.62505436, b: 0.39858374, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.89466214
+    g: 0.62505436
+    b: 0.39858374
+    a: 1
   transform: {fileID: 177033148}
 --- !u!1 &245221422
 GameObject:
@@ -962,8 +1048,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -975,8 +1063,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.Ghost, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     variableIDs: []
@@ -988,8 +1078,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Rigidbody2D, UnityEngine.Physics2DModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1002,8 +1094,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1015,8 +1109,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1028,8 +1124,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1041,8 +1139,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1054,8 +1154,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1065,8 +1167,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.41298524, g: 0.9129852, b: 0.41298524, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.41298524
+    g: 0.9129852
+    b: 0.41298524
+    a: 1
   transform: {fileID: 245221424}
 --- !u!1 &519420028
 GameObject:
@@ -1242,8 +1350,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1255,8 +1365,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Camera, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1268,8 +1380,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.AudioListener, UnityEngine.AudioModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1281,8 +1395,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2D, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1294,8 +1410,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2DPixelPerfect,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1307,8 +1425,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: Com.LuisPedroFonseca.ProCamera2D.ProCamera2DForwardFocus,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1321,8 +1441,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1334,8 +1456,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1347,8 +1471,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1360,8 +1486,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1373,8 +1501,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1384,8 +1514,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.347336, g: 0.847336, b: 0.847336, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.347336
+    g: 0.847336
+    b: 0.847336
+    a: 1
   transform: {fileID: 519420032}
 --- !u!1 &543492085
 GameObject:
@@ -1518,8 +1654,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1531,8 +1669,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1544,8 +1684,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1557,8 +1699,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1571,8 +1715,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1584,8 +1730,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1597,8 +1745,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1610,8 +1760,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1623,8 +1775,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1634,8 +1788,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.7537845, g: 0.25378448, b: 0.5037845, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.7537845
+    g: 0.25378448
+    b: 0.5037845
+    a: 1
   transform: {fileID: 543492086}
 --- !u!1 &557214267
 GameObject:
@@ -1738,8 +1898,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1751,8 +1913,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Camera, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1764,8 +1928,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.AudioListener, UnityEngine.AudioModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1778,8 +1944,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1791,8 +1959,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1804,8 +1974,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1817,8 +1989,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1830,8 +2004,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1841,8 +2017,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.80915505, g: 0.30915505, b: 0.55915505, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.80915505
+    g: 0.30915505
+    b: 0.55915505
+    a: 1
   transform: {fileID: 557214268}
 --- !u!1 &560027181
 GameObject:
@@ -1925,8 +2107,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1938,8 +2122,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.EventSystems.EventSystem, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1951,8 +2137,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.EventSystems.StandaloneInputModule, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -1965,8 +2153,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1978,8 +2168,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -1991,8 +2183,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2004,8 +2198,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2017,8 +2213,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2028,8 +2226,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.79337984, g: 0.29337984, b: 0.79337984, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.79337984
+    g: 0.29337984
+    b: 0.79337984
+    a: 1
   transform: {fileID: 560027184}
 --- !u!1 &565216048
 GameObject:
@@ -2146,7 +2350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76981503cacba42c798c7994461ce41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questId: 0
+  id: 0
   markPosition: {fileID: 1069432711}
   spriteRenderer: {fileID: 565216050}
   spriteSetting: {fileID: 11400000, guid: 56d640453b3454261b23cb37d631e437, type: 2}
@@ -2168,8 +2372,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2181,8 +2387,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2194,8 +2402,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.BoxCollider2D, UnityEngine.Physics2DModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2207,8 +2417,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.NPC, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     variableIDs: []
@@ -2221,8 +2433,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2234,8 +2448,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2247,8 +2463,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2260,8 +2478,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2273,8 +2493,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2284,8 +2506,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.93320596, g: 0.6635981, b: 0.43712753, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.93320596
+    g: 0.6635981
+    b: 0.43712753
+    a: 1
   transform: {fileID: 565216051}
 --- !u!1 &709029990
 GameObject:
@@ -2318,7 +2546,7 @@ RectTransform:
   m_Children:
   - {fileID: 26705940}
   m_Father: {fileID: 1214846947}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2418,8 +2646,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2431,8 +2661,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2444,8 +2676,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2457,8 +2691,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2471,8 +2707,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2484,8 +2722,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2497,8 +2737,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2510,8 +2752,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2523,8 +2767,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2534,8 +2780,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.81053513, g: 0.31053513, b: 0.31053513, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.81053513
+    g: 0.31053513
+    b: 0.31053513
+    a: 1
   transform: {fileID: 709029991}
 --- !u!1 &838305725
 GameObject:
@@ -2596,8 +2848,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2609,8 +2863,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.GameController, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2623,8 +2879,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2636,8 +2894,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2649,8 +2909,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2662,8 +2924,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2675,8 +2939,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2686,8 +2952,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.7249044, g: 0.47490445, b: 0.9749044, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.7249044
+    g: 0.47490445
+    b: 0.9749044
+    a: 1
   transform: {fileID: 838305727}
 --- !u!1 &919486634
 GameObject:
@@ -2777,8 +3049,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2790,8 +3064,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2803,8 +3079,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2817,8 +3095,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2830,8 +3110,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2843,8 +3125,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2856,8 +3140,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2869,8 +3155,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -2880,8 +3168,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.9298451, g: 0.8906294, b: 0.43768826, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.9298451
+    g: 0.8906294
+    b: 0.43768826
+    a: 1
   transform: {fileID: 919486635}
 --- !u!1 &1018661220
 GameObject:
@@ -2958,8 +3252,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2971,8 +3267,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CircleCollider2D, UnityEngine.Physics2DModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -2984,8 +3282,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.GhostSight, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     variableIDs: []
@@ -2998,8 +3298,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3011,8 +3313,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3024,8 +3328,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3037,8 +3343,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3050,8 +3358,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3061,8 +3371,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.75063384, g: 0.71141815, b: 0.25847697, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.75063384
+    g: 0.71141815
+    b: 0.25847697
+    a: 1
   transform: {fileID: 1018661221}
 --- !u!1 &1037397837
 GameObject:
@@ -3152,8 +3468,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3165,8 +3483,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3178,8 +3498,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3192,8 +3514,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3205,8 +3529,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3218,8 +3544,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3231,8 +3559,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3244,8 +3574,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3255,8 +3587,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.32352537, g: 0.82352537, b: 0.57352537, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.32352537
+    g: 0.82352537
+    b: 0.57352537
+    a: 1
   transform: {fileID: 1037397838}
 --- !u!1 &1069432710
 GameObject:
@@ -3305,8 +3643,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3319,8 +3659,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3332,8 +3674,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3345,8 +3689,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3358,8 +3704,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3371,8 +3719,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3382,8 +3732,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.3798226, g: 0.6298226, b: 0.8798226, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.3798226
+    g: 0.6298226
+    b: 0.8798226
+    a: 1
   transform: {fileID: 1069432711}
 --- !u!1 &1116002720
 GameObject:
@@ -3460,8 +3816,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3473,8 +3831,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3486,8 +3846,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.SettingPanel, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3500,8 +3862,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3513,8 +3877,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3526,8 +3892,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3539,8 +3907,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3552,8 +3922,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3563,8 +3935,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.6750004, g: 0.42500046, b: 0.9250004, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.6750004
+    g: 0.42500046
+    b: 0.9250004
+    a: 1
   transform: {fileID: 1116002721}
 --- !u!1 &1176333464
 GameObject:
@@ -3654,8 +4032,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3667,8 +4047,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3680,8 +4062,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3694,8 +4078,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3707,8 +4093,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3720,8 +4108,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3733,8 +4123,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3746,8 +4138,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3757,8 +4151,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.33868128, g: 0.8386813, b: 0.8386813, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.33868128
+    g: 0.8386813
+    b: 0.8386813
+    a: 1
   transform: {fileID: 1176333465}
 --- !u!1 &1190979358
 GameObject:
@@ -3854,8 +4254,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3867,8 +4269,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3880,8 +4284,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -3894,8 +4300,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3907,8 +4315,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3920,8 +4330,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3933,8 +4345,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3946,8 +4360,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -3957,8 +4373,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.955267, g: 0.455267, b: 0.455267, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.955267
+    g: 0.455267
+    b: 0.455267
+    a: 1
   transform: {fileID: 1190979359}
 --- !u!1 &1214846943
 GameObject:
@@ -4047,8 +4469,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 557214268}
-  - {fileID: 709029991}
   - {fileID: 1250345898}
+  - {fileID: 709029991}
   - {fileID: 1646010093}
   - {fileID: 177033148}
   - {fileID: 1116002721}
@@ -4078,8 +4500,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -4091,8 +4515,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Canvas, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -4104,8 +4530,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.CanvasScaler, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -4117,8 +4545,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.GraphicRaycaster, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -4131,8 +4561,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4144,8 +4576,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4157,8 +4591,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4170,8 +4606,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4183,8 +4621,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4194,8 +4634,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.4723809, g: 0.9723809, b: 0.7223809, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.4723809
+    g: 0.9723809
+    b: 0.7223809
+    a: 1
   transform: {fileID: 1214846947}
 --- !u!1 &1250345897
 GameObject:
@@ -4227,7 +4673,7 @@ RectTransform:
   - {fileID: 919486635}
   - {fileID: 1176333465}
   m_Father: {fileID: 1214846947}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4265,8 +4711,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -4278,8 +4726,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.Bands, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     variableIDs: []
@@ -4292,8 +4742,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4305,8 +4757,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4318,8 +4772,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4331,8 +4787,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4344,8 +4802,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -4355,8 +4815,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.35301092, g: 0.35301092, b: 0.8530109, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.35301092
+    g: 0.35301092
+    b: 0.8530109
+    a: 1
   transform: {fileID: 1250345898}
 --- !u!1 &1334613754
 GameObject:
@@ -8997,8 +9463,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9010,8 +9478,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9023,8 +9493,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.ParticleSystemRenderer, UnityEngine.ParticleSystemModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9037,8 +9509,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9050,8 +9524,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9063,8 +9539,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9076,8 +9554,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9089,8 +9569,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9100,8 +9582,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.9372712, g: 0.43727118, b: 0.6872712, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.9372712
+    g: 0.43727118
+    b: 0.6872712
+    a: 1
   transform: {fileID: 1334613757}
 --- !u!1 &1417196681
 GameObject:
@@ -9163,8 +9651,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9176,8 +9666,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Grid, UnityEngine.GridModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9190,8 +9682,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9203,8 +9697,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9216,8 +9712,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9229,8 +9727,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9242,8 +9742,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9253,8 +9755,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.79839504, g: 0.29839504, b: 0.29839504, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.79839504
+    g: 0.29839504
+    b: 0.29839504
+    a: 1
   transform: {fileID: 1417196683}
 --- !u!1 &1472251368
 GameObject:
@@ -9319,19 +9827,19 @@ MonoBehaviour:
   openReferences: 0
   openPrefabs: 0
   idRef:
-    _Keys: []
+    _Keys: 
     _Values:
     - {fileID: 11500000, guid: 3504d5775ff7142d9aa7af3452c9bf48, type: 3}
     - {fileID: 11400000, guid: 2c50d3c468e3f461fa78a895489d5529, type: 2}
     - {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
-    - {fileID: 181648, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
+    - {fileID: 0}
     - {fileID: 11500000, guid: d63c10bc77a21415c809281377e164df, type: 3}
     - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
     - {fileID: 11400000, guid: 56d640453b3454261b23cb37d631e437, type: 2}
     - {fileID: 11500000, guid: bffcfedf1d1214872bc8e3ea98b9dfa8, type: 3}
-    - {fileID: 11500000, guid: 6f55a09c14c6ffe4db52465bd2a4eed8, type: 3}
+    - {fileID: 0}
     - {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
-    - {fileID: 11484918, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
+    - {fileID: 0}
     - {fileID: 11500000, guid: bbc22c1c157e743df9fec93bc19fb23d, type: 3}
     - {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
     - {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -9344,19 +9852,19 @@ MonoBehaviour:
     - {fileID: 21300000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
     - {fileID: 2800000, guid: f9b5875de73f0405299a7dec3868521a, type: 3}
     - {fileID: 11500000, guid: 17577239430844efcbdda516df8c1f8e, type: 3}
-    - {fileID: 11500000, guid: 48ff16d2ac3a9c74b838a9c89b316154, type: 3}
+    - {fileID: 0}
     - {fileID: 11500000, guid: 7c28313ae8ef748b48ea32caef20ac19, type: 3}
-    - {fileID: 424396, guid: 7f22aeb4593a444b7a3c783dd2b58e8c, type: 2}
-    - {fileID: 478526, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 11500000, guid: 104299572f2fc416c8ff97ac4c0ceb40, type: 3}
-    - {fileID: 11466620, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 0}
     - {fileID: 11500000, guid: 02a8cd769f9ab46ff96c84ba466c8a29, type: 3}
     - {fileID: 21300000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
     - {fileID: 2800000, guid: 3498175e7e4834fc8b9e502ba7a73b94, type: 3}
     - {fileID: 2800000, guid: 67c8808fdefd0477fa15756c5b37b2bc, type: 3}
     - {fileID: 11500000, guid: 76981503cacba42c798c7994461ce41c, type: 3}
-    - {fileID: 11500000, guid: 1999142b602a95149b0a62c346aa151e, type: 3}
-    - {fileID: 129910, guid: b526f529a8c9147ff9f63024e8ef2144, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 11500000, guid: 12cc26b60e8ec4d76abe659a2eab79de, type: 3}
     - {fileID: 1334613754}
     - {fileID: 1334613757}
@@ -9637,8 +10145,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9650,8 +10160,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9663,8 +10175,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9677,8 +10191,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9690,8 +10206,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9703,8 +10221,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9716,8 +10236,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9729,8 +10251,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9740,8 +10264,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.4362109, g: 0.6862109, b: 0.9362109, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.4362109
+    g: 0.6862109
+    b: 0.9362109
+    a: 1
   transform: {fileID: 1489691189}
 --- !u!1 &1525571939
 GameObject:
@@ -9932,8 +10462,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.RectTransform, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9945,8 +10477,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9958,8 +10492,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9971,8 +10507,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: CCG.AnnounceText, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -9985,8 +10523,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -9998,8 +10538,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10011,8 +10553,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10024,8 +10568,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10037,8 +10583,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10048,8 +10596,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.8388793, g: 0.3388793, b: 0.8388793, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.8388793
+    g: 0.3388793
+    b: 0.8388793
+    a: 1
   transform: {fileID: 1646010093}
 --- !u!1 &1708395503
 GameObject:
@@ -10145,8 +10699,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -10158,8 +10714,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -10172,8 +10730,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10185,8 +10745,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10198,8 +10760,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10211,8 +10775,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10224,8 +10790,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -10235,8 +10803,14 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.33780807, g: 0.33780807, b: 0.8378081, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.33780807
+    g: 0.33780807
+    b: 0.8378081
+    a: 1
   transform: {fileID: 1708395504}
 --- !u!1 &1879718716
 GameObject:
@@ -10997,8 +11571,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -11010,8 +11586,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Tilemaps.Tilemap, UnityEngine.TilemapModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -11023,8 +11601,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Tilemaps.TilemapRenderer, UnityEngine.TilemapModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -11036,8 +11616,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 1
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 0
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: UnityEngine.Tilemaps.TilemapCollider2D, UnityEngine.TilemapModule,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     variableIDs: []
@@ -11050,8 +11632,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -11063,8 +11647,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -11076,8 +11662,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -11089,8 +11677,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -11102,8 +11692,10 @@ MonoBehaviour:
     previousID: 
     isComponent: 0
     _selected: 0
+    <selectionChanged>k__BackingField: 0
     saveButtonSelected: 0
     isProperty: 1
+    <buttonSelectionChanged>k__BackingField: 0
     assemblyQualifiedTypeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
     variableIDs: []
@@ -11113,6 +11705,12 @@ MonoBehaviour:
   prefabID: 
   isInitialised: 0
   _selected: 0
+  <selectionChanged>k__BackingField: 0
   saveButtonSelected: 0
-  color: {r: 0.3944492, g: 0.89444923, b: 0.3944492, a: 1}
+  <buttonSelectionChanged>k__BackingField: 0
+  color:
+    r: 0.3944492
+    g: 0.89444923
+    b: 0.3944492
+    a: 1
   transform: {fileID: 1879718717}
