@@ -20,8 +20,9 @@ namespace CCG
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public Enemy()
+        public Enemy(CharacterStatus status)
         {
+            this.status = status;
         }
 
         public void Damage(int damage)

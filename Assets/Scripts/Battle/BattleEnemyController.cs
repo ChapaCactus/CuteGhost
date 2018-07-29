@@ -35,7 +35,11 @@ namespace CCG
 
         public void OnTap(Gesture gesture)
         {
-            Debug.Log("OnTap");
+            if(Enemy == null)
+            {
+                Debug.Log("Not Set Enemy.");
+                return;
+            }
 
             BattleSceneController.I.OnClickEnemy(Enemy);
         }

@@ -22,7 +22,9 @@ namespace CCG
         public static void Init()
         {
             Player = LoadPlayerData();
-            UIManager.I.SetStatusPanel(Player.Status);
+
+            BattleManager = new BattleManager();
+            BattleManager.Init();
 
             QuestManager = new QuestManager();
             QuestManager.Init();

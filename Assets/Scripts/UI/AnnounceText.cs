@@ -20,10 +20,6 @@ namespace CCG
         #endregion
 
         #region unity callbacks
-        private void Awake()
-        {
-            SetVisible(false);
-        }
         #endregion
 
         #region public methods

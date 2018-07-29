@@ -368,7 +368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64492822
 GameObject:
@@ -559,7 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2c2db74a92d4080bd93008f96b4d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quickTap: {fileID: 106286655}
 --- !u!114 &106286655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1169075929
 MonoBehaviour:
@@ -1031,6 +1030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd6b013e866743c19ceed5fadad4419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebugMode: 1
+  battleEnemies:
+  - {fileID: 2082248705}
+  - {fileID: 2101801961}
+  - {fileID: 106286654}
 --- !u!1 &1394722868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,8 +1044,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1394722870}
   - component: {fileID: 1394722869}
+  - component: {fileID: 1394722871}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: BattleUIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,8 +1075,20 @@ Transform:
   m_Children:
   - {fileID: 10172576}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394722871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394722868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8892238fc504d33a8fc2d937008573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  announceText: {fileID: 1935211610}
 --- !u!1 &1699993250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2c2db74a92d4080bd93008f96b4d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quickTap: {fileID: 2082248703}
 --- !u!1 &2101801957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2c2db74a92d4080bd93008f96b4d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quickTap: {fileID: 2101801962}
 --- !u!114 &2101801962
 MonoBehaviour:
   m_ObjectHideFlags: 0
