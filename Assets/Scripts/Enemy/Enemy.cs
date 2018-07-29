@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class Enemy : IBattleCharacter
+    public class Enemy : IFightable
     {
         #region variables
         private CharacterStatus status;

@@ -13,10 +13,10 @@ namespace CCG
         #region inner classes
         public class BattleSetupData
         {
-            public IBattleCharacter Player { get; private set; }
-            public List<IBattleCharacter> Enemies { get; private set; }
+            public IFightable Player { get; private set; }
+            public List<IFightable> Enemies { get; private set; }
 
-            public BattleSetupData(IBattleCharacter player, List<IBattleCharacter> enemies)
+            public BattleSetupData(IFightable player, List<IFightable> enemies)
             {
                 Player = player;
                 Enemies = enemies;
@@ -25,8 +25,8 @@ namespace CCG
         #endregion
 
         #region properties
-        public IBattleCharacter Player { get; private set; }
-        public List<IBattleCharacter> Enemies { get; private set; }
+        public IFightable Player { get; private set; }
+        public List<IFightable> Enemies { get; private set; }
 
         public bool IsMyTurn { get; private set; }
         #endregion
