@@ -31,7 +31,9 @@ namespace CCG
         #region private methods
         private void OnClickClearAllSaveDataButton()
         {
+            SetActive(false);
             Global.DeleteAllSaveData();
+            UIManager.I.ShowAnnounceMessage("全セーブデータを削除\nしました。(再起動後有効)");
         }
         #endregion
     }
