@@ -46,7 +46,7 @@ namespace CCG
         /// 敵キャラクター選択時
         /// 自分のターン時のみ実行出来る
         /// </summary>
-        public void OnSelectEnemy(int enemyIndex)
+        public void OnSelectEnemy(Enemy enemy)
         {
             if (!IsMyTurn)
             {
@@ -54,10 +54,8 @@ namespace CCG
                 return;
             }
 
-            var target = Enemies[enemyIndex];
-
             // ダメージを与える
-            target.Damage(Player.Status.ATK);
+            enemy.Damage(Player.Status.ATK);
             OnEndMyTurn();
 
             StartEnemiesTurn();

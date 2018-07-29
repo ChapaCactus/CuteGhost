@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class BattleSceneController : MonoBehaviour
+    public class BattleSceneController : SingletonMonoBehaviour<BattleSceneController>
     {
         #region unity callbacks
         private void Awake()
@@ -15,9 +15,9 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void OnClickEnemy(int enemyIndex)
+        public void OnClickEnemy(Enemy enemy)
         {
-            Global.BattleManager.OnSelectEnemy(enemyIndex);
+            Global.BattleManager.OnSelectEnemy(enemy);
         }
         #endregion
     }
