@@ -37,8 +37,7 @@ namespace CCG
             {
                 this.speaker = speaker;
 
-                messages = new List<string>();
-                messages.Add(talkRow._Message);
+                messages = talkRow._Message;
 
                 progress = 0;
 
@@ -132,10 +131,18 @@ namespace CCG
             if (talk != null)
             {
                 talk.Next();
+
                 if (talk.state == Talk.State.End)
                 {
                     onEndTalk.SafeCall();
                     talk = null;
+                } else
+                {
+                    RequestCreateMessageBalloon(talk.speaker, balloon =>
+                    {
+                        SetBalloon(balloon);
+                        balloon.SetText(talk.GetMessage());
+                    });
                 }
             }
         }

@@ -127,8 +127,8 @@ namespace CCG
                 // 受領アナウンス再生
                 var questRow = QuestMaster.Instance.GetRow(QuestID);
                 var questTitle = questRow._Name;
-                var questTitleCombine = $"クエスト「{questTitle}」\nを受領した。";
-                UIManager.I.ShowAnnounceMessage(questTitleCombine);
+                var questTitleCombine = $"クエスト「{questTitle}」\nをうけた";
+                UIManager.I.ShowAnnounceMessage(questTitleCombine, 1.5f);
             }
             else
             {

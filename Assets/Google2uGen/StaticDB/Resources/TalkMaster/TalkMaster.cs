@@ -14,10 +14,16 @@ namespace Google2u
 	[System.Serializable]
 	public class TalkMasterRow : IGoogle2uRow
 	{
-		public string _Message;
+		public System.Collections.Generic.List<string> _Message = new System.Collections.Generic.List<string>();
 		public TalkMasterRow(string __ID, string __Message) 
 		{
-			_Message = __Message.Trim();
+			{
+				string []result = __Message.Split("|".ToCharArray(),System.StringSplitOptions.RemoveEmptyEntries);
+				for(int i = 0; i < result.Length; i++)
+				{
+					_Message.Add( result[i].Trim() );
+				}
+			}
 		}
 
 		public int Length { get { return 1; } }
@@ -85,8 +91,8 @@ namespace Google2u
 
 		private TalkMaster()
 		{
-			Rows.Add( new TalkMasterRow("ID_001", "あのぉ…"));
-			Rows.Add( new TalkMasterRow("ID_002", "たのみましたよ！"));
+			Rows.Add( new TalkMasterRow("ID_001", "あのぉ|たのみがあるんです|このところ　さむくてさむくて|あたたかくなるものを\nとってきてください！"));
+			Rows.Add( new TalkMasterRow("ID_002", "たのみました"));
 			Rows.Add( new TalkMasterRow("ID_003", "ここは、せかいのはてです\nおわりです"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)

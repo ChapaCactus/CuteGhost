@@ -118,7 +118,7 @@ namespace Google2u
 
 		private QuestMaster()
 		{
-			Rows.Add( new QuestMasterRow("ID_001", "彼に伝えて", "Talk", "1", "カレにつたえてほしいの。　またあそぼうって。"));
+			Rows.Add( new QuestMasterRow("ID_001", "ねむけ、さむけ", "Talk", "1", ""));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
