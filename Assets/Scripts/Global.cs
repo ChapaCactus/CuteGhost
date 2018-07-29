@@ -10,6 +10,8 @@ namespace CCG
     public static class Global
     {
         #region properties
+        public static Player Player { get; private set; }
+
         public static QuestManager questManager { get; private set; }
 
         public static IInsightable InsightTarget { get; private set; }
@@ -18,6 +20,9 @@ namespace CCG
         #region public methods
         public static void Init()
         {
+            Player = LoadPlayerData();
+            UIManager.I.SetStatusPanel(Player.PlayerStatus);
+
             questManager = new QuestManager();
             questManager.Init();
 
@@ -43,6 +48,19 @@ namespace CCG
             keys.ForEach(key => ES3.DeleteKey(key));
 
             UIManager.I.ShowAnnounceMessage("全セーブデータを削除\nしました。(再起動後有効)", 2);
+        }
+        #endregion
+
+        #region private methods
+        private static Player LoadPlayerData()
+        {
+            var status = new Player.Status();
+            status.Level = 1;
+            status.MaxHealth = 10;
+            status.Health = 10;
+            var player = new Player(status);
+
+            return player;
         }
         #endregion
     }

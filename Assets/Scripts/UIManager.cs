@@ -31,6 +31,9 @@ namespace CCG
         private AnnounceText announceText = null;
 
         [SerializeField]
+        private StatusPanel statusPanel = null;
+
+        [SerializeField]
         private Canvas canvas = null;
         [SerializeField]
         private Camera mainCamera = null;
@@ -63,6 +66,13 @@ namespace CCG
         #endregion
 
         #region public methods
+        public void SetStatusPanel(Player.Status status)
+        {
+            statusPanel.SetLevelText(status.Level);
+            statusPanel.SetHealthText(status.Health, status.MaxHealth);
+            statusPanel.SetHealthBarValue(status.Health, status.MaxHealth);
+        }
+
         public void ShowAnnounceMessage(string message, float fadeDelay = 1)
         {
             announceText.ShowMessage(message, fadeDelay);
