@@ -66,7 +66,7 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void SetStatusPanel(Player.Status status)
+        public void SetStatusPanel(CharacterStatus status)
         {
             statusPanel.SetLevelText(status.Level);
             statusPanel.SetHealthText(status.Health, status.MaxHealth);

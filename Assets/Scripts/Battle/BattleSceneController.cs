@@ -15,8 +15,9 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void OnClickEnemy(IBattleCharacter target)
+        public void OnClickEnemy(int enemyIndex)
         {
+            Global.BattleManager.OnSelectEnemy(enemyIndex);
         }
         #endregion
     }

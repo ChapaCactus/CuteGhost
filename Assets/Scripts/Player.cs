@@ -7,26 +7,21 @@ namespace CCG
 {
     public class Player
     {
-        #region inner classes
-        public class Status
-        {
-            public int Level { get; set; }
-
-            public int MaxHealth { get; set; }
-            public int Health { get; set; }
-
-            public int ATK { get; set; }
-        }
+        #region variables
+        private CharacterStatus status;
         #endregion
 
         #region properties
-        public Status PlayerStatus { get; private set; }
+        public CharacterStatus Status { get { return status; } }
         #endregion
 
         #region public methods
-        public Player(Status status)
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>¥
+        public Player(CharacterStatus status)
         {
-            PlayerStatus = status;
+            this.status = status;
         }
         #endregion
     }

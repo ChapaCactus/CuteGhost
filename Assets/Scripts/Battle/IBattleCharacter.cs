@@ -7,6 +7,11 @@ namespace CCG
 {
     public interface IBattleCharacter
     {
+        // ステータス参照
+        CharacterStatus Status { get; }
+
         void Damage(int damage);
+
+        bool GetIsDead();
     }
 }

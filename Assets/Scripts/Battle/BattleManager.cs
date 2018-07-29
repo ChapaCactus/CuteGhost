@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Linq;
 using UnityEngine.SceneManagement;
 
 namespace CCG
@@ -12,10 +13,10 @@ namespace CCG
         #region inner classes
         public class BattleSetupData
         {
-            public Player Player { get; private set; }
-            public List<EnemyVO> Enemies { get; private set; }
+            public IBattleCharacter Player { get; private set; }
+            public List<IBattleCharacter> Enemies { get; private set; }
 
-            public BattleSetupData(Player player, List<EnemyVO> enemies)
+            public BattleSetupData(IBattleCharacter player, List<IBattleCharacter> enemies)
             {
                 Player = player;
                 Enemies = enemies;
@@ -24,8 +25,8 @@ namespace CCG
         #endregion
 
         #region properties
-        public Player Player { get; private set; }
-        public List<EnemyVO> Enemies { get; private set; }
+        public IBattleCharacter Player { get; private set; }
+        public List<IBattleCharacter> Enemies { get; private set; }
 
         public bool IsMyTurn { get; private set; }
         #endregion
@@ -45,7 +46,7 @@ namespace CCG
         /// 敵キャラクター選択時
         /// 自分のターン時のみ実行出来る
         /// </summary>
-        public void OnSelectEnemy(IBattleCharacter target)
+        public void OnSelectEnemy(int enemyIndex)
         {
             if (!IsMyTurn)
             {
@@ -53,8 +54,10 @@ namespace CCG
                 return;
             }
 
+            var target = Enemies[enemyIndex];
+
             // ダメージを与える
-            target.Damage(Player.PlayerStatus.ATK);
+            target.Damage(Player.Status.ATK);
             OnEndMyTurn();
 
             StartEnemiesTurn();
@@ -75,6 +78,16 @@ namespace CCG
         private void OnEndEnemyTurn()
         {
             IsMyTurn = true;
+        }
+
+        private bool CheckPlayerDead()
+        {
+            return Player.GetIsDead();
+        }
+
+        private bool CheckEnemiesDead()
+        {
+            return Enemies.All(enemy => enemy.GetIsDead());
         }
         #endregion
     }

@@ -22,7 +22,7 @@ namespace CCG
         public static void Init()
         {
             Player = LoadPlayerData();
-            UIManager.I.SetStatusPanel(Player.PlayerStatus);
+            UIManager.I.SetStatusPanel(Player.Status);
 
             QuestManager = new QuestManager();
             QuestManager.Init();
@@ -55,7 +55,7 @@ namespace CCG
         #region private methods
         private static Player LoadPlayerData()
         {
-            var status = new Player.Status();
+            var status = new CharacterStatus();
             status.Level = 1;
             status.MaxHealth = 10;
             status.Health = 10;
