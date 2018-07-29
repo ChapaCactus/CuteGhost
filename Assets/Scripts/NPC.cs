@@ -75,7 +75,7 @@ namespace CCG
 
         public void Talk()
         {
-            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
+            var isQuestOffered = Global.QuestManager.CheckIsOfferedQuest(QuestID);
             // 受領済状態の会話 or 未受領状態の会話IDを取得
             var talkID = isQuestOffered ? MasterData._OfferedTalk : MasterData._NotOfferTalk;
             var talkRow = TalkMaster.Instance.GetRow(talkID);
@@ -118,11 +118,11 @@ namespace CCG
             }
 
             // クエストを受けていなければ受領
-            var isQuestOffered = Global.questManager.CheckIsOfferedQuest(QuestID);
+            var isQuestOffered = Global.QuestManager.CheckIsOfferedQuest(QuestID);
             if (!isQuestOffered)
             {
                 // クエスト受領
-                Global.questManager.OfferQuest(QuestID);
+                Global.QuestManager.OfferQuest(QuestID);
 
                 // 受領アナウンス再生
                 var questRow = QuestMaster.Instance.GetRow(QuestID);

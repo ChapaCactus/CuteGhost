@@ -12,7 +12,8 @@ namespace CCG
         #region properties
         public static Player Player { get; private set; }
 
-        public static QuestManager questManager { get; private set; }
+        public static BattleManager BattleManager { get; private set; }
+        public static QuestManager QuestManager { get; private set; }
 
         public static IInsightable InsightTarget { get; private set; }
         #endregion
@@ -23,8 +24,8 @@ namespace CCG
             Player = LoadPlayerData();
             UIManager.I.SetStatusPanel(Player.PlayerStatus);
 
-            questManager = new QuestManager();
-            questManager.Init();
+            QuestManager = new QuestManager();
+            QuestManager.Init();
 
             SetInsightTarget(null);
         }

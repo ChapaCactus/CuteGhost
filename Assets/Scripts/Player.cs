@@ -14,6 +14,8 @@ namespace CCG
 
             public int MaxHealth { get; set; }
             public int Health { get; set; }
+
+            public int ATK { get; set; }
         }
         #endregion
 
