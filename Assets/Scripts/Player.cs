@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class Player
+    public class Player : IBattleCharacter
     {
         #region variables
         private CharacterStatus status;
@@ -13,6 +13,7 @@ namespace CCG
 
         #region properties
         public CharacterStatus Status { get { return status; } }
+        public bool IsDead { get { return Status.Health <= 0; } }
         #endregion
 
         #region public methods
@@ -22,6 +23,10 @@ namespace CCG
         public Player(CharacterStatus status)
         {
             this.status = status;
+        }
+
+        public void Damage(int damage)
+        {
         }
         #endregion
     }

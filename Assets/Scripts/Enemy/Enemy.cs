@@ -5,7 +5,28 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : IBattleCharacter
     {
+        #region variables
+        private CharacterStatus status;
+        #endregion
+
+        #region properties
+        public CharacterStatus Status { get { return status; } }
+        public bool IsDead { get { return Status.Health <= 0; } }
+        #endregion
+
+        #region public methods
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public Enemy()
+        {
+        }
+
+        public void Damage(int damage)
+        {
+        }
+        #endregion
     }
 }

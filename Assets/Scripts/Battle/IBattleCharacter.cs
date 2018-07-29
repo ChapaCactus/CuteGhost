@@ -9,9 +9,8 @@ namespace CCG
     {
         // ステータス参照
         CharacterStatus Status { get; }
+        bool IsDead { get; }
 
         void Damage(int damage);
-
-        bool GetIsDead();
     }
 }

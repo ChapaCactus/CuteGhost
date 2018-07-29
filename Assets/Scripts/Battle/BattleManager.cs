@@ -82,12 +82,12 @@ namespace CCG
 
         private bool CheckPlayerDead()
         {
-            return Player.GetIsDead();
+            return Player.IsDead;
         }
 
         private bool CheckEnemiesDead()
         {
-            return Enemies.All(enemy => enemy.GetIsDead());
+            return Enemies.All(enemy => enemy.IsDead);
         }
         #endregion
     }
