@@ -42,7 +42,7 @@ namespace CCG
                           .ToList();
             keys.ForEach(key => ES3.DeleteKey(key));
 
-            Debug.Log("全セーブデータを削除しました。");
+            UIManager.I.ShowAnnounceMessage("全セーブデータを削除\nしました。(再起動後有効)", 2);
         }
         #endregion
     }
