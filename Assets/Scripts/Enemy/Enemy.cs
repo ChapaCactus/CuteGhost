@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using Google2u;
+
 namespace CCG
 {
     public class Enemy : IFightable
@@ -15,15 +17,21 @@ namespace CCG
         #region properties
         public CharacterStatus Status { get { return status; } }
         public bool IsDead { get { return Status.IsDead; } }
+
+        public string EnemyID { get; private set; }
         #endregion
 
         #region public methods
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public Enemy(CharacterStatus status)
+        public Enemy(string enemyID)
         {
-            this.status = status;
+            EnemyID = enemyID;
+
+            var row = EnemyMaster.Instance.GetRow(enemyID);
+            this.status = new CharacterStatus();
+            this.status.SetData(row);
         }
 
         public void SetOnDead(Action onDead)

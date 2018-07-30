@@ -101,20 +101,9 @@ namespace CCG
 
         public void LoadDummyEnemyData()
         {
-            var enemy1Status = new CharacterStatus();
-            var enemy1Row = EnemyMaster.Instance.GetRow(EnemyMaster.rowIds.ID_001);
-            enemy1Status.SetData(enemy1Row);
-            var enemy1 = new Enemy(enemy1Status);
-
-            var enemy2Status = new CharacterStatus();
-            var enemy2Row = EnemyMaster.Instance.GetRow(EnemyMaster.rowIds.ID_001);
-            enemy2Status.SetData(enemy2Row);
-            var enemy2 = new Enemy(enemy2Status);
-
-            var enemy3Status = new CharacterStatus();
-            var enemy3Row = EnemyMaster.Instance.GetRow(EnemyMaster.rowIds.ID_001);
-            enemy3Status.SetData(enemy3Row);
-            var enemy3 = new Enemy(enemy3Status);
+            var enemy1 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
+            var enemy2 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
+            var enemy3 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
 
             Enemies = new List<IFightable>();
             Enemies.Add(enemy1);

@@ -15,7 +15,8 @@ namespace Google2u
 	public class TalkMasterRow : IGoogle2uRow
 	{
 		public System.Collections.Generic.List<string> _Message = new System.Collections.Generic.List<string>();
-		public TalkMasterRow(string __ID, string __Message) 
+		public System.Collections.Generic.List<string> _Battle = new System.Collections.Generic.List<string>();
+		public TalkMasterRow(string __ID, string __Message, string __Battle) 
 		{
 			{
 				string []result = __Message.Split("|".ToCharArray(),System.StringSplitOptions.RemoveEmptyEntries);
@@ -24,9 +25,16 @@ namespace Google2u
 					_Message.Add( result[i].Trim() );
 				}
 			}
+			{
+				string []result = __Battle.Split("|".ToCharArray(),System.StringSplitOptions.RemoveEmptyEntries);
+				for(int i = 0; i < result.Length; i++)
+				{
+					_Battle.Add( result[i].Trim() );
+				}
+			}
 		}
 
-		public int Length { get { return 1; } }
+		public int Length { get { return 2; } }
 
 		public string this[int i]
 		{
@@ -44,6 +52,9 @@ namespace Google2u
 				case 0:
 					ret = _Message.ToString();
 					break;
+				case 1:
+					ret = _Battle.ToString();
+					break;
 			}
 
 			return ret;
@@ -57,6 +68,9 @@ namespace Google2u
 				case "Message":
 					ret = _Message.ToString();
 					break;
+				case "Battle":
+					ret = _Battle.ToString();
+					break;
 			}
 
 			return ret;
@@ -65,16 +79,17 @@ namespace Google2u
 		{
 			string ret = System.String.Empty;
 			ret += "{" + "Message" + " : " + _Message.ToString() + "} ";
+			ret += "{" + "Battle" + " : " + _Battle.ToString() + "} ";
 			return ret;
 		}
 	}
 	public sealed class TalkMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001, ID_002, ID_003
+			ID_001, ID_002, ID_003, ID_004
 		};
 		public string [] rowNames = {
-			"ID_001", "ID_002", "ID_003"
+			"ID_001", "ID_002", "ID_003", "ID_004"
 		};
 		public System.Collections.Generic.List<TalkMasterRow> Rows = new System.Collections.Generic.List<TalkMasterRow>();
 
@@ -91,9 +106,10 @@ namespace Google2u
 
 		private TalkMaster()
 		{
-			Rows.Add( new TalkMasterRow("ID_001", "あのぉ|たのみがあるんです|このところ　さむくてさむくて|あたたかくなるものを\nとってきてください！"));
-			Rows.Add( new TalkMasterRow("ID_002", "たのみました"));
-			Rows.Add( new TalkMasterRow("ID_003", "ここは、せかいのはてです\nおわりです"));
+			Rows.Add( new TalkMasterRow("ID_001", "あのぉ|たのみがあるんです|このところ　さむくてさむくて|あたたかくなるものを\nとってきてください！", "None"));
+			Rows.Add( new TalkMasterRow("ID_002", "たのみました", "None"));
+			Rows.Add( new TalkMasterRow("ID_003", "ここは、せかいのはてです\nおわりです", "None"));
+			Rows.Add( new TalkMasterRow("ID_004", "たたかいますか？", "ID_001|ID_001|ID_001"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

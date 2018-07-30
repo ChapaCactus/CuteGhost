@@ -61,6 +61,7 @@ namespace CCG
             status.Level = 1;
             status.MaxHealth = 10;
             status.Health = 10;
+            status.ATK = 400;
             var player = new Player(status);
 
             return player;

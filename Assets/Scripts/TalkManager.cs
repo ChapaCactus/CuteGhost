@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Linq;
 using Google2u;
 
 namespace CCG
@@ -24,6 +25,7 @@ namespace CCG
 
             #region properties
             public bool isTalking { get { return state == State.Start || state == State.Talking; } }
+            public List<string> Battle { get; private set; }
 
             public int progress { get; private set; }
             public GameObject speaker { get; private set; }
@@ -36,6 +38,7 @@ namespace CCG
             public Talk(GameObject speaker, TalkMasterRow talkRow)
             {
                 this.speaker = speaker;
+                Battle = talkRow._Battle;
 
                 messages = talkRow._Message;
 
@@ -134,9 +137,21 @@ namespace CCG
 
                 if (talk.state == Talk.State.End)
                 {
+                    if (talk.Battle.Count >= 1)
+                    {
+                        // 戦闘シーンに移動する
+                        var enemies = talk.Battle.Select(enemyID => new Enemy(enemyID) as IFightable)
+                                                  .ToList();
+                        var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies);
+                        Global.BattleManager.StartBattle(battleSetting);
+
+                        return;
+                    }
+
                     onEndTalk.SafeCall();
                     talk = null;
-                } else
+                }
+                else
                 {
                     RequestCreateMessageBalloon(talk.speaker, balloon =>
                     {
