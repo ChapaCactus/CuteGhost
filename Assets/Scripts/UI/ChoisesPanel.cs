@@ -22,13 +22,21 @@ namespace CCG
         private Action onClickNo { get; set; }
         #endregion
 
+        #region unity callbacks
+        private void Awake()
+        {
+            yesButton.onClick.AddListener(OnClickYes);
+            noButton.onClick.AddListener(OnClickNo);
+        }
+        #endregion
+
         #region public methods
         public void Open(Action onClickYes, Action onClickNo)
         {
             this.onClickYes = onClickYes;
             this.onClickNo = onClickNo;
 
-            SetActive(false);
+            SetActive(true);
         }
 
         public void SetActive(bool isActive)

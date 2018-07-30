@@ -25,6 +25,9 @@ namespace CCG
 
             #region properties
             public bool isTalking { get { return state == State.Start || state == State.Talking; } }
+            public bool IsEnd { get { return state == Talk.State.End; } }
+
+            public List<string> Choises { get; private set; }
             public List<string> Battle { get; private set; }
 
             public int progress { get; private set; }
@@ -38,6 +41,8 @@ namespace CCG
             public Talk(GameObject speaker, TalkMasterRow talkRow)
             {
                 this.speaker = speaker;
+
+                Choises = talkRow._Choises;
                 Battle = talkRow._Battle;
 
                 messages = talkRow._Message;
@@ -108,11 +113,6 @@ namespace CCG
         #region public methods
         public void StartTalk(GameObject speaker, TalkMasterRow talkRow, Action onEndTalk)
         {
-            if (talk != null)
-            {
-                return;
-            }
-
             this.onEndTalk = onEndTalk;
 
             talk = new Talk(speaker, talkRow);
@@ -135,9 +135,38 @@ namespace CCG
             {
                 talk.Next();
 
-                if (talk.state == Talk.State.End)
+                if (!talk.IsEnd)
                 {
-                    if (talk.Battle.Count >= 1)
+                    // 終了していなければ、テキスト表示
+                    RequestCreateMessageBalloon(talk.speaker, balloon =>
+                    {
+                        SetBalloon(balloon);
+                        balloon.SetText(talk.GetMessage());
+                    });
+                }
+                else
+                {
+                    // 選択肢が設定されていれば、選択肢を表示
+                    if (talk.Choises.Count >= 1
+                        && talk.Choises.Any(choise => choise != "None"))
+                    {
+                        UIManager.I.OpenChoisesPanel(() =>
+                        {
+                            // YES
+                            var yesRow = TalkMaster.Instance.GetRow(talk.Choises[0]);
+                            StartTalk(talk.speaker, yesRow, onEndTalk);
+                        }, () =>
+                        {
+                            // NO
+                            var noRow = TalkMaster.Instance.GetRow(talk.Choises[1]);
+                            StartTalk(talk.speaker, noRow, onEndTalk);
+                        });
+                        return;
+                    }
+
+                    // 戦闘敵が設定されていれば、戦闘シーンに以降
+                    if (talk.Battle.Count >= 1
+                        && talk.Battle.Any(battle => battle != "None"))
                     {
                         // 戦闘シーンに移動する
                         var enemies = talk.Battle.Select(enemyID => new Enemy(enemyID) as IFightable)
@@ -148,16 +177,7 @@ namespace CCG
                         return;
                     }
 
-                    onEndTalk.SafeCall();
-                    talk = null;
-                }
-                else
-                {
-                    RequestCreateMessageBalloon(talk.speaker, balloon =>
-                    {
-                        SetBalloon(balloon);
-                        balloon.SetText(talk.GetMessage());
-                    });
+                    OnEnd();
                 }
             }
         }
@@ -186,6 +206,12 @@ namespace CCG
         #endregion
 
         #region private methods
+        private void OnEnd()
+        {
+            onEndTalk.SafeCall();
+            talk = null;
+        }
+
         private void SetBalloon(MessageBalloon balloon)
         {
             this.balloon = balloon;
