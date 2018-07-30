@@ -9,11 +9,12 @@ namespace CCG
     {
         #region variables
         private CharacterStatus status;
+        private Action onDead;
         #endregion
 
         #region properties
         public CharacterStatus Status { get { return status; } }
-        public bool IsDead { get { return Status.Health <= 0; } }
+        public bool IsDead { get { return Status.IsDead; } }
         #endregion
 
         #region public methods
@@ -25,8 +26,26 @@ namespace CCG
             this.status = status;
         }
 
+        public void SetOnDead(Action onDead)
+        {
+            this.onDead = onDead;
+        }
+
+        public void Attack(IFightable target)
+        {
+            target.Damage(Status.ATK);
+        }
+
         public void Damage(int damage)
         {
+            Status.Damage(damage);
+
+            if(IsDead)
+            {
+                onDead.SafeCall();
+            }
+
+            Debug.Log($"{Status.Name}は、{damage}を受けた。");
         }
         #endregion
     }

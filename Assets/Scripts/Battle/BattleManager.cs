@@ -9,6 +9,12 @@ using Google2u;
 
 namespace CCG
 {
+    public enum BattleTurn
+    {
+        Player,
+        Enemy,
+    }
+
     public class BattleManager
     {
         #region inner classes
@@ -29,7 +35,9 @@ namespace CCG
         public IFightable Player { get; private set; }
         public List<IFightable> Enemies { get; private set; }
 
-        public bool IsMyTurn { get; private set; }
+        public BattleTurn Turn { get; private set; }
+        public bool IsPlayerTurn { get { return Turn == BattleTurn.Player; } }
+        public bool IsEnemyTurn { get { return Turn == BattleTurn.Enemy; } }
         #endregion
 
         #region public methods
@@ -47,6 +55,11 @@ namespace CCG
             SceneManager.LoadScene("Battle");
         }
 
+        public void PrepareBattle()
+        {
+            Turn = BattleTurn.Player;
+        }
+
         /// <summary>
         /// 敵キャラクター選択時
         /// 自分のターン時のみ実行出来る
@@ -55,15 +68,17 @@ namespace CCG
         {
             Debug.Log($"{enemy.Status.Name}を選択");
 
-            if (!IsMyTurn)
+            if (!IsPlayerTurn)
             {
                 Debug.Log("自分のターンではありません");
                 return;
             }
 
             // ダメージを与える
-            enemy.Damage(Player.Status.ATK);
-            OnEndMyTurn();
+            Player.Attack(enemy);
+
+            // Playerターン終了
+            OnEndPlayerTurn();
 
             StartEnemiesTurn();
         }
@@ -71,13 +86,16 @@ namespace CCG
         public void LoadDummyPlayerData()
         {
             var status = new CharacterStatus();
+            status.Name = "デバッグプレイヤー";
             status.Level = 1;
             status.MaxHealth = 10;
             status.Health = 10;
-            status.ATK = 5;
+            status.ATK = 500;
             var player = new Player(status);
 
-            Player = Player;
+            Player = player;
+
+            Debug.Log("Dummy PlayerData Loaded.");
         }
 
         public void LoadDummyEnemyData()
@@ -89,35 +107,60 @@ namespace CCG
 
             var enemy2Status = new CharacterStatus();
             var enemy2Row = EnemyMaster.Instance.GetRow(EnemyMaster.rowIds.ID_001);
-            enemy2Status.SetData(enemy1Row);
-            var enemy2 = new Enemy(enemy1Status);
+            enemy2Status.SetData(enemy2Row);
+            var enemy2 = new Enemy(enemy2Status);
 
             var enemy3Status = new CharacterStatus();
             var enemy3Row = EnemyMaster.Instance.GetRow(EnemyMaster.rowIds.ID_001);
-            enemy3Status.SetData(enemy1Row);
-            var enemy3 = new Enemy(enemy1Status);
+            enemy3Status.SetData(enemy3Row);
+            var enemy3 = new Enemy(enemy3Status);
 
             Enemies = new List<IFightable>();
             Enemies.Add(enemy1);
             Enemies.Add(enemy2);
             Enemies.Add(enemy3);
+
+            Debug.Log("Dummy EnemyData Loaded.");
         }
         #endregion
 
         #region private methods
+        private void FinishBattle(bool isWin)
+        {
+            // とりあえずMainシーンに返す
+            SceneManager.LoadScene("Main");
+        }
+
         private void StartEnemiesTurn()
         {
+            Enemies.ForEach(enemy =>
+            {
+                enemy.Attack(Player);
+            });
+
+            // Enemyターン終了
             OnEndEnemyTurn();
         }
 
-        private void OnEndMyTurn()
+        private void OnEndPlayerTurn()
         {
-            IsMyTurn = false;
+            bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
+            if(isAllEnemiesDead)
+            {
+                FinishBattle(true);
+                return;
+            }
+
+            Turn = BattleTurn.Enemy;
+
+            Debug.Log("OnEndPlayerTurn");
         }
 
         private void OnEndEnemyTurn()
         {
-            IsMyTurn = true;
+            Turn = BattleTurn.Player;
+
+            Debug.Log("OnEndEnemyTurn.");
         }
 
         private bool CheckPlayerDead()

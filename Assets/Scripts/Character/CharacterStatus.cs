@@ -18,6 +18,8 @@ namespace CCG
 
         public int ATK { get; set; }
 
+        public bool IsDead { get { return Health <= 0; } }
+
         public void SetData(EnemyMasterRow row)
         {
             Name = row._Name;
@@ -25,9 +27,20 @@ namespace CCG
             Level = row._Level;
 
             MaxHealth = row._MaxHealth;
-            Health = row._MaxHealth;
+            Health = MaxHealth;
 
             ATK = row._ATK;
+        }
+
+        public void Damage(int damage)
+        {
+            Debug.Log($"Health{Health} - Damage{damage} => {Health - damage}");
+            Health -= damage;
+
+            if(Health < 0)
+            {
+                Health = 0;
+            }
         }
     }
 }

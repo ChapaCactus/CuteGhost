@@ -40,6 +40,8 @@ namespace CCG
 
         private void Start()
         {
+            Global.BattleManager.PrepareBattle();
+
             BattleUIManager.I.ShowAnnounceMessage("バトルかいし！");
         }
         #endregion

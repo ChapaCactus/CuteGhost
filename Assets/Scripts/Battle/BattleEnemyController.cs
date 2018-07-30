@@ -31,6 +31,8 @@ namespace CCG
         public void Setup(Enemy enemy)
         {
             Enemy = enemy;
+
+            Enemy.SetOnDead(() => SetActive(false));
         }
 
         public void OnTap(Gesture gesture)
@@ -42,6 +44,11 @@ namespace CCG
             }
 
             BattleSceneController.I.OnClickEnemy(Enemy);
+        }
+
+        public void SetActive(bool isActive)
+        {
+            gameObject.SetActive(isActive);
         }
         #endregion
     }
