@@ -31,6 +31,9 @@ namespace CCG
         private AnnounceText announceText = null;
 
         [SerializeField]
+        private ChoisesPanel choisesPanel = null;
+
+        [SerializeField]
         private StatusPanel statusPanel = null;
 
         [SerializeField]
@@ -71,6 +74,14 @@ namespace CCG
             statusPanel.SetLevelText(status.Level);
             statusPanel.SetHealthText(status.Health, status.MaxHealth);
             statusPanel.SetHealthBarValue(status.Health, status.MaxHealth);
+        }
+
+        /// <summary>
+        /// 選択肢パネルを開く
+        /// </summary>
+        public void OpenChoisesPanel(Action onClickYes, Action onClickNo)
+        {
+            choisesPanel.Open(onClickYes, onClickNo);
         }
 
         public void ShowAnnounceMessage(string message, float fadeDelay = 1)
