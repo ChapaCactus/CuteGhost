@@ -92,9 +92,6 @@ namespace CCG
             private void OnEnd()
             {
                 state = State.End;
-
-                Ghost.I.SetIsTalking(false);
-                UIManager.I.GetBands().FrameOut(true, true);
             }
             #endregion
         }
@@ -209,6 +206,9 @@ namespace CCG
         private void OnEnd()
         {
             onEndTalk.SafeCall();
+
+            Ghost.I.SetIsTalking(false);
+            UIManager.I.GetBands().FrameOut(true, true);
             talk = null;
         }
 
