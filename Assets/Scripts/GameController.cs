@@ -11,6 +11,8 @@ namespace CCG
         private void Awake()
         {
             Global.Init();
+
+            UIManager.I.SetupStatusPanel(Global.Player.Status);
         }
 
         private void Start()
