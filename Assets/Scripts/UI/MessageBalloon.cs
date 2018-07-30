@@ -26,9 +26,11 @@ namespace CCG
         {
             if(speaker != null)
             {
-                var screenPos = Utilities.GetScreenPosition(speaker.transform.position);
-                screenPos += new Vector2(0, 50);
-                SetLocalPosition(screenPos);
+                //var screenPos = Utilities.GetScreenPosition(speaker.transform.position);
+                //screenPos += new Vector2(0, 50);
+
+                var pos = new Vector2(transform.localPosition.x, transform.localPosition.y);
+                SetLocalPosition(pos);
             }
         }
         #endregion
