@@ -136,7 +136,7 @@ namespace CCG
             foreach(var enemy in attackers)
             {
                 enemy.Attack(Player);
-                MasterAudio.PlaySound("Beep_High");
+                MasterAudio.PlaySound("EnemyHit");
 
                 await Task.Delay(1000);
             }
