@@ -35,6 +35,9 @@ namespace CCG
                 battleEnemies[i].Setup(Global.BattleManager.Enemies[i] as Enemy);
             }
 
+            // ステータスパネル初期化
+            BattleUIManager.I.StatusPanel.Setup(Global.Player.Status);
+
             // Enemyデータが設定されているControllerのみActive
             battleEnemies.ForEach(enemy => enemy.gameObject.SetActive(enemy.Enemy != null));
         }

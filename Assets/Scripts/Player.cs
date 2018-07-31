@@ -42,6 +42,9 @@ namespace CCG
             var damage = attacker.ATK;
             Status.Damage(damage);
 
+            BattleUIManager.I.StatusPanel.Setup(Status);
+
+            // ログ表示
             var head = $"{CharaName}は";
             var body = $"{damage}ダメージをうけた！";
             BattleUIManager.I.BattleLog.SetMessage(head, body);

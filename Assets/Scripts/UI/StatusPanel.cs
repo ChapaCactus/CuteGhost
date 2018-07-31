@@ -21,6 +21,13 @@ namespace CCG
         #endregion
 
         #region public methods
+        public void Setup(CharacterStatus status)
+        {
+            SetLevelText(status.Level);
+            SetHealthText(status.Health, status.MaxHealth);
+            SetHealthBarValue(status.Health, status.MaxHealth);
+        }
+
         public void SetLevelText(int level)
         {
             var text = $"Lv {level}";

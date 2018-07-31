@@ -10,13 +10,14 @@ namespace CCG
         #region variables
         [SerializeField]
         private BattleLog battleLog = null;
+
+        [SerializeField]
+        private StatusPanel statusPanel = null;
         #endregion
 
         #region properties
         public BattleLog BattleLog { get { return battleLog; } }
-        #endregion
-
-        #region public methods
+        public StatusPanel StatusPanel { get { return statusPanel; } }
         #endregion
     }
 }
