@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using UnityEngine.UI;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -50,6 +51,7 @@ namespace CCG
         {
             onClickYes.SafeCall();
 
+            MasterAudio.PlaySound("Beep_High");
             SetActive(false);
         }
 
@@ -57,6 +59,7 @@ namespace CCG
         {
             onClickNo.SafeCall();
 
+            MasterAudio.PlaySound("Beep_Low");
             SetActive(false);
         }
         #endregion

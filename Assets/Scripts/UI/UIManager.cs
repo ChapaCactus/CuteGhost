@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 
+using DarkTonic.MasterAudio;
+
 namespace CCG
 {
     public class UIManager : SingletonMonoBehaviour<UIManager>
@@ -92,6 +94,8 @@ namespace CCG
         public void OnLeftButtonDown()
         {
             IsLeftButtonDown = true;
+
+            MasterAudio.PlaySound("Beep_High");
         }
 
         public void OnLeftButtonUp()
@@ -102,6 +106,8 @@ namespace CCG
         public void OnRightButtonDown()
         {
             IsRightButtonDown = true;
+
+            MasterAudio.PlaySound("Beep_High");
         }
 
         public void OnRightButtonUp()
@@ -118,6 +124,8 @@ namespace CCG
             actionButton.onClick.AddListener(() =>
             {
                 OnClickTalkButton();
+
+                MasterAudio.PlaySound("Beep_High");
             });
         }
 
@@ -169,6 +177,8 @@ namespace CCG
         private void OnClickSettingButton()
         {
             settingPanel.SetActive(!settingPanel.gameObject.activeSelf);
+
+            MasterAudio.PlaySound("Beep_High");
         }
 
         private void OnClickTalkButton()
