@@ -43,7 +43,7 @@ namespace CCG
             Status.Damage(damage);
 
             var head = $"{CharaName}は";
-            var body = $"{damage}をうけた。";
+            var body = $"{damage}ダメージをうけた！";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
             MainCamera.I.Shake();
