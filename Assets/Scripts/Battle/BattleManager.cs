@@ -81,7 +81,7 @@ namespace CCG
 
             await Task.Delay(700);
 
-            enemy.PlayDamageEffect();
+            await enemy.PlayDamageEffect();
 
             // Playerターン終了
             OnEndPlayerTurn();

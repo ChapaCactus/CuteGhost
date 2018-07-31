@@ -679,7 +679,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 178
+  frames: 212
 --- !u!1 &237143470
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1046,7 +1046,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1333,7 +1333,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   playlistsExpanded: 1
   musicSpatialBlendType: 0
   musicSpatialBlend: 0
-  mixerSpatialBlendType: 1
+  mixerSpatialBlendType: 0
   mixerSpatialBlend: 1
   newGroupSpatialType: 1
   newGroupSpatialBlend: 1
@@ -2406,7 +2406,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 178
+  frames: 204
 --- !u!1 &2018473108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2604,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

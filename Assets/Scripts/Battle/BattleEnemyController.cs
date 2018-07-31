@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Threading.Tasks;
 using DG.Tweening;
 using HedgehogTeam.EasyTouch;
 using DarkTonic.MasterAudio;
@@ -56,7 +57,7 @@ namespace CCG
             gameObject.SetActive(isActive);
         }
 
-        public void PlayDamageEffect()
+        public async Task PlayDamageEffect()
         {
             MasterAudio.PlaySound("EnemyDead");
 
@@ -67,6 +68,7 @@ namespace CCG
 
                 if (Enemy.IsDead)
                 {
+                    MasterAudio.PlaySound("EnemyDead");
                     SetActive(false);
                 }
             });
@@ -75,6 +77,8 @@ namespace CCG
             sequence.Append(spriteRenderer.DOFade(0, 0.1f));
             sequence.Append(spriteRenderer.DOFade(1, 0.1f));
             sequence.Append(spriteRenderer.DOFade(0, 0.1f));
+
+            await Task.Delay(550);
         }
         #endregion
     }
