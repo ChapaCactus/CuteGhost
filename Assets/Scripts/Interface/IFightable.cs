@@ -12,6 +12,6 @@ namespace CCG
         bool IsDead { get; }
 
         void Attack(IFightable target);
-        void Damage(int damage);
+        void Damage(CharacterStatus attacker);
     }
 }

@@ -9,14 +9,14 @@ namespace CCG
     {
         #region variables
         [SerializeField]
-        private AnnounceText announceText = null;
+        private BattleLog battleLog = null;
+        #endregion
+
+        #region properties
+        public BattleLog BattleLog { get { return battleLog; } }
         #endregion
 
         #region public methods
-        public void ShowAnnounceMessage(string message, float fadeDelay = 1)
-        {
-            announceText.ShowMessage(message, fadeDelay);
-        }
         #endregion
     }
 }

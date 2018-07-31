@@ -42,7 +42,7 @@ namespace CCG
         {
             Global.BattleManager.PrepareBattle();
 
-            BattleUIManager.I.ShowAnnounceMessage("バトルかいし！");
+            BattleUIManager.I.BattleLog.SetMessage("バトルかいし！");
         }
         #endregion
 

@@ -461,7 +461,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 190
+  frames: 612
 --- !u!1 &64492822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8892238fc504d33a8fc2d937008573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  announceText: {fileID: 1935211610}
+  battleLog: {fileID: 1935211610}
 --- !u!1 &1699993250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,10 +2521,10 @@ GameObject:
   - component: {fileID: 1935211608}
   - component: {fileID: 1935211612}
   - component: {fileID: 1935211611}
-  - component: {fileID: 1935211610}
   - component: {fileID: 1935211609}
+  - component: {fileID: 1935211610}
   m_Layer: 5
-  m_Name: AnnounceText
+  m_Name: BattleLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2567,7 +2567,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1935211607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bffcfedf1d1214872bc8e3ea98b9dfa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 546e586c879ea4e359c01416ef809d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1935211611}

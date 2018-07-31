@@ -15,6 +15,8 @@ namespace CCG
 
         #region properties
         public CharacterStatus Status { get { return status; } }
+        public string CharaName { get { return Status.CharaName; } }
+
         public bool IsDead { get { return Status.IsDead; } }
         #endregion
 
@@ -32,14 +34,17 @@ namespace CCG
             // 射撃音再生
             MasterAudio.PlaySound("Blaster_001");
 
-            target.Damage(Status.ATK);
+            target.Damage(Status);
         }
 
-        public void Damage(int damage)
+        public void Damage(CharacterStatus attacker)
         {
+            var damage = attacker.ATK;
             Status.Damage(damage);
 
-            Debug.Log($"{Status.Name}は、{damage}を受けた。");
+            var head = $"{CharaName}は";
+            var body = $"{damage}をうけた。";
+            BattleUIManager.I.BattleLog.SetMessage(head, body);
         }
         #endregion
     }

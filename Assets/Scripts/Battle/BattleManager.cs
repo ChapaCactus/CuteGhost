@@ -68,7 +68,7 @@ namespace CCG
         /// </summary>
         public async void OnSelectEnemy(BattleEnemyController enemy)
         {
-            Debug.Log($"{enemy.Status.Name}を選択");
+            Debug.Log($"{enemy.Status.CharaName}を選択");
 
             if (!IsPlayerTurn)
             {
@@ -90,7 +90,7 @@ namespace CCG
         public void LoadDummyPlayerData()
         {
             var status = new CharacterStatus();
-            status.Name = "デバッグプレイヤー";
+            status.CharaName = "デバッグプレイヤー";
             status.Level = 1;
             status.MaxHealth = 10;
             status.Health = 10;

@@ -16,6 +16,8 @@ namespace CCG
 
         #region properties
         public CharacterStatus Status { get { return status; } }
+        public string CharaName { get { return Status.CharaName; } }
+
         public bool IsDead { get { return Status.IsDead; } }
 
         public string EnemyID { get; private set; }
@@ -41,19 +43,22 @@ namespace CCG
 
         public void Attack(IFightable target)
         {
-            target.Damage(Status.ATK);
+            target.Damage(Status);
         }
 
-        public void Damage(int damage)
+        public void Damage(CharacterStatus attacker)
         {
+            var damage = attacker.ATK;
             Status.Damage(damage);
 
-            if(IsDead)
+            if (IsDead)
             {
                 onDead.SafeCall();
             }
 
-            Debug.Log($"{Status.Name}は、{damage}を受けた。");
+            var head = $"{CharaName}は";
+            var body = $"{damage}をうけた。";
+            BattleUIManager.I.BattleLog.SetMessage(head, body);
         }
         #endregion
     }

@@ -9,7 +9,7 @@ namespace CCG
 {
     public class CharacterStatus
     {
-        public string Name { get; set; }
+        public string CharaName { get; set; }
 
         public int Level { get; set; }
 
@@ -22,7 +22,7 @@ namespace CCG
 
         public void SetData(EnemyMasterRow row)
         {
-            Name = row._Name;
+            CharaName = row._Name;
 
             Level = row._Level;
 
