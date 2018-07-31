@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using System.Linq;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -40,6 +41,8 @@ namespace CCG
 
         private void Start()
         {
+            MasterAudio.PlaySound("Battle_001");
+
             Global.BattleManager.PrepareBattle();
 
             BattleUIManager.I.BattleLog.SetMessage("バトルかいし！");

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using DarkTonic.MasterAudio;
+
 namespace CCG
 {
     public class GameController : SingletonMonoBehaviour<GameController>
@@ -17,6 +19,8 @@ namespace CCG
 
         private void Start()
         {
+            MasterAudio.PlaySound("Field_001");
+
             UIManager.I.ShowAnnounceMessage("はじまり　はじまり", 1);
         }
         #endregion
