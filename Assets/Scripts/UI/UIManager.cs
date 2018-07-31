@@ -66,6 +66,8 @@ namespace CCG
             SetActionButtonText(DefaultActionButtonText);
             actionButton.interactable = false;
 
+            announceText.SetVisible(false);
+
             InitUI();
         }
         #endregion

@@ -40,6 +40,8 @@ namespace CCG
 
             // Enemyデータが設定されているControllerのみActive
             battleEnemies.ForEach(enemy => enemy.gameObject.SetActive(enemy.Enemy != null));
+
+
         }
 
         private void Start()

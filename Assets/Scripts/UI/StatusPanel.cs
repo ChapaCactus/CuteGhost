@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace CCG
 {
@@ -26,6 +27,14 @@ namespace CCG
             SetLevelText(status.Level);
             SetHealthText(status.Health, status.MaxHealth);
             SetHealthBarValue(status.Health, status.MaxHealth);
+        }
+
+        public void Move(bool isOn)
+        {
+            var to = isOn ? 20 : -20;
+            transform.DOLocalMoveY(to, 0.3f)
+                     .SetRelative()
+                     .SetEase(Ease.InExpo);
         }
 
         public void SetLevelText(int level)

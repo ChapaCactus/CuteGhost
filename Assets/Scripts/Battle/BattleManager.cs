@@ -59,7 +59,7 @@ namespace CCG
 
         public void PrepareBattle()
         {
-            Turn = BattleTurn.Player;
+            OnStartPlayerTurn();
         }
 
         /// <summary>
@@ -153,8 +153,16 @@ namespace CCG
             OnEndEnemyTurn();
         }
 
+        private void OnStartPlayerTurn()
+        {
+            Turn = BattleTurn.Player;
+            BattleUIManager.I.StatusPanel.Move(true);
+        }
+
         private async void OnEndPlayerTurn()
         {
+            BattleUIManager.I.StatusPanel.Move(false);
+
             bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
             if(isAllEnemiesDead)
             {
@@ -171,7 +179,7 @@ namespace CCG
 
         private void OnEndEnemyTurn()
         {
-            Turn = BattleTurn.Player;
+            OnStartPlayerTurn();
 
             Debug.Log("OnEndEnemyTurn.");
         }
