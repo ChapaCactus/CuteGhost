@@ -19,7 +19,7 @@ namespace CCG
 
         private void Start()
         {
-            MasterAudio.PlaySound("Field_001");
+            MasterAudio.PlaySound("Field_002");
 
             UIManager.I.ShowAnnounceMessage("はじまり　はじまり", 1);
         }
