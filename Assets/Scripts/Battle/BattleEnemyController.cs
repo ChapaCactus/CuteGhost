@@ -59,7 +59,7 @@ namespace CCG
 
         public async Task PlayDamageEffect()
         {
-            MasterAudio.PlaySound("EnemyDead");
+            MasterAudio.PlaySound("EnemyHit");
 
             var sequence = DOTween.Sequence();
             sequence.OnComplete(() =>
