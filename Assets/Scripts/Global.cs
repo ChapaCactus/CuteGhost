@@ -58,6 +58,7 @@ namespace CCG
         private static Player LoadPlayerData()
         {
             var status = new CharacterStatus();
+            status.CharaName = "あなた";
             status.Level = 1;
             status.MaxHealth = 10;
             status.Health = 10;
