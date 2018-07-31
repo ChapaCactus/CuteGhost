@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -57,7 +58,7 @@ namespace CCG
             gameObject.SetActive(isActive);
         }
 
-        public async Task PlayDamageEffect()
+        public IEnumerator PlayDamageEffect()
         {
             MasterAudio.PlaySound("EnemyHit");
 
@@ -78,7 +79,7 @@ namespace CCG
             sequence.Append(spriteRenderer.DOFade(1, 0.1f));
             sequence.Append(spriteRenderer.DOFade(0, 0.1f));
 
-            await Task.Delay(550);
+            yield return new WaitForSeconds(0.55f);
         }
         #endregion
     }

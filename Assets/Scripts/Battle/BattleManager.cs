@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -66,25 +67,25 @@ namespace CCG
         /// 敵キャラクター選択時
         /// 自分のターン時のみ実行出来る
         /// </summary>
-        public async void OnSelectEnemy(BattleEnemyController enemy)
+        public IEnumerator OnSelectEnemy(BattleEnemyController enemy)
         {
             Debug.Log($"{enemy.Status.CharaName}を選択");
 
             if (!IsPlayerTurn)
             {
                 Debug.Log("自分のターンではありません");
-                return;
+                yield break;
             }
 
             // ダメージを与える
             Player.Attack(enemy.Enemy);
 
-            await Task.Delay(700);
+            yield return new WaitForSeconds(0.7f);
 
-            await enemy.PlayDamageEffect();
+            yield return enemy.PlayDamageEffect();
 
             // Playerターン終了
-            OnEndPlayerTurn();
+            yield return OnEndPlayerTurn();
         }
 
         public void LoadDummyPlayerData()
@@ -118,7 +119,7 @@ namespace CCG
         #endregion
 
         #region private methods
-        private async void FinishBattle(bool isWin)
+        private IEnumerator FinishBattle(bool isWin)
         {
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
@@ -128,13 +129,13 @@ namespace CCG
             var body = $"{Player.Status.CharaName}は\nたくさんの　けいけんちをえた。";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
-            await Task.Delay(4000);
+            yield return new WaitForSeconds(3.2f);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
         }
 
-        private async void StartEnemiesTurn()
+        private IEnumerator StartEnemiesTurn()
         {
             Turn = BattleTurn.Enemy;
 
@@ -146,7 +147,7 @@ namespace CCG
                 enemy.Attack(Player);
                 MasterAudio.PlaySound("EnemyHit");
 
-                await Task.Delay(1000);
+                yield return new WaitForSeconds(1.0f);
             }
 
             // Enemyターン終了
@@ -159,20 +160,20 @@ namespace CCG
             BattleUIManager.I.StatusPanel.Move(true);
         }
 
-        private async void OnEndPlayerTurn()
+        private IEnumerator OnEndPlayerTurn()
         {
             BattleUIManager.I.StatusPanel.Move(false);
 
             bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
             if(isAllEnemiesDead)
             {
-                FinishBattle(true);
-                return;
+                yield return FinishBattle(true);
+                yield break;
             }
 
-            await Task.Delay(1000);
+            yield return new WaitForSeconds(1.0f);
 
-            StartEnemiesTurn();
+            yield return StartEnemiesTurn();
 
             Debug.Log("OnEndPlayerTurn");
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -16,11 +17,18 @@ namespace CCG
         #endregion
 
         #region public methods
-        public async void SetMessage(string head, string body = "")
+        public void SetMessage(string head, string body = "")
+        {
+            StartCoroutine(SetMessageCoroutine(head, body));
+        }
+        #endregion
+
+        #region private methods
+        private IEnumerator SetMessageCoroutine(string head, string body = "")
         {
             text.text = head;
 
-            await Task.Delay(500);
+            yield return new WaitForSeconds(0.5f);
 
             if (!string.IsNullOrEmpty(body))
             {
