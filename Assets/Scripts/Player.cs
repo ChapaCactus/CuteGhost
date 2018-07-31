@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using DarkTonic.MasterAudio;
+
 namespace CCG
 {
     public class Player : IFightable
@@ -27,6 +29,9 @@ namespace CCG
 
         public void Attack(IFightable target)
         {
+            // 射撃音再生
+            MasterAudio.PlaySound("Blaster_001");
+
             target.Damage(Status.ATK);
         }
 

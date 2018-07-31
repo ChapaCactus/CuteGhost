@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 using DG.Tweening;
 using HedgehogTeam.EasyTouch;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -57,6 +58,8 @@ namespace CCG
 
         public void PlayDamageEffect()
         {
+            MasterAudio.PlaySound("EnemyDead");
+
             var sequence = DOTween.Sequence();
             sequence.OnComplete(() =>
             {

@@ -66,7 +66,7 @@ namespace CCG
         /// 敵キャラクター選択時
         /// 自分のターン時のみ実行出来る
         /// </summary>
-        public void OnSelectEnemy(BattleEnemyController enemy)
+        public async void OnSelectEnemy(BattleEnemyController enemy)
         {
             Debug.Log($"{enemy.Status.Name}を選択");
 
@@ -78,6 +78,9 @@ namespace CCG
 
             // ダメージを与える
             Player.Attack(enemy.Enemy);
+
+            await Task.Delay(700);
+
             enemy.PlayDamageEffect();
 
             // Playerターン終了
