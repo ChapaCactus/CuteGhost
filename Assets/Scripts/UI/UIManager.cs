@@ -94,8 +94,6 @@ namespace CCG
         public void OnLeftButtonDown()
         {
             IsLeftButtonDown = true;
-
-            MasterAudio.PlaySound("Beep_High");
         }
 
         public void OnLeftButtonUp()
@@ -106,8 +104,6 @@ namespace CCG
         public void OnRightButtonDown()
         {
             IsRightButtonDown = true;
-
-            MasterAudio.PlaySound("Beep_High");
         }
 
         public void OnRightButtonUp()
