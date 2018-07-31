@@ -120,7 +120,15 @@ namespace CCG
         #region private methods
         private async void FinishBattle(bool isWin)
         {
-            await Task.Delay(1000);
+            MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
+            MasterAudio.PlaySound("Jingle_001");
+
+            // 勝利メッセージ
+            var head = $"YOU WIN！";
+            var body = $"{Player.Status.CharaName}は\nたくさんの　けいけんちをえた。";
+            BattleUIManager.I.BattleLog.SetMessage(head, body);
+
+            await Task.Delay(4000);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
