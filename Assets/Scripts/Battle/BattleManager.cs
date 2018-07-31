@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Threading.Tasks;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using Google2u;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -80,8 +82,6 @@ namespace CCG
 
             // Playerターン終了
             OnEndPlayerTurn();
-
-            StartEnemiesTurn();
         }
 
         public void LoadDummyPlayerData()
@@ -115,24 +115,34 @@ namespace CCG
         #endregion
 
         #region private methods
-        private void FinishBattle(bool isWin)
+        private async void FinishBattle(bool isWin)
         {
+            await Task.Delay(1000);
+
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
         }
 
-        private void StartEnemiesTurn()
+        private async void StartEnemiesTurn()
         {
-            Enemies.ForEach(enemy =>
+            Turn = BattleTurn.Enemy;
+
+            var attackers = Enemies.Where(enemy => !enemy.IsDead)
+                                   .ToList();
+
+            foreach(var enemy in attackers)
             {
                 enemy.Attack(Player);
-            });
+                MasterAudio.PlaySound("Beep_High");
+
+                await Task.Delay(1000);
+            }
 
             // Enemyターン終了
             OnEndEnemyTurn();
         }
 
-        private void OnEndPlayerTurn()
+        private async void OnEndPlayerTurn()
         {
             bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
             if(isAllEnemiesDead)
@@ -141,7 +151,9 @@ namespace CCG
                 return;
             }
 
-            Turn = BattleTurn.Enemy;
+            await Task.Delay(1000);
+
+            StartEnemiesTurn();
 
             Debug.Log("OnEndPlayerTurn");
         }
