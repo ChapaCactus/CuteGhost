@@ -38,6 +38,14 @@ namespace CCG
 
             return pos;
         }
+
+        /// <summary>
+        /// 画像読み込み
+        /// </summary>
+        public static Sprite LoadSprite(string path)
+        {
+            return Resources.Load<Sprite>(path);
+        }
         #endregion
     }
 }
