@@ -101,10 +101,10 @@ namespace Google2u
 	public sealed class TalkMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001, ID_002, ID_003, ID_004, ID_005, ID_006
+			ID_001, ID_002, ID_003, ID_004, ID_005, ID_006, ID_007
 		};
 		public string [] rowNames = {
-			"ID_001", "ID_002", "ID_003", "ID_004", "ID_005", "ID_006"
+			"ID_001", "ID_002", "ID_003", "ID_004", "ID_005", "ID_006", "ID_007"
 		};
 		public System.Collections.Generic.List<TalkMasterRow> Rows = new System.Collections.Generic.List<TalkMasterRow>();
 
@@ -127,6 +127,7 @@ namespace Google2u
 			Rows.Add( new TalkMasterRow("ID_004", "たたかいますか？", "None", "ID_005|ID_006"));
 			Rows.Add( new TalkMasterRow("ID_005", "よしたたかえ！", "ID_001|ID_002", "None"));
 			Rows.Add( new TalkMasterRow("ID_006", "やめとくのね", "None", "None"));
+			Rows.Add( new TalkMasterRow("ID_007", "わからないことは\nわからなくても、こまらないんだ", "None", "None"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
