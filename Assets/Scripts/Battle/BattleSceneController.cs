@@ -21,14 +21,6 @@ namespace CCG
         #region unity callbacks
         private void Awake()
         {
-            if(isDebugMode)
-            {
-                Global.Init();
-                // デバッグモードならここでプレイヤー・敵データを設定する
-                Global.BattleManager.LoadDummyPlayerData();
-                Global.BattleManager.LoadDummyEnemyData();
-            }
-
             // BattleScene開始タイミング
             for (int i = 0; i < battleEnemies.Count; i++)
             {

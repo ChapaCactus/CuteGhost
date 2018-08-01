@@ -28,7 +28,7 @@ namespace CCG
             public bool IsEnd { get { return state == Talk.State.End; } }
 
             public List<string> Choises { get; private set; }
-            public List<string> Battle { get; private set; }
+            public List<string> BattleGroup { get; private set; }
 
             public int progress { get; private set; }
             public GameObject speaker { get; private set; }
@@ -43,7 +43,7 @@ namespace CCG
                 this.speaker = speaker;
 
                 Choises = talkRow._Choises;
-                Battle = talkRow._Battle;
+                BattleGroup = talkRow._Battle;
 
                 messages = talkRow._Message;
 
@@ -162,12 +162,20 @@ namespace CCG
                     }
 
                     // 戦闘敵が設定されていれば、戦闘シーンに以降
-                    if (talk.Battle.Count >= 1
-                        && talk.Battle.Any(battle => battle != "None"))
+                    if (talk.BattleGroup.Count >= 1
+                        && talk.BattleGroup.Any(battle => battle != "None"))
                     {
-                        // 戦闘シーンに移動する
-                        var enemies = talk.Battle.Select(enemyID => new Enemy(enemyID) as IFightable)
-                                                  .ToList();
+                        var battleGroupID = talk.BattleGroup
+                                                .OrderBy(n => Guid.NewGuid())
+                                                .First();
+                        var battleGroup = EnemyGroupMaster.Instance.GetRow(battleGroupID);
+                        var enemies = new List<IFightable>()
+                        {
+                            (string.IsNullOrEmpty(battleGroup._Enemy1) ? null : new Enemy(battleGroup._Enemy1)),
+                            (string.IsNullOrEmpty(battleGroup._Enemy2) ? null : new Enemy(battleGroup._Enemy2)),
+                            (string.IsNullOrEmpty(battleGroup._Enemy3) ? null : new Enemy(battleGroup._Enemy3)),
+                        };
+
                         var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies);
                         Global.BattleManager.StartBattle(battleSetting);
 

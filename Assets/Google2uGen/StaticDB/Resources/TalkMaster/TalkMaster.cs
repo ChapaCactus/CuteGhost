@@ -125,7 +125,7 @@ namespace Google2u
 			Rows.Add( new TalkMasterRow("ID_002", "たのみました", "None", "None"));
 			Rows.Add( new TalkMasterRow("ID_003", "ここは、せかいのはてです\nおわりです", "None", "None"));
 			Rows.Add( new TalkMasterRow("ID_004", "たたかいますか？", "None", "ID_005|ID_006"));
-			Rows.Add( new TalkMasterRow("ID_005", "よしたたかえ！", "ID_001|ID_001|ID_001", "None"));
+			Rows.Add( new TalkMasterRow("ID_005", "よしたたかえ！", "ID_001|ID_002", "None"));
 			Rows.Add( new TalkMasterRow("ID_006", "やめとくのね", "None", "None"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)

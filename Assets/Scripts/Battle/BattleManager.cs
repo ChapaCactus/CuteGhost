@@ -88,35 +88,6 @@ namespace CCG
             // Playerターン終了
             yield return OnEndPlayerTurn();
         }
-
-        public void LoadDummyPlayerData()
-        {
-            var status = new CharacterStatus();
-            status.CharaName = "デバッグプレイヤー";
-            status.Level = 1;
-            status.MaxHealth = 10;
-            status.Health = 10;
-            status.ATK = 500;
-            var player = new Player(status);
-
-            Player = player;
-
-            Debug.Log("Dummy PlayerData Loaded.");
-        }
-
-        public void LoadDummyEnemyData()
-        {
-            var enemy1 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
-            var enemy2 = new Enemy(EnemyMaster.rowIds.ID_002.ToString());
-            var enemy3 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
-
-            Enemies = new List<IFightable>();
-            Enemies.Add(enemy1);
-            Enemies.Add(enemy2);
-            Enemies.Add(enemy3);
-
-            Debug.Log("Dummy EnemyData Loaded.");
-        }
         #endregion
 
         #region private methods
@@ -140,8 +111,10 @@ namespace CCG
         {
             Turn = BattleTurn.Enemy;
 
-            var attackers = Enemies.Where(enemy => !enemy.IsDead)
-                                   .ToList();
+            var attackers = Enemies
+                .Where(enemy => enemy != null)
+                .Where(enemy => !enemy.IsDead)
+                .ToList();
 
             foreach(var enemy in attackers)
             {
@@ -163,7 +136,9 @@ namespace CCG
 
         private IEnumerator OnEndPlayerTurn()
         {
-            bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
+            var isAllEnemiesDead = Enemies
+                .Where(enemy => enemy != null)
+                .All(enemy => enemy.IsDead);
             if(isAllEnemiesDead)
             {
                 yield return FinishBattle(true);

@@ -37,8 +37,13 @@ namespace CCG
         #region public methods
         public void Setup(Enemy enemy)
         {
-            Enemy = enemy;
+            if(enemy == null)
+            {
+                SetActive(false);
+                return;
+            }
 
+            Enemy = enemy;
             Enemy.SetOnDead(() => { });
 
             // 画像読み込み・セット
