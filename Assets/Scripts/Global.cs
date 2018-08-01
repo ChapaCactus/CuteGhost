@@ -10,6 +10,8 @@ namespace CCG
     public static class Global
     {
         #region properties
+        public static bool IsGameInitialized { get; private set; } = false;
+
         public static Player Player { get; private set; }
 
         public static BattleManager BattleManager { get; private set; }
@@ -30,6 +32,8 @@ namespace CCG
             QuestManager.Init();
 
             SetInsightTarget(null);
+
+            IsGameInitialized = true;
         }
 
         public static void StartGame()

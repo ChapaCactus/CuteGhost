@@ -91,8 +91,14 @@ namespace CCG
         #endregion
 
         #region private methods
+        /// <summary>
+        /// バトルの終了
+        /// </summary>
         private IEnumerator FinishBattle(bool isWin)
         {
+            // 終了時点のプレイヤーステータスを反映
+            Global.Player.UpdateStatus(Player.Status);
+
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
 

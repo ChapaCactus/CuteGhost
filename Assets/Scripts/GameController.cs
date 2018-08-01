@@ -12,7 +12,10 @@ namespace CCG
         #region unity callbacks
         private void Awake()
         {
-            Global.Init();
+            if (!Global.IsGameInitialized)
+            {
+                Global.Init();
+            }
 
             UIManager.I.SetupStatusPanel(Global.Player.Status);
         }

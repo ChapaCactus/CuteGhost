@@ -29,6 +29,11 @@ namespace CCG
             this.status = status;
         }
 
+        public void UpdateStatus(CharacterStatus status)
+        {
+            this.status = status;
+        }
+
         public void Attack(IFightable target)
         {
             // 射撃音再生
