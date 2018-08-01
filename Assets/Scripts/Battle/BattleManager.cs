@@ -79,6 +79,7 @@ namespace CCG
 
             // ダメージを与える
             Player.Attack(enemy.Enemy);
+            BattleUIManager.I.StatusPanel.Move(false);
 
             yield return new WaitForSeconds(0.7f);
 
@@ -162,8 +163,6 @@ namespace CCG
 
         private IEnumerator OnEndPlayerTurn()
         {
-            BattleUIManager.I.StatusPanel.Move(false);
-
             bool isAllEnemiesDead = Enemies.All(enemy => enemy.IsDead);
             if(isAllEnemiesDead)
             {
