@@ -21,6 +21,7 @@ namespace CCG
         public bool IsDead { get { return Status.IsDead; } }
 
         public string EnemyID { get; private set; }
+        public string SpritePath { get; private set; }
         #endregion
 
         #region public methods
@@ -34,6 +35,7 @@ namespace CCG
             var row = EnemyMaster.Instance.GetRow(enemyID);
             this.status = new CharacterStatus();
             this.status.SetData(row);
+            this.SpritePath = row._Sprite;
         }
 
         public void SetOnDead(Action onDead)

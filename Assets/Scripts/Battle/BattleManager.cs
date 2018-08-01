@@ -107,7 +107,7 @@ namespace CCG
         public void LoadDummyEnemyData()
         {
             var enemy1 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
-            var enemy2 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
+            var enemy2 = new Enemy(EnemyMaster.rowIds.ID_002.ToString());
             var enemy3 = new Enemy(EnemyMaster.rowIds.ID_001.ToString());
 
             Enemies = new List<IFightable>();

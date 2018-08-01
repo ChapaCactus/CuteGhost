@@ -40,6 +40,9 @@ namespace CCG
             Enemy = enemy;
 
             Enemy.SetOnDead(() => { });
+
+            // 画像読み込み・セット
+            spriteRenderer.sprite = Utilities.LoadSprite(enemy.SpritePath);
         }
 
         public void OnTap(Gesture gesture)

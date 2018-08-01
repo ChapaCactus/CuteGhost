@@ -18,7 +18,8 @@ namespace Google2u
 		public int _Level;
 		public int _MaxHealth;
 		public int _ATK;
-		public EnemyMasterRow(string __ID, string __Name, string __Level, string __MaxHealth, string __ATK) 
+		public string _Sprite;
+		public EnemyMasterRow(string __ID, string __Name, string __Level, string __MaxHealth, string __ATK, string __Sprite) 
 		{
 			_Name = __Name.Trim();
 			{
@@ -42,9 +43,10 @@ namespace Google2u
 				else
 					Debug.LogError("Failed To Convert _ATK string: "+ __ATK +" to int");
 			}
+			_Sprite = __Sprite.Trim();
 		}
 
-		public int Length { get { return 4; } }
+		public int Length { get { return 5; } }
 
 		public string this[int i]
 		{
@@ -71,6 +73,9 @@ namespace Google2u
 				case 3:
 					ret = _ATK.ToString();
 					break;
+				case 4:
+					ret = _Sprite.ToString();
+					break;
 			}
 
 			return ret;
@@ -93,6 +98,9 @@ namespace Google2u
 				case "ATK":
 					ret = _ATK.ToString();
 					break;
+				case "Sprite":
+					ret = _Sprite.ToString();
+					break;
 			}
 
 			return ret;
@@ -104,16 +112,17 @@ namespace Google2u
 			ret += "{" + "Level" + " : " + _Level.ToString() + "} ";
 			ret += "{" + "MaxHealth" + " : " + _MaxHealth.ToString() + "} ";
 			ret += "{" + "ATK" + " : " + _ATK.ToString() + "} ";
+			ret += "{" + "Sprite" + " : " + _Sprite.ToString() + "} ";
 			return ret;
 		}
 	}
 	public sealed class EnemyMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001
+			ID_001, ID_002
 		};
 		public string [] rowNames = {
-			"ID_001"
+			"ID_001", "ID_002"
 		};
 		public System.Collections.Generic.List<EnemyMasterRow> Rows = new System.Collections.Generic.List<EnemyMasterRow>();
 
@@ -130,7 +139,8 @@ namespace Google2u
 
 		private EnemyMaster()
 		{
-			Rows.Add( new EnemyMasterRow("ID_001", "さいしょのてき", "1", "10", "3"));
+			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "10", "3", "Sprites/Enemy/Longie"));
+			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "20", "4", "Sprites/Enemy/Fattie"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
