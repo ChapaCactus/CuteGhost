@@ -18,10 +18,17 @@ namespace CCG
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public Item(ItemMasterRow masterData)
+        public Item(ItemMaster.rowIds id)
         {
-            this.Name = masterData._Name;
-            this.Price = masterData._Price;
+            var row = ItemMaster.Instance.GetRow(id);
+
+            this.Name = row._Name;
+            this.Price = row._Price;
+        }
+
+        public static Item Empty()
+        {
+            return new Item(ItemMaster.rowIds.Empty);
         }
         #endregion
     }

@@ -80,10 +80,10 @@ namespace Google2u
 	public sealed class ItemMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001, ID_002, ID_003
+			Empty, ID_001, ID_002, ID_003
 		};
 		public string [] rowNames = {
-			"ID_001", "ID_002", "ID_003"
+			"Empty", "ID_001", "ID_002", "ID_003"
 		};
 		public System.Collections.Generic.List<ItemMasterRow> Rows = new System.Collections.Generic.List<ItemMasterRow>();
 
@@ -100,6 +100,7 @@ namespace Google2u
 
 		private ItemMaster()
 		{
+			Rows.Add( new ItemMasterRow("Empty", "Empty", "0"));
 			Rows.Add( new ItemMasterRow("ID_001", "コロッケ", "100"));
 			Rows.Add( new ItemMasterRow("ID_002", "クリームコロッケ", "200"));
 			Rows.Add( new ItemMasterRow("ID_003", "サンダークリームコロッケ", "1000"));

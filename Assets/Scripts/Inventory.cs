@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Linq;
+
 namespace CCG
 {
     public class Inventory
     {
+        #region constants
+        private const int InventoryMax = 10;
+        #endregion
+
         #region properties
-        public List<Item> Items { get; private set; }
+        public Item[] Items { get; private set; }
         #endregion
 
         #region public methods
@@ -17,12 +23,13 @@ namespace CCG
         /// </summary>
         public Inventory()
         {
-            this.Items = new List<Item>();
+            this.Items = new Item[InventoryMax];
         }
 
         public static Inventory Load()
         {
-            return new Inventory();
+            var inventory = new Inventory();
+            return inventory;
         }
         #endregion
     }
