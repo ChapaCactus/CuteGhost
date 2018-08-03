@@ -27,11 +27,8 @@ namespace CCG
             Player = LoadPlayerData();
             Inventory = Inventory.Load();
 
-            BattleManager = new BattleManager();
-            BattleManager.Init();
-
-            QuestManager = new QuestManager();
-            QuestManager.Init();
+            BattleManager = BattleManager.Create();
+            QuestManager = QuestManager.Create();
 
             SetInsightTarget(null);
 

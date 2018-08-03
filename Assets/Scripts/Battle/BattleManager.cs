@@ -44,8 +44,16 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void Init()
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public BattleManager()
         {
+        }
+
+        public static BattleManager Create()
+        {
+            return new BattleManager();
         }
 
         public void StartBattle(BattleSetupData setupData)

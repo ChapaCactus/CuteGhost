@@ -22,11 +22,19 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void Init()
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public QuestManager()
         {
             allQuestList = LoadAllQuestFromMaster();
 
             Load();
+        }
+
+        public static QuestManager Create()
+        {
+            return new QuestManager();
         }
 
         /// <summary>
