@@ -22,12 +22,20 @@ namespace CCG
         private Button actionButton = null;
         [SerializeField]
         private Text actionButtonText = null;
+
         // 設定ボタン
         [SerializeField]
         private Button settingButton = null;
         // 設定パネル
         [SerializeField]
         private SettingPanel settingPanel = null;
+
+        // インベントリボタン
+        [SerializeField]
+        private Button inventoryButton = null;
+        // インベントリパネル
+        [SerializeField]
+        private InventoryPanel inventoryPanel = null;
 
         [SerializeField]
         private AnnounceText announceText = null;
@@ -165,6 +173,7 @@ namespace CCG
         private void InitUI()
         {
             settingPanel.SetActive(false);
+            inventoryPanel.SetActive(false);
 
             actionButtonText.text = DefaultActionButtonText;
         }
