@@ -13,6 +13,7 @@ namespace CCG
         public static bool IsGameInitialized { get; private set; } = false;
 
         public static Player Player { get; private set; }
+        public static Inventory Inventory { get; private set; }
 
         public static BattleManager BattleManager { get; private set; }
         public static QuestManager QuestManager { get; private set; }
@@ -24,6 +25,7 @@ namespace CCG
         public static void Init()
         {
             Player = LoadPlayerData();
+            Inventory = Inventory.Load();
 
             BattleManager = new BattleManager();
             BattleManager.Init();
