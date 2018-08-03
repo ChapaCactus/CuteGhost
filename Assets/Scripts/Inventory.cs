@@ -23,7 +23,10 @@ namespace CCG
         /// </summary>
         public Inventory()
         {
-            this.Items = new Item[InventoryMax];
+            this.Items = new Item[InventoryMax]
+                .ToList()
+                .Select(_ => Item.Empty())
+                .ToArray();
         }
 
         public static Inventory Load()
