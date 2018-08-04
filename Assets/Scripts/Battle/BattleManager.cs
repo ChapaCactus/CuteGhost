@@ -12,9 +12,10 @@ using DarkTonic.MasterAudio;
 
 namespace CCG
 {
-    public enum BattleTurn
+    public enum BattleState
     {
         Player,
+        EnemySelected,
         Enemy,
     }
 
@@ -38,9 +39,9 @@ namespace CCG
         public IFightable Player { get; private set; }
         public List<IFightable> Enemies { get; private set; }
 
-        public BattleTurn Turn { get; private set; }
-        public bool IsPlayerTurn { get { return Turn == BattleTurn.Player; } }
-        public bool IsEnemyTurn { get { return Turn == BattleTurn.Enemy; } }
+        public BattleState State { get; private set; }
+        public bool IsPlayerTurn { get { return State == BattleState.Player; } }
+        public bool IsEnemyTurn { get { return State == BattleState.Enemy; } }
         #endregion
 
         #region public methods
@@ -84,6 +85,7 @@ namespace CCG
                 Debug.Log("自分のターンではありません");
                 yield break;
             }
+            State = BattleState.EnemySelected;
 
             // ダメージを与える
             Player.Attack(enemy.Enemy);
@@ -148,7 +150,7 @@ namespace CCG
 
         private IEnumerator StartEnemiesTurn()
         {
-            Turn = BattleTurn.Enemy;
+            State = BattleState.Enemy;
 
             var attackers = Enemies
                 .Select(enemy => enemy as Enemy)
@@ -172,7 +174,7 @@ namespace CCG
         /// </summary>
         private void OnStartPlayerTurn()
         {
-            Turn = BattleTurn.Player;
+            State = BattleState.Player;
             BattleUIManager.I.StatusPanel.Move(true);
         }
 
