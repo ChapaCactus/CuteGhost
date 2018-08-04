@@ -18,8 +18,9 @@ namespace Google2u
 		public int _Level;
 		public int _MaxHealth;
 		public int _ATK;
+		public System.Collections.Generic.List<string> _DropItem = new System.Collections.Generic.List<string>();
 		public string _Sprite;
-		public EnemyMasterRow(string __ID, string __Name, string __Level, string __MaxHealth, string __ATK, string __Sprite) 
+		public EnemyMasterRow(string __ID, string __Name, string __Level, string __MaxHealth, string __ATK, string __DropItem, string __Sprite) 
 		{
 			_Name = __Name.Trim();
 			{
@@ -43,10 +44,17 @@ namespace Google2u
 				else
 					Debug.LogError("Failed To Convert _ATK string: "+ __ATK +" to int");
 			}
+			{
+				string []result = __DropItem.Split("|".ToCharArray(),System.StringSplitOptions.RemoveEmptyEntries);
+				for(int i = 0; i < result.Length; i++)
+				{
+					_DropItem.Add( result[i].Trim() );
+				}
+			}
 			_Sprite = __Sprite.Trim();
 		}
 
-		public int Length { get { return 5; } }
+		public int Length { get { return 6; } }
 
 		public string this[int i]
 		{
@@ -74,6 +82,9 @@ namespace Google2u
 					ret = _ATK.ToString();
 					break;
 				case 4:
+					ret = _DropItem.ToString();
+					break;
+				case 5:
 					ret = _Sprite.ToString();
 					break;
 			}
@@ -98,6 +109,9 @@ namespace Google2u
 				case "ATK":
 					ret = _ATK.ToString();
 					break;
+				case "DropItem":
+					ret = _DropItem.ToString();
+					break;
 				case "Sprite":
 					ret = _Sprite.ToString();
 					break;
@@ -112,6 +126,7 @@ namespace Google2u
 			ret += "{" + "Level" + " : " + _Level.ToString() + "} ";
 			ret += "{" + "MaxHealth" + " : " + _MaxHealth.ToString() + "} ";
 			ret += "{" + "ATK" + " : " + _ATK.ToString() + "} ";
+			ret += "{" + "DropItem" + " : " + _DropItem.ToString() + "} ";
 			ret += "{" + "Sprite" + " : " + _Sprite.ToString() + "} ";
 			return ret;
 		}
@@ -139,8 +154,8 @@ namespace Google2u
 
 		private EnemyMaster()
 		{
-			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "10", "3", "Sprites/Enemy/Longie"));
-			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "20", "4", "Sprites/Enemy/Fattie"));
+			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "10", "3", "ID_001|100%", "Sprites/Enemy/Longie"));
+			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "20", "4", "ID_002|20%", "Sprites/Enemy/Fattie"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

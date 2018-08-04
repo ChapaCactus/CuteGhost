@@ -18,6 +18,8 @@ namespace CCG
         public CharacterStatus Status { get { return status; } }
         public string CharaName { get { return Status.CharaName; } }
 
+        public DropItem DropItem { get; private set; }
+
         public bool IsDead { get { return Status.IsDead; } }
 
         public string EnemyID { get; private set; }
@@ -36,6 +38,10 @@ namespace CCG
             this.status = new CharacterStatus();
             this.status.SetData(row);
             this.SpritePath = row._Sprite;
+
+            var dropItem = new Item(row._DropItem[0]);
+            var dropRate = row._DropItem[1];
+            this.DropItem = new DropItem(dropItem, dropRate);
         }
 
         public void SetOnDead(Action onDead)

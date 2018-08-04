@@ -28,6 +28,18 @@ namespace CCG
             this.Description = row._Description;
         }
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public Item(string id)
+        {
+            var row = ItemMaster.Instance.GetRow(id);
+
+            this.Name = row._Name;
+            this.Price = row._Price;
+            this.Description = row._Description;
+        }
+
         public static Item Empty()
         {
             return new Item(ItemMaster.rowIds.Empty);
