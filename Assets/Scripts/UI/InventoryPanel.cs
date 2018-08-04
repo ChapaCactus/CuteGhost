@@ -17,6 +17,9 @@ namespace CCG
 
         [SerializeField]
         private GridLayoutGroup layout = null;
+
+        [SerializeField]
+        private ItemInfoPanel itemInfoPanel = null;
         #endregion
 
         #region properties
@@ -26,20 +29,24 @@ namespace CCG
         #region unity callbacks
         private void Start()
         {
-            Open(10);
+            Open(Global.Inventory.Items);
         }
         #endregion
 
         #region public methods
-        public void Open(int cellCount)
+        public void Open(Item[] items)
         {
             Cells.ForEach(cell => Destroy(cell.gameObject));
             Cells.Clear();
 
             var cellPrefab = Resources.Load<InventoryCell>("Prefabs/UI/InventoryCell");
-            foreach(var loop in Enumerable.Range(0, cellCount))
+            foreach(var loopIndex in Enumerable.Range(0, items.Length))
             {
                 var cell = Instantiate(cellPrefab, layout.transform);
+                cell.SetIndex(loopIndex);
+                cell.SetData(items[loopIndex]);
+                cell.SetOnClick(OnClickCell);
+
                 Cells.Add(cell);
             }
 
@@ -60,6 +67,11 @@ namespace CCG
         #endregion
 
         #region private methods
+        private void OnClickCell(int cellIndex)
+        {
+            var item = Global.Inventory.Items[cellIndex];
+            itemInfoPanel.SetItem(item);
+        }
         #endregion
     }
 }
