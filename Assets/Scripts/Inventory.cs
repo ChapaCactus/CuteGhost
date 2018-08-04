@@ -34,6 +34,21 @@ namespace CCG
             var inventory = new Inventory();
             return inventory;
         }
+
+        /// <summary>
+        /// アイテム追加
+        /// </summary>
+        public void AddItem(Item item)
+        {
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if(Items[i].IsEmpty)
+                {
+                    Items[i] = item;
+                    break;
+                }
+            }
+        }
         #endregion
     }
 }

@@ -126,7 +126,7 @@ namespace CCG
         private IEnumerator CheckDropItem()
         {
             var wait = new WaitForSeconds(1);
-            foreach(Enemy enemy in Enemies)
+            foreach (Enemy enemy in Enemies)
             {
                 if (!enemy.IsEmpty)
                 {
@@ -134,6 +134,8 @@ namespace CCG
                     if (random <= enemy.DropItem.DropRate)
                     {
                         // ドロップした
+                        Global.Inventory.AddItem(enemy.DropItem.Item);
+
                         var head = $"{enemy.CharaName}は\nアイテムをもっていた！";
                         var body = $"{enemy.DropItem.Item.Name}をてにいれた。";
                         BattleUIManager.I.BattleLog.SetMessage(head, body);
@@ -149,11 +151,11 @@ namespace CCG
             Turn = BattleTurn.Enemy;
 
             var attackers = Enemies
-                .Where(enemy => enemy != null)
-                .Where(enemy => !enemy.IsDead)
+                .Select(enemy => enemy as Enemy)
+                .Where(enemy => !enemy.IsEmpty && !enemy.IsDead)
                 .ToList();
 
-            foreach(var enemy in attackers)
+            foreach (var enemy in attackers)
             {
                 enemy.Attack(Player);
                 MasterAudio.PlaySound("EnemyHit");
@@ -182,7 +184,7 @@ namespace CCG
             var isAllEnemiesDead = Enemies
                 .Where(enemy => enemy != null)
                 .All(enemy => enemy.IsDead);
-            if(isAllEnemiesDead)
+            if (isAllEnemiesDead)
             {
                 yield return FinishBattle(true);
                 yield break;
@@ -209,7 +211,8 @@ namespace CCG
 
         private bool CheckEnemiesDead()
         {
-            return Enemies.All(enemy => enemy.IsDead);
+            return Enemies.Select(enemy => enemy as Enemy)
+                          .All(enemy => enemy.IsDead || enemy.IsEmpty);
         }
         #endregion
     }

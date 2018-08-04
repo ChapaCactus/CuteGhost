@@ -43,7 +43,8 @@ namespace CCG
             this.status.SetData(row);
             this.SpritePath = row._Sprite;
 
-            if (row._DropItem != null)
+            if (row._DropItem != null
+                && row._DropItem.Count > 0)
             {
                 var dropItem = new Item(row._DropItem[0]);
                 var dropRate = row._DropItem[1];
