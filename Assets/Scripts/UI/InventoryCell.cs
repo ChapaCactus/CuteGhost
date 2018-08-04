@@ -38,6 +38,8 @@ namespace CCG
         public void SetData(Item item)
         {
             text.text = item.Name;
+
+            button.interactable = (item.Name != "Empty");
         }
         #endregion
     }

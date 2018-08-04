@@ -12,6 +12,7 @@ namespace CCG
         #region properties
         public string Name { get; private set; }
         public int Price { get; private set; }
+        public string Description { get; private set; }
         #endregion
 
         #region public methods
@@ -24,6 +25,7 @@ namespace CCG
 
             this.Name = row._Name;
             this.Price = row._Price;
+            this.Description = row._Description;
         }
 
         public static Item Empty()

@@ -27,10 +27,6 @@ namespace CCG
         #endregion
 
         #region unity callbacks
-        private void Start()
-        {
-            Open(Global.Inventory.Items);
-        }
         #endregion
 
         #region public methods
