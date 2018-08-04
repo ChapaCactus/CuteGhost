@@ -19,14 +19,30 @@ namespace CCG
 
         [SerializeField]
         private Slider healthBar = null;
+
+        [SerializeField]
+        private CurePopText curePopText = null;
+        #endregion
+
+        #region properties
+        private int? healthCache { get; set; } = null;
         #endregion
 
         #region public methods
         public void Setup(CharacterStatus status)
         {
+            if(healthCache != null
+               && status.Health > healthCache)
+            {
+                int cure = (status.Health - (int)healthCache);
+                curePopText.Play(cure);
+            }
+
             SetLevelText(status.Level);
             SetHealthText(status.Health, status.MaxHealth);
             SetHealthBarValue(status.Health, status.MaxHealth);
+
+            healthCache = status.Health;
         }
 
         public void Move(bool isOn)

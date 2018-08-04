@@ -84,9 +84,7 @@ namespace CCG
         #region public methods
         public void SetupStatusPanel(CharacterStatus status)
         {
-            statusPanel.SetLevelText(status.Level);
-            statusPanel.SetHealthText(status.Health, status.MaxHealth);
-            statusPanel.SetHealthBarValue(status.Health, status.MaxHealth);
+            statusPanel.Setup(status);
         }
 
         /// <summary>
