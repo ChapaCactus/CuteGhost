@@ -55,6 +55,11 @@ namespace CCG
             OnOpen();
         }
 
+        public void UpdateCells()
+        {
+            Cells.ForEach(cell => cell.UpdateUI());
+        }
+
         public void Close()
         {
             SetActive(false);
@@ -89,6 +94,8 @@ namespace CCG
         {
             var item = Global.Inventory.Items[SelectedCellIndex];
             item.Use();
+            Global.Inventory.SetEmpty(SelectedCellIndex);
+            UpdateCells();
         }
 
         private void OnOpen()

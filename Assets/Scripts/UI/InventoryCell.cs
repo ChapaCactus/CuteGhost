@@ -44,6 +44,12 @@ namespace CCG
 
             button.interactable = (item.Name != "Empty");
         }
+
+        public void UpdateUI()
+        {
+            var item = Global.Inventory.Items[Index];
+            SetData(item);
+        }
         #endregion
 
         #region private methods

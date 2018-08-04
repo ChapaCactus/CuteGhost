@@ -49,6 +49,11 @@ namespace CCG
                 }
             }
         }
+
+        public void SetEmpty(int index)
+        {
+            Items[index] = Item.Empty();
+        }
         #endregion
     }
 }
