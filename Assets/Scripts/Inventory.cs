@@ -10,7 +10,7 @@ namespace CCG
     public class Inventory
     {
         #region constants
-        private const int InventoryMax = 10;
+        private const int InventoryMax = 20;
         #endregion
 
         #region properties
