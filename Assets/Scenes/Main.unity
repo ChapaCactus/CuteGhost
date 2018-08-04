@@ -588,7 +588,7 @@ MonoBehaviour:
   settingButton: {fileID: 177033149}
   settingPanel: {fileID: 1116002722}
   inventoryButton: {fileID: 1881777010}
-  inventoryPanel: {fileID: 0}
+  inventoryPanel: {fileID: 1790942957}
   announceText: {fileID: 1646010096}
   choisesPanel: {fileID: 1910643249}
   statusPanel: {fileID: 930955130}
@@ -15886,6 +15886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1790942958}
+  layout: {fileID: 601163879}
 --- !u!225 &1790942958
 CanvasGroup:
   m_ObjectHideFlags: 0
