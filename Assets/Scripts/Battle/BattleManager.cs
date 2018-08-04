@@ -181,10 +181,7 @@ namespace CCG
         /// </summary>
         private IEnumerator OnEndPlayerTurn()
         {
-            var isAllEnemiesDead = Enemies
-                .Where(enemy => enemy != null)
-                .All(enemy => enemy.IsDead);
-            if (isAllEnemiesDead)
+            if (CheckEnemiesDead())
             {
                 yield return FinishBattle(true);
                 yield break;
