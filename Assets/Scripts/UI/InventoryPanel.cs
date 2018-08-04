@@ -33,6 +33,7 @@ namespace CCG
         #region public methods
         public void Open(int cellCount)
         {
+            Cells.ForEach(cell => Destroy(cell.gameObject));
             Cells.Clear();
 
             var cellPrefab = Resources.Load<InventoryCell>("Prefabs/UI/InventoryCell");
