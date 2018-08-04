@@ -9,6 +9,10 @@ namespace CCG
 {
     public class Enemy : IFightable
     {
+        #region constants
+        private const string EmptyKey = "Empty";
+        #endregion
+
         #region variables
         private CharacterStatus status;
         private Action onDead;
@@ -17,11 +21,11 @@ namespace CCG
         #region properties
         public CharacterStatus Status { get { return status; } }
         public string CharaName { get { return Status.CharaName; } }
+        public bool IsDead { get { return Status.IsDead; } }
 
         public DropItem DropItem { get; private set; }
 
-        public bool IsDead { get { return Status.IsDead; } }
-
+        public bool IsEmpty { get { return Status.CharaName == EmptyKey; } }
         public string EnemyID { get; private set; }
         public string SpritePath { get; private set; }
         #endregion
@@ -39,9 +43,18 @@ namespace CCG
             this.status.SetData(row);
             this.SpritePath = row._Sprite;
 
-            var dropItem = new Item(row._DropItem[0]);
-            var dropRate = row._DropItem[1];
-            this.DropItem = new DropItem(dropItem, dropRate);
+            if (row._DropItem != null)
+            {
+                var dropItem = new Item(row._DropItem[0]);
+                var dropRate = row._DropItem[1];
+                this.DropItem = new DropItem(dropItem, dropRate);
+            }
+        }
+
+        public static Enemy Empty()
+        {
+            var empty = new Enemy(EmptyKey);
+            return empty;
         }
 
         public void SetOnDead(Action onDead)

@@ -115,10 +115,33 @@ namespace CCG
             var body = $"{Player.Status.CharaName}は\nたくさんの　けいけんちをえた。";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
+            yield return CheckDropItem();
+
             yield return new WaitForSeconds(3.2f);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
+        }
+
+        private IEnumerator CheckDropItem()
+        {
+            var wait = new WaitForSeconds(1);
+            foreach(Enemy enemy in Enemies)
+            {
+                if (!enemy.IsEmpty)
+                {
+                    var random = UnityEngine.Random.Range(0, 101);
+                    if (random <= enemy.DropItem.DropRate)
+                    {
+                        // ドロップした
+                        var head = $"{enemy.CharaName}は\nアイテムをもっていた！";
+                        var body = $"{enemy.DropItem.Item.Name}をてにいれた。";
+                        BattleUIManager.I.BattleLog.SetMessage(head, body);
+
+                        yield return wait;
+                    }
+                }
+            }
         }
 
         private IEnumerator StartEnemiesTurn()
@@ -142,12 +165,18 @@ namespace CCG
             OnEndEnemyTurn();
         }
 
+        /// <summary>
+        /// プレイヤーターン開始時
+        /// </summary>
         private void OnStartPlayerTurn()
         {
             Turn = BattleTurn.Player;
             BattleUIManager.I.StatusPanel.Move(true);
         }
 
+        /// <summary>
+        /// プレイヤーターン終了時
+        /// </summary>
         private IEnumerator OnEndPlayerTurn()
         {
             var isAllEnemiesDead = Enemies

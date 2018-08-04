@@ -171,9 +171,9 @@ namespace CCG
                         var battleGroup = EnemyGroupMaster.Instance.GetRow(battleGroupID);
                         var enemies = new List<IFightable>()
                         {
-                            (string.IsNullOrEmpty(battleGroup._Enemy1) ? null : new Enemy(battleGroup._Enemy1)),
-                            (string.IsNullOrEmpty(battleGroup._Enemy2) ? null : new Enemy(battleGroup._Enemy2)),
-                            (string.IsNullOrEmpty(battleGroup._Enemy3) ? null : new Enemy(battleGroup._Enemy3)),
+                            (string.IsNullOrEmpty(battleGroup._Enemy1) ? Enemy.Empty() : new Enemy(battleGroup._Enemy1)),
+                            (string.IsNullOrEmpty(battleGroup._Enemy2) ? Enemy.Empty() : new Enemy(battleGroup._Enemy2)),
+                            (string.IsNullOrEmpty(battleGroup._Enemy3) ? Enemy.Empty() : new Enemy(battleGroup._Enemy3)),
                         };
 
                         var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies);

@@ -37,7 +37,7 @@ namespace CCG
         #region public methods
         public void Setup(Enemy enemy)
         {
-            if(enemy == null)
+            if(enemy.IsEmpty)
             {
                 SetActive(false);
                 return;
