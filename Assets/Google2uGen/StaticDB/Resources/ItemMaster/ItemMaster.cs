@@ -16,8 +16,10 @@ namespace Google2u
 	{
 		public string _Name;
 		public int _Price;
+		public string _Type;
+		public int _Value;
 		public string _Description;
-		public ItemMasterRow(string __ID, string __Name, string __Price, string __Description) 
+		public ItemMasterRow(string __ID, string __Name, string __Price, string __Type, string __Value, string __Description) 
 		{
 			_Name = __Name.Trim();
 			{
@@ -27,10 +29,18 @@ namespace Google2u
 				else
 					Debug.LogError("Failed To Convert _Price string: "+ __Price +" to int");
 			}
+			_Type = __Type.Trim();
+			{
+			int res;
+				if(int.TryParse(__Value, NumberStyles.Any, CultureInfo.InvariantCulture, out res))
+					_Value = res;
+				else
+					Debug.LogError("Failed To Convert _Value string: "+ __Value +" to int");
+			}
 			_Description = __Description.Trim();
 		}
 
-		public int Length { get { return 3; } }
+		public int Length { get { return 5; } }
 
 		public string this[int i]
 		{
@@ -52,6 +62,12 @@ namespace Google2u
 					ret = _Price.ToString();
 					break;
 				case 2:
+					ret = _Type.ToString();
+					break;
+				case 3:
+					ret = _Value.ToString();
+					break;
+				case 4:
 					ret = _Description.ToString();
 					break;
 			}
@@ -70,6 +86,12 @@ namespace Google2u
 				case "Price":
 					ret = _Price.ToString();
 					break;
+				case "Type":
+					ret = _Type.ToString();
+					break;
+				case "Value":
+					ret = _Value.ToString();
+					break;
 				case "Description":
 					ret = _Description.ToString();
 					break;
@@ -82,6 +104,8 @@ namespace Google2u
 			string ret = System.String.Empty;
 			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
 			ret += "{" + "Price" + " : " + _Price.ToString() + "} ";
+			ret += "{" + "Type" + " : " + _Type.ToString() + "} ";
+			ret += "{" + "Value" + " : " + _Value.ToString() + "} ";
 			ret += "{" + "Description" + " : " + _Description.ToString() + "} ";
 			return ret;
 		}
@@ -109,10 +133,10 @@ namespace Google2u
 
 		private ItemMaster()
 		{
-			Rows.Add( new ItemMasterRow("Empty", "Empty", "0", "から。"));
-			Rows.Add( new ItemMasterRow("ID_001", "コロッケ", "100", "おいしい"));
-			Rows.Add( new ItemMasterRow("ID_002", "クリームコロッケ", "200", "とてもおいしい"));
-			Rows.Add( new ItemMasterRow("ID_003", "サンダークリームコロッケ", "1000", "やみつき"));
+			Rows.Add( new ItemMasterRow("Empty", "Empty", "0", "Empty", "0", "から。"));
+			Rows.Add( new ItemMasterRow("ID_001", "コロッケ", "100", "Food", "10", "おいしい。"));
+			Rows.Add( new ItemMasterRow("ID_002", "クリームコロッケ", "200", "Food", "50", "とてもおいしい。"));
+			Rows.Add( new ItemMasterRow("ID_003", "サンダークリームコロッケ", "1000", "Food", "3000", "やみつき。"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

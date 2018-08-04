@@ -18,6 +18,8 @@ namespace CCG
 
         [SerializeField]
         private Button button = null;
+
+        private Action<int> onClick = null;
         #endregion
 
         #region properties
@@ -27,7 +29,8 @@ namespace CCG
         #region public methods
         public void SetOnClick(Action<int> onClick)
         {
-            button.onClick.AddListener(() => onClick.SafeCall(Index));
+            this.onClick = onClick;
+            button.onClick.AddListener(OnClick);
         }
 
         public void SetIndex(int index)
@@ -40,6 +43,13 @@ namespace CCG
             text.text = item.Name;
 
             button.interactable = (item.Name != "Empty");
+        }
+        #endregion
+
+        #region private methods
+        private void OnClick()
+        {
+            onClick.SafeCall(Index);
         }
         #endregion
     }

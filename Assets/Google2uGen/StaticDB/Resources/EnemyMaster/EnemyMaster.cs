@@ -134,10 +134,10 @@ namespace Google2u
 	public sealed class EnemyMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			Empty, ID_001, ID_002
+			Empty, ID_001, ID_002, a
 		};
 		public string [] rowNames = {
-			"Empty", "ID_001", "ID_002"
+			"Empty", "ID_001", "ID_002", "a"
 		};
 		public System.Collections.Generic.List<EnemyMasterRow> Rows = new System.Collections.Generic.List<EnemyMasterRow>();
 
@@ -157,6 +157,7 @@ namespace Google2u
 			Rows.Add( new EnemyMasterRow("Empty", "Empty", "1", "9999", "0", "", ""));
 			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "10", "3", "ID_001|100%", "Sprites/Enemy/Longie"));
 			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "20", "4", "ID_002|20%", "Sprites/Enemy/Fattie"));
+			Rows.Add( new EnemyMasterRow("a", "", "0", "0", "0", "", ""));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

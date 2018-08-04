@@ -27,6 +27,7 @@ namespace CCG
         public bool IsActive { get { return gameObject.activeSelf && canvasGroup.alpha == 1; } }
 
         private List<InventoryCell> Cells { get; set; } = new List<InventoryCell>();
+        private int SelectedCellIndex { get; set; }
         #endregion
 
         #region unity callbacks
@@ -77,8 +78,17 @@ namespace CCG
         #region private methods
         private void OnClickCell(int cellIndex)
         {
-            var item = Global.Inventory.Items[cellIndex];
+            SelectedCellIndex = cellIndex;
+
+            var item = Global.Inventory.Items[SelectedCellIndex];
             itemInfoPanel.SetItem(item);
+            itemInfoPanel.SetOnClickUseButton(OnClickUseButton);
+        }
+
+        private void OnClickUseButton()
+        {
+            var item = Global.Inventory.Items[SelectedCellIndex];
+            item.Use();
         }
 
         private void OnOpen()

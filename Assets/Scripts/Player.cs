@@ -56,6 +56,11 @@ namespace CCG
 
             MainCamera.I.Shake();
         }
+
+        public void Cure(int cure)
+        {
+            Status.Cure(cure);
+        }
         #endregion
     }
 }

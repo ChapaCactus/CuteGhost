@@ -15,6 +15,18 @@ namespace CCG
 
         [SerializeField]
         private Text descriptionText = null;
+
+        [SerializeField]
+        private Button useButton = null;
+
+        private Action onClickUseButton = null;
+        #endregion
+
+        #region unity callback
+        private void Awake()
+        {
+            useButton.onClick.AddListener(OnClickUseButton);
+        }
         #endregion
 
         #region public methods
@@ -22,6 +34,18 @@ namespace CCG
         {
             itemNameText.text = item.Name;
             descriptionText.text = item.Description;
+        }
+
+        public void SetOnClickUseButton(Action onClickUseButton)
+        {
+            this.onClickUseButton = onClickUseButton;
+        }
+        #endregion
+
+        #region private methods
+        private void OnClickUseButton()
+        {
+            onClickUseButton.SafeCall();
         }
         #endregion
     }

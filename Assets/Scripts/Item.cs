@@ -14,6 +14,8 @@ namespace CCG
 
         public string Name { get; private set; }
         public int Price { get; private set; }
+        public string Type { get; private set; }
+        public int Value { get; private set; }
         public string Description { get; private set; }
 
         public bool IsEmpty { get { return Name == "Empty"; } }
@@ -44,7 +46,22 @@ namespace CCG
         {
             this.Name = row._Name;
             this.Price = row._Price;
+            this.Type = row._Type;
+            this.Value = row._Value;
             this.Description = row._Description;
+        }
+
+        public void Use()
+        {
+            switch(Type)
+            {
+                case "Food":
+                    Global.Player.Cure(Value);
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         public static Item Empty()

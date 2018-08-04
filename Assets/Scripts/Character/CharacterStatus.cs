@@ -42,5 +42,16 @@ namespace CCG
                 Health = 0;
             }
         }
+
+        public void Cure(int cure)
+        {
+            Health += cure;
+            if(Health > MaxHealth)
+            {
+                Health = MaxHealth;
+            }
+
+            UIManager.I.SetupStatusPanel(this);
+        }
     }
 }
