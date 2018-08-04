@@ -184,23 +184,30 @@ namespace CCG
         /// </summary>
         private void OnClickSettingButton()
         {
-            settingPanel.SetActive(!settingPanel.gameObject.activeSelf);
-
-            string soundKey = settingPanel.gameObject.activeSelf ? "Beep_High" : "Beep_Low";
-            MasterAudio.PlaySound(soundKey);
+            if(settingPanel.gameObject.activeSelf)
+            {
+                settingPanel.Close();
+            } else
+            {
+                // 他のパネル非表示
+                inventoryPanel.SetActive(false);
+                // 開く
+                settingPanel.Open();
+            }
         }
 
         private void OnClickInventoryButton()
         {
             if (inventoryPanel.IsActive)
             {
-                inventoryPanel.SetActive(false);
-                MasterAudio.PlaySound("Beep_Low");
+                inventoryPanel.Close();
             }
             else
             {
+                // 他のパネル非表示
+                settingPanel.SetActive(false);
+                // 開く
                 inventoryPanel.Open(Global.Inventory.Items);
-                MasterAudio.PlaySound("Beep_High");
             }
         }
 

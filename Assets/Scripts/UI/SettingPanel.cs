@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using UnityEngine.UI;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -22,6 +23,18 @@ namespace CCG
         #endregion
 
         #region public methods
+        public void Open()
+        {
+            SetActive(true);
+            OnOpen();
+        }
+
+        public void Close()
+        {
+            SetActive(false);
+            OnClose();
+        }
+
         public void SetActive(bool isActive)
         {
             gameObject.SetActive(isActive);
@@ -33,6 +46,16 @@ namespace CCG
         {
             SetActive(false);
             Global.DeleteAllSaveData();
+        }
+
+        private void OnOpen()
+        {
+            MasterAudio.PlaySound("Beep_High");
+        }
+
+        private void OnClose()
+        {
+            MasterAudio.PlaySound("Beep_Low");
         }
         #endregion
     }

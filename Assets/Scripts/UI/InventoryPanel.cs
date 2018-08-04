@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 using UnityEngine.UI;
 using System.Linq;
+using DarkTonic.MasterAudio;
 
 namespace CCG
 {
@@ -49,6 +50,15 @@ namespace CCG
             }
 
             SetActive(true);
+
+            OnOpen();
+        }
+
+        public void Close()
+        {
+            SetActive(false);
+
+            OnClose();
         }
 
         public void SetActive(bool isActive)
@@ -69,6 +79,16 @@ namespace CCG
         {
             var item = Global.Inventory.Items[cellIndex];
             itemInfoPanel.SetItem(item);
+        }
+
+        private void OnOpen()
+        {
+            MasterAudio.PlaySound("Beep_High");
+        }
+
+        private void OnClose()
+        {
+            MasterAudio.PlaySound("Beep_Low");
         }
         #endregion
     }
