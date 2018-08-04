@@ -23,6 +23,8 @@ namespace CCG
         #endregion
 
         #region properties
+        public bool IsActive { get { return gameObject.activeSelf && canvasGroup.alpha == 1; } }
+
         private List<InventoryCell> Cells { get; set; } = new List<InventoryCell>();
         #endregion
 
@@ -36,7 +38,7 @@ namespace CCG
             Cells.Clear();
 
             var cellPrefab = Resources.Load<InventoryCell>("Prefabs/UI/InventoryCell");
-            foreach(var loopIndex in Enumerable.Range(0, items.Length))
+            foreach (var loopIndex in Enumerable.Range(0, items.Length))
             {
                 var cell = Instantiate(cellPrefab, layout.transform);
                 cell.SetIndex(loopIndex);

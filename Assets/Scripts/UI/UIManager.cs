@@ -67,6 +67,7 @@ namespace CCG
             canvasRect = canvas.GetComponent<RectTransform>();
 
             settingButton.onClick.AddListener(OnClickSettingButton);
+            inventoryButton.onClick.AddListener(OnClickInventoryButton);
 
             IsLeftButtonDown = false;
             IsRightButtonDown = false;
@@ -185,7 +186,22 @@ namespace CCG
         {
             settingPanel.SetActive(!settingPanel.gameObject.activeSelf);
 
-            MasterAudio.PlaySound("Beep_High");
+            string soundKey = settingPanel.gameObject.activeSelf ? "Beep_High" : "Beep_Low";
+            MasterAudio.PlaySound(soundKey);
+        }
+
+        private void OnClickInventoryButton()
+        {
+            if (inventoryPanel.IsActive)
+            {
+                inventoryPanel.SetActive(false);
+                MasterAudio.PlaySound("Beep_Low");
+            }
+            else
+            {
+                inventoryPanel.Open(Global.Inventory.Items);
+                MasterAudio.PlaySound("Beep_High");
+            }
         }
 
         private void OnClickTalkButton()
