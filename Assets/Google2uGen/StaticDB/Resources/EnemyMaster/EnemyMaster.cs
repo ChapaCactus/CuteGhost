@@ -16,11 +16,12 @@ namespace Google2u
 	{
 		public string _Name;
 		public int _Level;
+		public int _GainExp;
 		public int _MaxHealth;
 		public int _ATK;
 		public System.Collections.Generic.List<string> _DropItem = new System.Collections.Generic.List<string>();
 		public string _Sprite;
-		public EnemyMasterRow(string __ID, string __Name, string __Level, string __MaxHealth, string __ATK, string __DropItem, string __Sprite) 
+		public EnemyMasterRow(string __ID, string __Name, string __Level, string __GainExp, string __MaxHealth, string __ATK, string __DropItem, string __Sprite) 
 		{
 			_Name = __Name.Trim();
 			{
@@ -29,6 +30,13 @@ namespace Google2u
 					_Level = res;
 				else
 					Debug.LogError("Failed To Convert _Level string: "+ __Level +" to int");
+			}
+			{
+			int res;
+				if(int.TryParse(__GainExp, NumberStyles.Any, CultureInfo.InvariantCulture, out res))
+					_GainExp = res;
+				else
+					Debug.LogError("Failed To Convert _GainExp string: "+ __GainExp +" to int");
 			}
 			{
 			int res;
@@ -54,7 +62,7 @@ namespace Google2u
 			_Sprite = __Sprite.Trim();
 		}
 
-		public int Length { get { return 6; } }
+		public int Length { get { return 7; } }
 
 		public string this[int i]
 		{
@@ -76,15 +84,18 @@ namespace Google2u
 					ret = _Level.ToString();
 					break;
 				case 2:
-					ret = _MaxHealth.ToString();
+					ret = _GainExp.ToString();
 					break;
 				case 3:
-					ret = _ATK.ToString();
+					ret = _MaxHealth.ToString();
 					break;
 				case 4:
-					ret = _DropItem.ToString();
+					ret = _ATK.ToString();
 					break;
 				case 5:
+					ret = _DropItem.ToString();
+					break;
+				case 6:
 					ret = _Sprite.ToString();
 					break;
 			}
@@ -102,6 +113,9 @@ namespace Google2u
 					break;
 				case "Level":
 					ret = _Level.ToString();
+					break;
+				case "GainExp":
+					ret = _GainExp.ToString();
 					break;
 				case "MaxHealth":
 					ret = _MaxHealth.ToString();
@@ -124,6 +138,7 @@ namespace Google2u
 			string ret = System.String.Empty;
 			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
 			ret += "{" + "Level" + " : " + _Level.ToString() + "} ";
+			ret += "{" + "GainExp" + " : " + _GainExp.ToString() + "} ";
 			ret += "{" + "MaxHealth" + " : " + _MaxHealth.ToString() + "} ";
 			ret += "{" + "ATK" + " : " + _ATK.ToString() + "} ";
 			ret += "{" + "DropItem" + " : " + _DropItem.ToString() + "} ";
@@ -134,10 +149,10 @@ namespace Google2u
 	public sealed class EnemyMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			Empty, ID_001, ID_002, a
+			Empty, ID_001, ID_002
 		};
 		public string [] rowNames = {
-			"Empty", "ID_001", "ID_002", "a"
+			"Empty", "ID_001", "ID_002"
 		};
 		public System.Collections.Generic.List<EnemyMasterRow> Rows = new System.Collections.Generic.List<EnemyMasterRow>();
 
@@ -154,10 +169,9 @@ namespace Google2u
 
 		private EnemyMaster()
 		{
-			Rows.Add( new EnemyMasterRow("Empty", "Empty", "1", "9999", "0", "", ""));
-			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "10", "3", "ID_001|70%", "Sprites/Enemy/Longie"));
-			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "20", "4", "ID_002|40%", "Sprites/Enemy/Fattie"));
-			Rows.Add( new EnemyMasterRow("a", "", "0", "0", "0", "", ""));
+			Rows.Add( new EnemyMasterRow("Empty", "Empty", "1", "0", "9999", "0", "", ""));
+			Rows.Add( new EnemyMasterRow("ID_001", "ながーい", "1", "7", "10", "3", "ID_001|70%", "Sprites/Enemy/Longie"));
+			Rows.Add( new EnemyMasterRow("ID_002", "ふとーい", "1", "9", "20", "4", "ID_002|40%", "Sprites/Enemy/Fattie"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

@@ -61,6 +61,22 @@ namespace CCG
         {
             Status.Cure(cure);
         }
+
+        /// <summary>
+        /// 経験値取得
+        /// </summary>
+        /// <returns><c>true</c>, レベルアップした, <c>false</c> レベルアップしていない</returns>
+        /// <param name="gainExp">取得経験値</param>
+        public bool GainExp(int gainExp)
+        {
+            Status.Exp += gainExp;
+
+            var levelupTable = Resources.Load<LevelUpTable>("ScriptableObjects/PlayerLevelUpTable");
+            var nextLevelSetting = levelupTable.Settings[Status.Level];// インデックスで参照しているので、現在のレベルが次レベルのテーブル
+
+            bool isLevelup = (Status.Exp >= nextLevelSetting.Total);
+            return isLevelup;
+        }
         #endregion
     }
 }

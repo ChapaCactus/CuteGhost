@@ -24,10 +24,10 @@ namespace CCG
         #region inner classes
         public class BattleSetupData
         {
-            public IFightable Player { get; private set; }
+            public Player Player { get; private set; }
             public List<IFightable> Enemies { get; private set; }
 
-            public BattleSetupData(IFightable player, List<IFightable> enemies)
+            public BattleSetupData(Player player, List<IFightable> enemies)
             {
                 Player = player;
                 Enemies = enemies;
@@ -36,7 +36,7 @@ namespace CCG
         #endregion
 
         #region properties
-        public IFightable Player { get; private set; }
+        public Player Player { get; private set; }
         public List<IFightable> Enemies { get; private set; }
 
         public BattleState State { get; private set; }
@@ -111,8 +111,6 @@ namespace CCG
                 // 敗北時はHPを1にしておく
                 Player.Status.Health = 1;
             }
-            // 終了時点のプレイヤーステータスを反映
-            Global.Player.UpdateStatus(Player.Status);
 
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
@@ -124,16 +122,43 @@ namespace CCG
                 : $"{player.CharaName}は　たおれてしまった...";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
+            // 経験値加算処理・レベルアップ
+            yield return GainExp();
+
             if (isWin)
             {
                 //勝利時のみドロップ判定
                 yield return CheckDropItem();
             }
 
+            // 終了時点のプレイヤーステータスを反映
+            Global.Player.UpdateStatus(Player.Status);
+
             yield return new WaitForSeconds(2.5f);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
+        }
+
+        private IEnumerator GainExp()
+        {
+            int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
+                                       .Sum();
+
+            var isLevelup = Player.GainExp(gainExpAmount);
+
+            if(isLevelup)
+            {
+                Player.Status.Level++;
+
+                var head = $"レベルアップ！！";
+                var body = $"{Player.CharaName}のレベルが\n{Player.Status.Level}になった。";
+                BattleUIManager.I.BattleLog.SetMessage(head, body);
+
+                yield return new WaitForSeconds(1.5f);
+            }
+
+            yield break;
         }
 
         private IEnumerator CheckDropItem()

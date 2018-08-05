@@ -63,6 +63,7 @@ namespace CCG
             var status = new CharacterStatus();
             status.CharaName = "あなた";
             status.Level = 1;
+            status.Exp = 0;
             status.MaxHealth = 10;
             status.Health = 10;
             status.ATK = 400;

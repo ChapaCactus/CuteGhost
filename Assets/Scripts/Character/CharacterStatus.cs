@@ -12,6 +12,7 @@ namespace CCG
         public string CharaName { get; set; }
 
         public int Level { get; set; }
+        public int Exp { get; set; }
 
         public int MaxHealth { get; set; }
         public int Health { get; set; }
@@ -25,6 +26,7 @@ namespace CCG
             CharaName = row._Name;
 
             Level = row._Level;
+            Exp = row._GainExp;
 
             MaxHealth = row._MaxHealth;
             Health = MaxHealth;
