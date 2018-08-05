@@ -15,14 +15,16 @@ namespace Google2u
 	public class EnemyGroupMasterRow : IGoogle2uRow
 	{
 		public string _Name;
+		public string _Background;
 		public string _Enemy1;
 		public string _Enemy2;
 		public string _Enemy3;
 		public string _Enemy4;
 		public string _Enemy5;
-		public EnemyGroupMasterRow(string __ID, string __Name, string __Enemy1, string __Enemy2, string __Enemy3, string __Enemy4, string __Enemy5) 
+		public EnemyGroupMasterRow(string __ID, string __Name, string __Background, string __Enemy1, string __Enemy2, string __Enemy3, string __Enemy4, string __Enemy5) 
 		{
 			_Name = __Name.Trim();
+			_Background = __Background.Trim();
 			_Enemy1 = __Enemy1.Trim();
 			_Enemy2 = __Enemy2.Trim();
 			_Enemy3 = __Enemy3.Trim();
@@ -30,7 +32,7 @@ namespace Google2u
 			_Enemy5 = __Enemy5.Trim();
 		}
 
-		public int Length { get { return 6; } }
+		public int Length { get { return 7; } }
 
 		public string this[int i]
 		{
@@ -49,18 +51,21 @@ namespace Google2u
 					ret = _Name.ToString();
 					break;
 				case 1:
-					ret = _Enemy1.ToString();
+					ret = _Background.ToString();
 					break;
 				case 2:
-					ret = _Enemy2.ToString();
+					ret = _Enemy1.ToString();
 					break;
 				case 3:
-					ret = _Enemy3.ToString();
+					ret = _Enemy2.ToString();
 					break;
 				case 4:
-					ret = _Enemy4.ToString();
+					ret = _Enemy3.ToString();
 					break;
 				case 5:
+					ret = _Enemy4.ToString();
+					break;
+				case 6:
 					ret = _Enemy5.ToString();
 					break;
 			}
@@ -75,6 +80,9 @@ namespace Google2u
 			{
 				case "Name":
 					ret = _Name.ToString();
+					break;
+				case "Background":
+					ret = _Background.ToString();
 					break;
 				case "Enemy1":
 					ret = _Enemy1.ToString();
@@ -99,6 +107,7 @@ namespace Google2u
 		{
 			string ret = System.String.Empty;
 			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
+			ret += "{" + "Background" + " : " + _Background.ToString() + "} ";
 			ret += "{" + "Enemy1" + " : " + _Enemy1.ToString() + "} ";
 			ret += "{" + "Enemy2" + " : " + _Enemy2.ToString() + "} ";
 			ret += "{" + "Enemy3" + " : " + _Enemy3.ToString() + "} ";
@@ -130,8 +139,8 @@ namespace Google2u
 
 		private EnemyGroupMaster()
 		{
-			Rows.Add( new EnemyGroupMasterRow("ID_001", "あるグループ", "ID_001", "ID_001", "ID_001", "", ""));
-			Rows.Add( new EnemyGroupMasterRow("ID_002", "あるグループ", "", "ID_002", "ID_002", "", ""));
+			Rows.Add( new EnemyGroupMasterRow("ID_001", "あるグループ", "Grass", "ID_001", "ID_001", "ID_001", "", ""));
+			Rows.Add( new EnemyGroupMasterRow("ID_002", "あるグループ", "Stone", "", "ID_002", "ID_002", "", ""));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

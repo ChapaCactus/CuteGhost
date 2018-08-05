@@ -12,15 +12,15 @@ namespace CCG
     {
         #region variables
         [SerializeField]
-        private bool isDebugMode = false;
-
-        [SerializeField]
         private List<BattleEnemyController> battleEnemies = new List<BattleEnemyController>();
         #endregion
 
         #region unity callbacks
         private void Awake()
         {
+            var backgroundPrefab = Resources.Load($"Battle/Background/{Global.BattleManager.Background}");
+            Instantiate(backgroundPrefab, null);
+
             // BattleScene開始タイミング
             for (int i = 0; i < battleEnemies.Count; i++)
             {

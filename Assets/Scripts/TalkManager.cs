@@ -176,7 +176,7 @@ namespace CCG
                             (string.IsNullOrEmpty(battleGroup._Enemy3) ? Enemy.Empty() : new Enemy(battleGroup._Enemy3)),
                         };
 
-                        var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies);
+                        var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background);
                         Global.BattleManager.StartBattle(battleSetting);
 
                         return;

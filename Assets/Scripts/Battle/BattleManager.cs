@@ -27,10 +27,13 @@ namespace CCG
             public Player Player { get; private set; }
             public List<IFightable> Enemies { get; private set; }
 
-            public BattleSetupData(Player player, List<IFightable> enemies)
+            public string Background { get; private set; }
+
+            public BattleSetupData(Player player, List<IFightable> enemies, string background)
             {
-                Player = player;
-                Enemies = enemies;
+                this.Player = player;
+                this.Enemies = enemies;
+                this.Background = background;
             }
         }
         #endregion
@@ -38,6 +41,7 @@ namespace CCG
         #region properties
         public Player Player { get; private set; }
         public List<IFightable> Enemies { get; private set; }
+        public string Background { get; private set; }
 
         public BattleState State { get; private set; }
         public bool IsPlayerTurn { get { return State == BattleState.Player; } }
@@ -62,6 +66,7 @@ namespace CCG
             // シーン遷移前にデータを設定しておく
             Player = setupData.Player;
             Enemies = setupData.Enemies;
+            Background = setupData.Background;
 
             // Battleシーンに遷移
             SceneManager.LoadScene("Battle");
