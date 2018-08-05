@@ -9,6 +9,7 @@ namespace CCG
     {
         // ステータス参照
         CharacterStatus Status { get; }
+
         bool IsDead { get; }
 
         void Attack(IFightable target);

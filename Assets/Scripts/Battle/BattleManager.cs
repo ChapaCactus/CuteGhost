@@ -107,19 +107,24 @@ namespace CCG
         private IEnumerator FinishBattle(bool isWin)
         {
             // 終了時点のプレイヤーステータスを反映
-            Global.Player.UpdateStatus(Player.Status);
+            Global.Player.UpdateStatus(this.Player.Status);
 
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
 
+            Player player = Player as Player;
             // 勝利メッセージ
-            var head = $"YOU WIN！";
-            var body = $"{Player.Status.CharaName}は\nたくさんの　けいけんちをえた。";
+            var head = isWin ? "YOU WIN！" : "YOU LOSE...";
+            var body = isWin ? $"{player.CharaName}は\nたくさんの　けいけんちをえた。"
+                : $"{player.CharaName}は　たおれてしまった...";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
-            yield return CheckDropItem();
+            if (isWin)
+            {
+                yield return CheckDropItem();
+            }
 
-            yield return new WaitForSeconds(3.2f);
+            yield return new WaitForSeconds(2.5f);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
@@ -159,6 +164,11 @@ namespace CCG
 
             foreach (var enemy in attackers)
             {
+                if (CheckPlayerDead())
+                {
+                    break;
+                }
+
                 enemy.Attack(Player);
                 MasterAudio.PlaySound("EnemyHit");
 
@@ -166,7 +176,7 @@ namespace CCG
             }
 
             // Enemyターン終了
-            OnEndEnemyTurn();
+            yield return OnEndEnemyTurn();
         }
 
         /// <summary>
@@ -196,8 +206,14 @@ namespace CCG
             Debug.Log("OnEndPlayerTurn");
         }
 
-        private void OnEndEnemyTurn()
+        private IEnumerator OnEndEnemyTurn()
         {
+            if(CheckPlayerDead())
+            {
+                yield return FinishBattle(false);
+                yield break;
+            }
+
             OnStartPlayerTurn();
 
             Debug.Log("OnEndEnemyTurn.");
