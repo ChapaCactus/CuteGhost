@@ -106,8 +106,13 @@ namespace CCG
         /// </summary>
         private IEnumerator FinishBattle(bool isWin)
         {
+            if (!isWin)
+            {
+                // 敗北時はHPを1にしておく
+                Player.Status.Health = 1;
+            }
             // 終了時点のプレイヤーステータスを反映
-            Global.Player.UpdateStatus(this.Player.Status);
+            Global.Player.UpdateStatus(Player.Status);
 
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
@@ -121,6 +126,7 @@ namespace CCG
 
             if (isWin)
             {
+                //勝利時のみドロップ判定
                 yield return CheckDropItem();
             }
 
@@ -208,7 +214,7 @@ namespace CCG
 
         private IEnumerator OnEndEnemyTurn()
         {
-            if(CheckPlayerDead())
+            if (CheckPlayerDead())
             {
                 yield return FinishBattle(false);
                 yield break;
