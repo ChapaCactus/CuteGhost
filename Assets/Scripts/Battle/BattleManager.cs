@@ -122,13 +122,17 @@ namespace CCG
 
             Player player = Player as Player;
             // 勝利メッセージ
+            int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
+                           .Sum();
             var head = isWin ? "YOU WIN！" : "YOU LOSE...";
-            var body = isWin ? $"{player.CharaName}は\nたくさんの　けいけんちをえた。"
+            var body = isWin ? $"{player.CharaName}は\n{gainExpAmount}のけいけんちをえた。"
                 : $"{player.CharaName}は　たおれてしまった...";
             BattleUIManager.I.BattleLog.SetMessage(head, body);
 
+            yield return new WaitForSeconds(1.5f);
+
             // 経験値加算処理・レベルアップ
-            yield return GainExp();
+            yield return GainExp(gainExpAmount);
 
             if (isWin)
             {
@@ -145,14 +149,11 @@ namespace CCG
             SceneManager.LoadScene("Main");
         }
 
-        private IEnumerator GainExp()
+        private IEnumerator GainExp(int gainExpAmount)
         {
-            int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
-                                       .Sum();
-
             var isLevelup = Player.GainExp(gainExpAmount);
 
-            if(isLevelup)
+            if (isLevelup)
             {
                 Player.Status.Level++;
 
@@ -161,6 +162,8 @@ namespace CCG
                 BattleUIManager.I.BattleLog.SetMessage(head, body);
 
                 yield return new WaitForSeconds(1.5f);
+
+                yield return GainExp(0);
             }
 
             yield break;

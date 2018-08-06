@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 340410578}
+  backgroundImage: {fileID: 25449953}
   descriptionText: {fileID: 996199229}
   useButton: {fileID: 520082749}
 --- !u!1 &26705939

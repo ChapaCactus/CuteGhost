@@ -50,6 +50,8 @@ namespace CCG
                 Cells.Add(cell);
             }
 
+            itemInfoPanel.ResetUI();
+
             SetActive(true);
 
             OnOpen();
