@@ -21,7 +21,7 @@ namespace CCG
         public int GetExpFromLevel(CharacterType type, int level)
         {
             var padLeft = level.ToString().PadLeft(2, '0');
-            var key = $"ID_{padLeft}";
+            var key = $"Level_{padLeft}";
 
             switch (type)
             {

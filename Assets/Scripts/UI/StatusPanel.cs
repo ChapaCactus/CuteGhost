@@ -31,7 +31,8 @@ namespace CCG
         #region public methods
         public void Setup(CharacterStatus status)
         {
-            if(healthCache != null
+            if (curePopText != null
+               && healthCache != null
                && status.Health > healthCache)
             {
                 int cure = (status.Health - (int)healthCache);
