@@ -71,10 +71,10 @@ namespace CCG
         {
             Status.Exp += gainExp;
 
-            var levelupTable = Resources.Load<LevelUpTable>("ScriptableObjects/PlayerLevelUpTable");
-            var nextLevelSetting = levelupTable.Settings[Status.Level];// インデックスで参照しているので、現在のレベルが次レベルのテーブル
-
-            bool isLevelup = (Status.Exp >= nextLevelSetting.Total);
+            int nextLevel = (Status.Level + 1);
+            int nextExp = Global.BattleManager
+                                .ExpTable.GetExpFromLevel(ExpTable.CharacterType.Player, nextLevel);// 次レベルの必要経験値を取得
+            bool isLevelup = (Status.Exp >= nextExp);
             return isLevelup;
         }
         #endregion

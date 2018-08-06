@@ -46,6 +46,8 @@ namespace CCG
         public BattleState State { get; private set; }
         public bool IsPlayerTurn { get { return State == BattleState.Player; } }
         public bool IsEnemyTurn { get { return State == BattleState.Enemy; } }
+
+        public ExpTable ExpTable { get; private set; }
         #endregion
 
         #region public methods
@@ -67,6 +69,8 @@ namespace CCG
             Player = setupData.Player;
             Enemies = setupData.Enemies;
             Background = setupData.Background;
+
+            Init();
 
             // Battleシーンに遷移
             SceneManager.LoadScene("Battle");
@@ -140,13 +144,20 @@ namespace CCG
                 yield return CheckDropItem();
             }
 
-            // 終了時点のプレイヤーステータスを反映
-            Global.Player.UpdateStatus(Player.Status);
+            OnFinishBattle();
 
             yield return new WaitForSeconds(2.5f);
 
             // とりあえずMainシーンに返す
             SceneManager.LoadScene("Main");
+        }
+
+        private void OnFinishBattle()
+        {
+            // 終了時点のプレイヤーステータスを反映
+            Global.Player.UpdateStatus(Player.Status);
+
+            Release();
         }
 
         private IEnumerator GainExp(int gainExpAmount)
@@ -267,6 +278,16 @@ namespace CCG
         {
             return Enemies.Select(enemy => enemy as Enemy)
                           .All(enemy => enemy.IsDead || enemy.IsEmpty);
+        }
+
+        private void Init()
+        {
+            ExpTable = new ExpTable();
+        }
+
+        private void Release()
+        {
+            ExpTable = null;
         }
         #endregion
     }
