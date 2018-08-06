@@ -79,9 +79,13 @@ namespace CCG
             }
 
             // ログ表示
-            var head = $"{attacker.CharaName}のこうげき！";
-            var body = $"{CharaName}に\n{damage}のダメージ！";
-            BattleUIManager.I.BattleLog.SetMessage(head, body);
+            var messages = new List<string>()
+            {
+                $"{attacker.CharaName}のこうげき！",
+                $"{CharaName}に\n{damage}のダメージ！",
+            };
+            var setting = new BattleLog.Setting(messages);
+            BattleUIManager.I.BattleLog.SetMessage(setting);
         }
         #endregion
     }

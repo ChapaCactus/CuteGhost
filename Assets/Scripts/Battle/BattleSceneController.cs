@@ -40,7 +40,8 @@ namespace CCG
 
             Global.BattleManager.PrepareBattle();
 
-            BattleUIManager.I.BattleLog.SetMessage("バトルかいし！");
+            var setting = new BattleLog.Setting("バトルかいし！");
+            BattleUIManager.I.BattleLog.SetMessage(setting);
         }
         #endregion
 

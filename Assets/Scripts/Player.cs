@@ -52,9 +52,13 @@ namespace CCG
             BattleUIManager.I.StatusPanel.Setup(Status);
 
             // ログ表示
-            var head = $"{attacker.CharaName}のこうげき！";
-            var body = $"{CharaName}に\n{damage}のダメージ！";
-            BattleUIManager.I.BattleLog.SetMessage(head, body);
+            var messages = new List<string>()
+            {
+                $"{attacker.CharaName}のこうげき！",
+                $"{CharaName}に\n{damage}のダメージ！",
+            };
+            var setting = new BattleLog.Setting(messages);
+            BattleUIManager.I.BattleLog.SetMessage(setting);
 
             MainCamera.I.Shake();
         }
@@ -103,9 +107,13 @@ namespace CCG
             yield return new WaitForSeconds(2f);
 
             // ステータスアップ表示①
-            var head1 = $"こうげき　が{Status.Attack - currentStatus.Attack}アップ！";
-            var body1 = $"ぼうぎょ　{Status.Defense - currentStatus.Defense}アップ！";
-            BattleUIManager.I.BattleLog.SetMessage(head1, body1);
+            var messages = new List<string>()
+            {
+                $"こうげき　が{Status.Attack - currentStatus.Attack}アップ！",
+                $"ぼうぎょ　{Status.Defense - currentStatus.Defense}アップ！",
+            };
+            var setting = new BattleLog.Setting(messages);
+            BattleUIManager.I.BattleLog.SetMessage(setting);
 
             yield return new WaitForSeconds(2f);
         }
