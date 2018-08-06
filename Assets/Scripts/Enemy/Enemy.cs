@@ -70,7 +70,7 @@ namespace CCG
 
         public void Damage(CharacterStatus attacker)
         {
-            var damage = attacker.ATK;
+            var damage = attacker.Attack;
             Status.Damage(damage);
 
             if (IsDead)

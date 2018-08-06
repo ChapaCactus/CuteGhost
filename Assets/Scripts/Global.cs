@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 using System.Linq;
+using Google2u;
 
 namespace CCG
 {
@@ -63,10 +64,10 @@ namespace CCG
             var status = new CharacterStatus();
             status.CharaName = "あなた";
             status.Level = 1;
-            status.Exp = 0;
-            status.MaxHealth = 10;
-            status.Health = 10;
-            status.ATK = 400;
+            var statusTableKey = $"Level_{status.Level.ToString().PadLeft(2, '0')}";
+            var statusTable = PlayerStatusTable.Instance.GetRow(statusTableKey);
+            status.UpdateStatus(statusTable);
+
             var player = new Player(status);
 
             return player;

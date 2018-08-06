@@ -165,7 +165,13 @@ namespace CCG
 
             if (isLevelup)
             {
+                // レベルアップ処理
                 Player.Status.Level++;
+                var statusTableKey = $"Level_{Player.Status.Level.ToString().PadLeft(2, '0')}";
+                var statusRow = PlayerStatusTable.Instance.GetRow(statusTableKey);
+                Player.Status.UpdateStatus(statusRow);
+                // ステータスパネル初期化
+                BattleUIManager.I.StatusPanel.Setup(Player.Status);
 
                 var message = BattleLog.GetBattleLevelupMessage(Player.CharaName, Player.Status.Level);
                 BattleUIManager.I.BattleLog.SetMessage(message);

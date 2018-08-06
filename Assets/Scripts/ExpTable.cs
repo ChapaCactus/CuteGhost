@@ -38,12 +38,12 @@ namespace CCG
         #region private methods
         private int GetPlayerExpFromLevel(string key)
         {
-            return PlayerExpTable.Instance.GetRow(key)._Exp;
+            return PlayerStatusTable.Instance.GetRow(key)._Exp;
         }
 
         private int GetFriendExpFromLevel(string key)
         {
-            return FriendExpTable.Instance.GetRow(key)._Exp;
+            return FriendStatusTable.Instance.GetRow(key)._Exp;
         }
         #endregion
     }

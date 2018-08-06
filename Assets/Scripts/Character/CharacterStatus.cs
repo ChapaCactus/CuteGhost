@@ -17,9 +17,43 @@ namespace CCG
         public int MaxHealth { get; set; }
         public int Health { get; set; }
 
-        public int ATK { get; set; }
+        public int MaxSpecialPoint { get; set; }
+        public int SpecialPoint { get; set; }
+
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int Speed { get; set; }
+        public int Luck { get; set; }
 
         public bool IsDead { get { return Health <= 0; } }
+
+        public void UpdateStatus(PlayerStatusTableRow row)
+        {
+            this.MaxHealth = row._Health;
+            this.Health = row._Health;// 最大値に揃える
+
+            this.MaxSpecialPoint = row._SpecialPoint;
+            this.SpecialPoint = row._SpecialPoint;
+
+            this.Attack = row._Attack;
+            this.Defense = row._Defense;
+            this.Speed = row._Speed;
+            this.Luck = row._Luck;
+        }
+
+        public void UpdateStatus(FriendStatusTableRow row)
+        {
+            this.MaxHealth = row._Health;
+            this.Health = row._Health;// 最大値に揃える
+
+            this.MaxSpecialPoint = row._SpecialPoint;
+            this.SpecialPoint = row._SpecialPoint;
+
+            this.Attack = row._Attack;
+            this.Defense = row._Defense;
+            this.Speed = row._Speed;
+            this.Luck = row._Luck;
+        }
 
         public void SetData(EnemyMasterRow row)
         {
@@ -31,7 +65,7 @@ namespace CCG
             MaxHealth = row._MaxHealth;
             Health = MaxHealth;
 
-            ATK = row._ATK;
+            Attack = row._ATK;
         }
 
         public void Damage(int damage)
