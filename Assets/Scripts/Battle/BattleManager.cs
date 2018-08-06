@@ -124,14 +124,13 @@ namespace CCG
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
 
-            Player player = Player as Player;
-            // 勝利メッセージ
+            // 勝利・敗北メッセージ
             int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
                            .Sum();
-            var head = isWin ? "YOU WIN！" : "YOU LOSE...";
-            var body = isWin ? $"{player.CharaName}は\n{gainExpAmount}のけいけんちをえた。"
-                : $"{player.CharaName}は　たおれてしまった...";
-            BattleUIManager.I.BattleLog.SetMessage(head, body);
+            string playerName = (Player as Player).CharaName;
+            var logMessage = isWin ? BattleLog.GetBattleWinMessage(playerName, gainExpAmount)
+                                              : BattleLog.GetBattleLoseMessage(playerName);
+            BattleUIManager.I.BattleLog.SetMessage(logMessage);
 
             yield return new WaitForSeconds(1.5f);
 
@@ -168,9 +167,8 @@ namespace CCG
             {
                 Player.Status.Level++;
 
-                var head = $"レベルアップ！！";
-                var body = $"{Player.CharaName}のレベルが\n{Player.Status.Level}になった。";
-                BattleUIManager.I.BattleLog.SetMessage(head, body);
+                var message = BattleLog.GetBattleLevelupMessage(Player.CharaName, Player.Status.Level);
+                BattleUIManager.I.BattleLog.SetMessage(message);
 
                 yield return new WaitForSeconds(1.5f);
 
@@ -193,9 +191,8 @@ namespace CCG
                         // ドロップした
                         Global.Inventory.AddItem(enemy.DropItem.Item);
 
-                        var head = $"{enemy.CharaName}は\nアイテムをもっていた！";
-                        var body = $"{enemy.DropItem.Item.Name}をてにいれた。";
-                        BattleUIManager.I.BattleLog.SetMessage(head, body);
+                        var message = BattleLog.GetDropItemMessage(enemy.CharaName, enemy.DropItem.Item.Name);
+                        BattleUIManager.I.BattleLog.SetMessage(message);
 
                         yield return wait;
                     }
