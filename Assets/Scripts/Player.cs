@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 using DarkTonic.MasterAudio;
+using Google2u;
 
 namespace CCG
 {
@@ -76,6 +78,36 @@ namespace CCG
                                 .ExpTable.GetExpFromLevel(ExpTable.CharacterType.Player, nextLevel);// 次レベルの必要経験値を取得
             bool isLevelup = (Status.Exp >= nextExp);
             return isLevelup;
+        }
+
+        /// <summary>
+        /// レベルアップ
+        /// </summary>
+        public IEnumerator LevelUp()
+        {
+            var currentStatus = new CharacterStatus();
+            currentStatus.Attack = Status.Attack;
+            currentStatus.Defense = Status.Defense;
+
+            // レベルアップ処理
+            Status.Level++;
+            var statusTableKey = $"Level_{Status.Level.ToString().PadLeft(2, '0')}";
+            var statusRow = PlayerStatusTable.Instance.GetRow(statusTableKey);
+            Status.UpdateStatus(statusRow);
+            // ステータスパネル初期化
+            BattleUIManager.I.StatusPanel.Setup(Status);
+
+            var message = BattleLog.GetBattleLevelupMessage(CharaName, Status.Level);
+            BattleUIManager.I.BattleLog.SetMessage(message);
+
+            yield return new WaitForSeconds(2f);
+
+            // ステータスアップ表示①
+            var head1 = $"こうげき　が{Status.Attack - currentStatus.Attack}アップ！";
+            var body1 = $"ぼうぎょ　{Status.Defense - currentStatus.Defense}アップ！";
+            BattleUIManager.I.BattleLog.SetMessage(head1, body1);
+
+            yield return new WaitForSeconds(2f);
         }
         #endregion
     }

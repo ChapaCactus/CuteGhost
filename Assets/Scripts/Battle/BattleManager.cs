@@ -165,29 +165,7 @@ namespace CCG
 
             if (isLevelup)
             {
-                var currentStatus = new CharacterStatus();
-                currentStatus.Attack = Player.Status.Attack;
-                currentStatus.Defense = Player.Status.Defense;
-
-                // レベルアップ処理
-                Player.Status.Level++;
-                var statusTableKey = $"Level_{Player.Status.Level.ToString().PadLeft(2, '0')}";
-                var statusRow = PlayerStatusTable.Instance.GetRow(statusTableKey);
-                Player.Status.UpdateStatus(statusRow);
-                // ステータスパネル初期化
-                BattleUIManager.I.StatusPanel.Setup(Player.Status);
-
-                var message = BattleLog.GetBattleLevelupMessage(Player.CharaName, Player.Status.Level);
-                BattleUIManager.I.BattleLog.SetMessage(message);
-
-                yield return new WaitForSeconds(2f);
-
-                // ステータスアップ表示①
-                var head1 = $"こうげき　が{Player.Status.Attack - currentStatus.Attack}アップ！";
-                var body1 = $"ぼうぎょ　{Player.Status.Defense - currentStatus.Defense}アップ！";
-                BattleUIManager.I.BattleLog.SetMessage(head1, body1);
-
-                yield return new WaitForSeconds(2f);
+                yield return Player.LevelUp();
 
                 yield return GainExp(0);
             }
