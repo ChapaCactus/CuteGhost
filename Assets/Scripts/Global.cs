@@ -28,7 +28,7 @@ namespace CCG
         {
             // セーブデータマネージャ初期化、セーブデータロード
             SaveDataManager = SaveDataManager.Create();
-            SaveDataManager.LoadSaveData();
+            SaveDataManager.Load();
             // プレイヤクラス初期化
             Player = LoadPlayerData();
             // インベントリ初期化

@@ -24,7 +24,17 @@ namespace CCG
             return new SaveDataManager();
         }
 
-        public void LoadSaveData()
+        public void Save()
+        {
+            var saving = new SaveData();
+            saving.name = Global.Player.CharaName;
+            saving.level = Global.Player.Status.Level;
+            saving.exp = Global.Player.Status.Exp;
+
+            ES3.Save<SaveData>("SaveData", saving);
+        }
+
+        public void Load()
         {
             SaveData = ES3.Load("SaveData", SaveData.NewData());
         }

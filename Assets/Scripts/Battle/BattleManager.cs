@@ -156,6 +156,9 @@ namespace CCG
             // 終了時点のプレイヤーステータスを反映
             Global.Player.UpdateStatus(Player.Status);
 
+            // プレイヤーデータをセーブ
+            Global.SaveDataManager.Save();
+
             Release();
         }
 
