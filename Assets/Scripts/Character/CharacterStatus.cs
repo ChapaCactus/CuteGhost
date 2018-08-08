@@ -87,7 +87,7 @@ namespace CCG
                 Health = MaxHealth;
             }
 
-            UIManager.I.SetupStatusPanel(this);
+            MainUIManager.I.SetupStatusPanel(this);
         }
     }
 }

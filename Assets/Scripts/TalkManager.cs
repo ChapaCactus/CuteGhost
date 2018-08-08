@@ -81,7 +81,7 @@ namespace CCG
                 state = State.Start;
 
                 Ghost.I.SetIsTalking(true);
-                UIManager.I.GetBands().FrameIn(true, true);
+                MainUIManager.I.GetBands().FrameIn(true, true);
             }
 
             private void OnTalking()
@@ -147,7 +147,7 @@ namespace CCG
                     if (talk.Choises.Count >= 1
                         && talk.Choises.Any(choise => choise != "None"))
                     {
-                        UIManager.I.OpenChoisesPanel(() =>
+                        MainUIManager.I.OpenChoisesPanel(() =>
                         {
                             // YES
                             var yesRow = TalkMaster.Instance.GetRow(talk.Choises[0]);
@@ -192,7 +192,7 @@ namespace CCG
         /// </summary>
         public void RequestCreateMessageBalloon(GameObject speaker, Action<MessageBalloon> onCreate)
         {
-            MessageBalloon.Create(UIManager.I.canvasRect, balloon =>
+            MessageBalloon.Create(MainUIManager.I.canvasRect, balloon =>
             {
                 balloon.SetSpeaker(speaker);
                 onCreate.SafeCall(balloon);
@@ -216,7 +216,7 @@ namespace CCG
             onEndTalk.SafeCall();
 
             Ghost.I.SetIsTalking(false);
-            UIManager.I.GetBands().FrameOut(true, true);
+            MainUIManager.I.GetBands().FrameOut(true, true);
             talk = null;
         }
 

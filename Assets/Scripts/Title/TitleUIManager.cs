@@ -8,14 +8,11 @@ using UnityEngine.SceneManagement;
 
 namespace CCG
 {
-    public class TitleUIManager : MonoBehaviour
+    public class TitleUIManager : SingletonMonoBehaviour<TitleUIManager>
     {
         #region variables
         [SerializeField]
-        private Button newGameButton = null;
-
-        [SerializeField]
-        private Button continueGameButton = null;
+        private Button startGameButton = null;
 
         [SerializeField]
         private Button fishingGameButton = null;
@@ -28,20 +25,17 @@ namespace CCG
         }
         #endregion
 
+        #region public methods
+        #endregion
+
         #region private methods
         private void InitUI()
         {
-            newGameButton.onClick.AddListener(OnClickNewGameButton);
-            continueGameButton.onClick.AddListener(OnClickContinueButton);
+            startGameButton.onClick.AddListener(OnClickStartGameButton);
             fishingGameButton.onClick.AddListener(OnClickFishingGameButton);
         }
 
-        private void OnClickNewGameButton()
-        {
-            SceneManager.LoadScene("Main");
-        }
-
-        private void OnClickContinueButton()
+        private void OnClickStartGameButton()
         {
             SceneManager.LoadScene("Main");
         }

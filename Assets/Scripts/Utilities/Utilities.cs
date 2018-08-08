@@ -27,7 +27,7 @@ namespace CCG
         {
             var pos = Vector2.zero;
 
-            var uiManager = UIManager.I;
+            var uiManager = MainUIManager.I;
             var mainCanvasRect = uiManager.canvasRect;
             var mainCamera = uiManager.GetMainCamera();
             var uiCamera = uiManager.GetUICamera();

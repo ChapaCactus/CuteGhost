@@ -8,7 +8,7 @@ using DarkTonic.MasterAudio;
 
 namespace CCG
 {
-    public class UIManager : SingletonMonoBehaviour<UIManager>
+    public class MainUIManager : SingletonMonoBehaviour<MainUIManager>
     {
         #region constants
         private const string DefaultActionButtonText = "?";

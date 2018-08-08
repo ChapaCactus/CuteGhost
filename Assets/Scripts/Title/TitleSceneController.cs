@@ -7,5 +7,7 @@ namespace CCG
 {
     public class TitleSceneController : MonoBehaviour
     {
+        #region unity callbacks
+        #endregion
     }
 }

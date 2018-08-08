@@ -56,7 +56,7 @@ namespace CCG
                           .ToList();
             keys.ForEach(key => ES3.DeleteKey(key));
 
-            UIManager.I.ShowAnnounceMessage("全セーブデータを削除\nしました。(再起動後有効)", 2);
+            MainUIManager.I.ShowAnnounceMessage("全セーブデータを削除\nしました。(再起動後有効)", 2);
         }
         #endregion
 

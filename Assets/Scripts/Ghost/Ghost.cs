@@ -40,8 +40,8 @@ namespace CCG
             }
 
             var horizontal = 0;
-            horizontal = UIManager.I.IsLeftButtonDown ? -1 : horizontal;
-            horizontal = UIManager.I.IsRightButtonDown ? 1 : horizontal;
+            horizontal = MainUIManager.I.IsLeftButtonDown ? -1 : horizontal;
+            horizontal = MainUIManager.I.IsRightButtonDown ? 1 : horizontal;
             var speed = (horizontal * MoveBuff);
             transform.localPosition += new Vector3(speed, 0, 0);
 
@@ -65,7 +65,7 @@ namespace CCG
             insightable.OnInsightEnter();
 
             Global.SetInsightTarget(insightable);
-            UIManager.I.OnInsightTarget();
+            MainUIManager.I.OnInsightTarget();
 
             Debug.Log("OnInsightEnter");
         }
@@ -75,7 +75,7 @@ namespace CCG
             insightable.OnInsightExit();
 
             Global.SetInsightTarget(null);
-            UIManager.I.OnExitInsightTarget();
+            MainUIManager.I.OnExitInsightTarget();
 
             Debug.Log("OnInsightExit");
         }

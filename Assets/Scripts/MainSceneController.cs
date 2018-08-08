@@ -18,7 +18,7 @@ namespace CCG
                 return;
             }
 
-            UIManager.I.SetupStatusPanel(Global.Player.Status);
+            MainUIManager.I.SetupStatusPanel(Global.Player.Status);
 
             MasterAudio.PlaySound("Field_002");
         }
