@@ -7,21 +7,19 @@ using DarkTonic.MasterAudio;
 
 namespace CCG
 {
-    public class GameController : SingletonMonoBehaviour<GameController>
+    public class MainSceneController : SingletonMonoBehaviour<MainSceneController>
     {
         #region unity callbacks
         private void Awake()
         {
-            if (!Global.IsGameInitialized)
+            if(!Global.IsGameInitialized)
             {
-                Global.Init();
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+                return;
             }
 
             UIManager.I.SetupStatusPanel(Global.Player.Status);
-        }
 
-        private void Start()
-        {
             MasterAudio.PlaySound("Field_002");
         }
         #endregion

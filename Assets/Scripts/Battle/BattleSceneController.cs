@@ -18,6 +18,12 @@ namespace CCG
         #region unity callbacks
         private void Awake()
         {
+            if(!Global.IsGameInitialized)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+                return;
+            }
+
             var backgroundPrefab = Resources.Load($"Battle/Background/{Global.BattleManager.Background}");
             Instantiate(backgroundPrefab, null);
 
