@@ -16,6 +16,7 @@ namespace CCG
         public static Player Player { get; private set; }
         public static Inventory Inventory { get; private set; }
 
+        public static SaveDataManager SaveDataManager { get; private set; }
         public static BattleManager BattleManager { get; private set; }
         public static QuestManager QuestManager { get; private set; }
 
@@ -25,7 +26,12 @@ namespace CCG
         #region public methods
         public static void Init()
         {
+            // セーブデータマネージャ初期化、セーブデータロード
+            SaveDataManager = SaveDataManager.Create();
+            SaveDataManager.LoadSaveData();
+            // プレイヤクラス初期化
             Player = LoadPlayerData();
+            // インベントリ初期化
             Inventory = Inventory.Load();
 
             BattleManager = BattleManager.Create();
@@ -34,10 +40,6 @@ namespace CCG
             SetInsightTarget(null);
 
             IsGameInitialized = true;
-        }
-
-        public static void StartGame()
-        {
         }
 
         public static void SetInsightTarget(IInsightable insighted)
@@ -61,9 +63,12 @@ namespace CCG
         #region private methods
         private static Player LoadPlayerData()
         {
+            var saveData = Global.SaveDataManager.SaveData;
+
             var status = new CharacterStatus();
-            status.CharaName = "あなた";
-            status.Level = 1;
+            status.CharaName = saveData.name;
+            status.Level = saveData.level;
+
             var statusTableKey = $"Level_{status.Level.ToString().PadLeft(2, '0')}";
             var statusTable = PlayerStatusTable.Instance.GetRow(statusTableKey);
             status.UpdateStatus(statusTable);
