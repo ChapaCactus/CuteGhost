@@ -119,57 +119,58 @@ namespace CCG
 
         public void PlayNext()
         {
-            if (talk != null)
-            {
-                talk.Next();
+            if (talk == null)
+                return;
 
-                if (!talk.IsEnd)
+            // 会話クラスを進めておく
+            talk.Next();
+
+            if (!talk.IsEnd)
+            {
+                MainUIManager.I.MessageBalloon.Play(talk.GetMessage(), PlayNext);
+            }
+            else
+            {
+                // 選択肢が設定されていれば、選択肢を表示
+                if (talk.Choises.Count >= 1
+                    && talk.Choises.Any(choise => choise != "None"))
                 {
-                    MainUIManager.I.MessageBalloon.Play(talk.GetMessage(), PlayNext);
-                }
-                else
-                {
-                    // 選択肢が設定されていれば、選択肢を表示
-                    if (talk.Choises.Count >= 1
-                        && talk.Choises.Any(choise => choise != "None"))
+                    MainUIManager.I.OpenChoisesPanel(() =>
                     {
-                        MainUIManager.I.OpenChoisesPanel(() =>
-                        {
                             // YES
                             var yesRow = TalkMaster.Instance.GetRow(talk.Choises[0]);
-                            StartTalk(talk.speaker, yesRow, onEndTalk);
-                        }, () =>
-                        {
+                        StartTalk(talk.speaker, yesRow, onEndTalk);
+                    }, () =>
+                    {
                             // NO
                             var noRow = TalkMaster.Instance.GetRow(talk.Choises[1]);
-                            StartTalk(talk.speaker, noRow, onEndTalk);
-                        });
-                        return;
-                    }
+                        StartTalk(talk.speaker, noRow, onEndTalk);
+                    });
+                    return;
+                }
 
-                    // 戦闘敵が設定されていれば、戦闘シーンに以降
-                    if (talk.BattleGroup.Count >= 1
-                        && talk.BattleGroup.Any(battle => battle != "None"))
-                    {
-                        var battleGroupID = talk.BattleGroup
-                                                .OrderBy(n => Guid.NewGuid())
-                                                .First();
-                        var battleGroup = EnemyGroupMaster.Instance.GetRow(battleGroupID);
-                        var enemies = new List<IFightable>()
+                // 戦闘敵が設定されていれば、戦闘シーンに以降
+                if (talk.BattleGroup.Count >= 1
+                    && talk.BattleGroup.Any(battle => battle != "None"))
+                {
+                    var battleGroupID = talk.BattleGroup
+                                            .OrderBy(n => Guid.NewGuid())
+                                            .First();
+                    var battleGroup = EnemyGroupMaster.Instance.GetRow(battleGroupID);
+                    var enemies = new List<IFightable>()
                         {
                             (string.IsNullOrEmpty(battleGroup._Enemy1) ? Enemy.Empty() : new Enemy(battleGroup._Enemy1)),
                             (string.IsNullOrEmpty(battleGroup._Enemy2) ? Enemy.Empty() : new Enemy(battleGroup._Enemy2)),
                             (string.IsNullOrEmpty(battleGroup._Enemy3) ? Enemy.Empty() : new Enemy(battleGroup._Enemy3)),
                         };
 
-                        var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background);
-                        Global.BattleManager.StartBattle(battleSetting);
+                    var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background);
+                    Global.BattleManager.StartBattle(battleSetting);
 
-                        return;
-                    }
-
-                    OnEnd();
+                    return;
                 }
+
+                OnEnd();
             }
         }
 
