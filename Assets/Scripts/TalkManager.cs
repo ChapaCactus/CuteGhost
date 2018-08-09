@@ -103,7 +103,6 @@ namespace CCG
         #region properties
         private Talk talk { get; set; }
 
-        private MessageBalloon balloon { get; set; }
         private Action onEndTalk { get; set; }
         #endregion
 
@@ -113,33 +112,20 @@ namespace CCG
             this.onEndTalk = onEndTalk;
 
             talk = new Talk(speaker, talkRow);
-            RequestCreateMessageBalloon(talk.speaker, balloon =>
-            {
-                SetBalloon(balloon);
-                balloon.SetText(talk.GetMessage());
-            });
+
+            var balloon = MainUIManager.I.MessageBalloon;
+            balloon.Play(talk.GetMessage(), PlayNext);
         }
 
-        public void Next()
+        public void PlayNext()
         {
-            if (balloon != null)
-            {
-                Destroy(balloon.gameObject);
-                balloon = null;
-            }
-
             if (talk != null)
             {
                 talk.Next();
 
                 if (!talk.IsEnd)
                 {
-                    // 終了していなければ、テキスト表示
-                    RequestCreateMessageBalloon(talk.speaker, balloon =>
-                    {
-                        SetBalloon(balloon);
-                        balloon.SetText(talk.GetMessage());
-                    });
+                    MainUIManager.I.MessageBalloon.Play(talk.GetMessage(), PlayNext);
                 }
                 else
                 {
@@ -187,18 +173,6 @@ namespace CCG
             }
         }
 
-        /// <summary>
-        /// 吹き出しの生成リクエスト
-        /// </summary>
-        public void RequestCreateMessageBalloon(GameObject speaker, Action<MessageBalloon> onCreate)
-        {
-            MessageBalloon.Create(MainUIManager.I.canvasRect, balloon =>
-            {
-                balloon.SetSpeaker(speaker);
-                onCreate.SafeCall(balloon);
-            });
-        }
-
         public bool IsTalking()
         {
             if (talk == null)
@@ -217,12 +191,9 @@ namespace CCG
 
             Ghost.I.SetIsTalking(false);
             MainUIManager.I.GetBands().FrameOut(true, true);
+            MainUIManager.I.MessageBalloon.SetActive(false);
+            MainUIManager.I.MessageBalloon.Init();
             talk = null;
-        }
-
-        private void SetBalloon(MessageBalloon balloon)
-        {
-            this.balloon = balloon;
         }
         #endregion
     }

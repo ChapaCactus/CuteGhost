@@ -4,50 +4,45 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 
+using DG.Tweening;
+
 namespace CCG
 {
     public class MessageBalloon : MonoBehaviour
     {
-        #region constants
-        private const string PrefabPath = "Prefabs/UI/MessageBalloon";
+        #region enums
+        public enum State
+        {
+            Wait,
+            Playing,
+            Complete,
+        }
         #endregion
 
         #region variables
         [SerializeField]
         private Text text = null;
+
+        [SerializeField]
+        private Button nextButton = null;
         #endregion
 
         #region properties
-        private GameObject speaker { get; set; }
-        #endregion
+        private Tween Tween { get; set; }
+        private State CurrentState { get; set; }
 
-        #region unity callbacks
-        private void LateUpdate()
-        {
-            if(speaker != null)
-            {
-                //var screenPos = Utilities.GetScreenPosition(speaker.transform.position);
-                //screenPos += new Vector2(0, 50);
-
-                var pos = new Vector2(transform.localPosition.x, transform.localPosition.y);
-                SetLocalPosition(pos);
-            }
-        }
+        private Action OnEnd { get; set; }
         #endregion
 
         #region public methods
-        public static void Create(Transform parent, Action<MessageBalloon> onCreate)
+        public void Init()
         {
-            var prefab = Resources.Load(PrefabPath) as GameObject;
-            var go = Instantiate(prefab, parent);
-            var result = go.GetComponent<MessageBalloon>();
-
-            onCreate(result);
-        }
-
-        public void SetSpeaker(GameObject speaker)
-        {
-            this.speaker = speaker;
+            SetActive(false);
+            CurrentState = State.Wait;
+            text.text = "";
+            nextButton.onClick.AddListener(OnClick);
+            Tween = null;
+            OnEnd = null;
         }
 
         public void SetActive(bool isActive)
@@ -55,14 +50,55 @@ namespace CCG
             gameObject.SetActive(isActive);
         }
 
-        public void SetLocalPosition(Vector2 pos)
+        public void ShowFullText()
         {
-            transform.localPosition = pos;
+            if (Tween != null)
+            {
+                Tween.Complete();
+            }
         }
 
-        public void SetText(string message)
+        public void Play(string message, Action onEnd)
         {
-            text.text = message;
+            OnEnd = onEnd;
+            text.text = "";
+            CurrentState = State.Playing;
+
+            nextButton.gameObject.SetActive(true);
+
+            var duration = message.Length * 0.1f;
+            Tween = text.DOText(message, duration)
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+            {
+                nextButton.gameObject.SetActive(false);
+                Tween = null;
+
+                CurrentState = State.Complete;
+            });
+
+            SetActive(true);
+        }
+        #endregion
+
+        #region private methods
+        private void OnClick()
+        {
+            switch (CurrentState)
+            {
+                case State.Wait:
+                    // この時タッチ判定が無いため、ここを通らない想定
+                    break;
+                case State.Playing:
+                    ShowFullText();
+                    break;
+                case State.Complete:
+                    OnEnd.SafeCall();
+                    break;
+
+                default:
+                    break;
+            }
         }
         #endregion
     }

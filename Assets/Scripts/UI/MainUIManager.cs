@@ -30,6 +30,9 @@ namespace CCG
         [SerializeField]
         private SettingPanel settingPanel = null;
 
+        [SerializeField]
+        private MessageBalloon messageBalloon = null;
+
         // インベントリボタン
         [SerializeField]
         private Button inventoryButton = null;
@@ -55,6 +58,8 @@ namespace CCG
         #endregion
 
         #region properties
+        public MessageBalloon MessageBalloon { get { return messageBalloon; } }
+
         public RectTransform canvasRect { get; private set; }
 
         public bool IsLeftButtonDown { get; private set; }
@@ -76,6 +81,7 @@ namespace CCG
             actionButton.interactable = false;
 
             announceText.SetVisible(false);
+            messageBalloon.Init();
 
             InitUI();
         }
@@ -182,10 +188,11 @@ namespace CCG
         /// </summary>
         private void OnClickSettingButton()
         {
-            if(settingPanel.gameObject.activeSelf)
+            if (settingPanel.gameObject.activeSelf)
             {
                 settingPanel.Close();
-            } else
+            }
+            else
             {
                 // 他のパネル非表示
                 inventoryPanel.SetActive(false);
@@ -214,7 +221,7 @@ namespace CCG
             // 会話中なら読み進める
             if (TalkManager.I.IsTalking())
             {
-                TalkManager.I.Next();
+                TalkManager.I.PlayNext();
             }
             else
             {
