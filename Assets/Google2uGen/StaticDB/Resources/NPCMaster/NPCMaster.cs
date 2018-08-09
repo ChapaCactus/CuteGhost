@@ -92,10 +92,10 @@ namespace Google2u
 	public sealed class NPCMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001, ID_002, ID_003, ID_004, Monjiro
+			ID_001, ID_002, ID_003, ID_004, Monjiro, Maguro
 		};
 		public string [] rowNames = {
-			"ID_001", "ID_002", "ID_003", "ID_004", "Monjiro"
+			"ID_001", "ID_002", "ID_003", "ID_004", "Monjiro", "Maguro"
 		};
 		public System.Collections.Generic.List<NPCMasterRow> Rows = new System.Collections.Generic.List<NPCMasterRow>();
 
@@ -117,6 +117,7 @@ namespace Google2u
 			Rows.Add( new NPCMasterRow("ID_003", "バトルまねーちゃん", "None", "ID_004", "None"));
 			Rows.Add( new NPCMasterRow("ID_004", "NPC", "None", "ID_007", "None"));
 			Rows.Add( new NPCMasterRow("Monjiro", "もんじろう", "None", "Monjiro_Talk1", "None"));
+			Rows.Add( new NPCMasterRow("Maguro", "まぐろにんげん", "None", "Monjiro_Talk1", "None"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{

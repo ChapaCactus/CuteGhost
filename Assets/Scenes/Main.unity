@@ -15149,7 +15149,7 @@ GameObject:
   - component: {fileID: 1412339864}
   - component: {fileID: 1412339863}
   m_Layer: 0
-  m_Name: Numera (3)
+  m_Name: Maguro
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15177,10 +15177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76981503cacba42c798c7994461ce41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  id: 5
   markPosition: {fileID: 889710710}
   spriteRenderer: {fileID: 1412339866}
-  spriteSetting: {fileID: 11400000, guid: 94cd09981a58d4533a8f6cffd7af42e8, type: 2}
+  spriteSetting: {fileID: 11400000, guid: 26ad7e7267f4e4661806c92e652b2af5, type: 2}
 --- !u!61 &1412339865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15241,7 +15241,7 @@ SpriteRenderer:
   m_SortingLayerID: 2088616437
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3b877000e64848629500c80e53de944, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 600a585160c8d40bca86ab43c696ba88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -15259,7 +15259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412339862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.35, y: 0.49, z: -0.014334909}
+  m_LocalPosition: {x: -3.35, y: 0.457, z: -0.014334909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 889710710}
