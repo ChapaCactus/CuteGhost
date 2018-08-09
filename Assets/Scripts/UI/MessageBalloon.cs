@@ -40,6 +40,7 @@ namespace CCG
             SetActive(false);
             CurrentState = State.Wait;
             text.text = "";
+            nextButton.onClick.RemoveAllListeners();
             nextButton.onClick.AddListener(OnClick);
             Tween = null;
             OnEnd = null;
@@ -71,7 +72,6 @@ namespace CCG
                 .SetEase(Ease.Linear)
                 .OnComplete(() =>
             {
-                nextButton.gameObject.SetActive(false);
                 Tween = null;
 
                 CurrentState = State.Complete;
