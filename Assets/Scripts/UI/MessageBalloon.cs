@@ -73,7 +73,6 @@ namespace CCG
                 .OnComplete(() =>
             {
                 Tween = null;
-
                 CurrentState = State.Complete;
             });
 
