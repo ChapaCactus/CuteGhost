@@ -45,11 +45,11 @@ TagManager:
   - name: BackGround
     uniqueID: 2852233297
     locked: 0
-  - name: Character
-    uniqueID: 2088616437
-    locked: 0
   - name: Ground
     uniqueID: 3205818439
+    locked: 0
+  - name: Character
+    uniqueID: 2088616437
     locked: 0
   - name: Effect
     uniqueID: 1386316457

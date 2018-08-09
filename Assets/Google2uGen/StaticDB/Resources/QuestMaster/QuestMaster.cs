@@ -98,10 +98,10 @@ namespace Google2u
 	public sealed class QuestMaster : IGoogle2uDB
 	{
 		public enum rowIds {
-			ID_001
+			ID_001, ID_002
 		};
 		public string [] rowNames = {
-			"ID_001"
+			"ID_001", "ID_002"
 		};
 		public System.Collections.Generic.List<QuestMasterRow> Rows = new System.Collections.Generic.List<QuestMasterRow>();
 
@@ -118,7 +118,8 @@ namespace Google2u
 
 		private QuestMaster()
 		{
-			Rows.Add( new QuestMasterRow("ID_001", "ねむけ、さむけ", "Talk", "1", ""));
+			Rows.Add( new QuestMasterRow("ID_001", "ねむけ、さむけ", "Talk", "1", "さむいのはいやだよ、あたたかくしてね"));
+			Rows.Add( new QuestMasterRow("ID_002", "むして、あつい", "Talk", "2", "あついのはいやだよ、ひやひやにしてね"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
