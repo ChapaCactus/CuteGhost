@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG
 {
-    public class Ghost : SingletonMonoBehaviour<Ghost>
+    public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         #region constants
         private const float MoveBuff = 0.01f;
@@ -47,7 +47,7 @@ namespace CCG
 
             if (horizontal != 0)
             {
-                view.Flip(horizontal < 0);
+                OnMove(horizontal);
             }
         }
         #endregion
@@ -78,6 +78,12 @@ namespace CCG
             MainUIManager.I.OnExitInsightTarget();
 
             Debug.Log("OnInsightExit");
+        }
+
+        private void OnMove(int horizontal)
+        {
+            view.Flip(horizontal < 0);
+            EncounterManager.I.OnMove();
         }
         #endregion
     }

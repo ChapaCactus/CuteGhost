@@ -80,7 +80,7 @@ namespace CCG
             {
                 state = State.Start;
 
-                Ghost.I.SetIsTalking(true);
+                PlayerController.I.SetIsTalking(true);
                 MainUIManager.I.GetBands().FrameIn(true, true);
             }
 
@@ -190,7 +190,7 @@ namespace CCG
         {
             onEndTalk.SafeCall();
 
-            Ghost.I.SetIsTalking(false);
+            PlayerController.I.SetIsTalking(false);
             MainUIManager.I.GetBands().FrameOut(true, true);
             MainUIManager.I.MessageBalloon.SetActive(false);
             MainUIManager.I.MessageBalloon.Init();
