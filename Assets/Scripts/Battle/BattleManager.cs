@@ -25,7 +25,7 @@ namespace CCG
         public class BattleSetting
         {
             public Player Player { get; private set; }
-            public List<IFightable> Enemies { get; private set; }
+            public List<Enemy> Enemies { get; private set; }
 
             public string Background { get; private set; }
 
@@ -33,7 +33,7 @@ namespace CCG
             public string StartSceneName { get; private set; } = "None";
             public Vector2 StartPosition { get; private set; }
 
-            public BattleSetting(Player player, List<IFightable> enemies, string background
+            public BattleSetting(Player player, List<Enemy> enemies, string background
                                   , string startSceneName, Vector2 startPosition)
             {
                 this.Player = player;
@@ -48,7 +48,7 @@ namespace CCG
 
         #region properties
         public Player Player { get { return setting.Player; } }
-        public List<IFightable> Enemies { get { return setting.Enemies; } }
+        public List<Enemy> Enemies { get { return setting.Enemies; } }
         public string Background { get { return setting.Background; } }
 
         public BattleState State { get; private set; }
@@ -96,14 +96,13 @@ namespace CCG
         {
             if (!IsPlayerTurn)
                 yield break;
-            
-            State = BattleState.EnemySelected;
+
+            ChangeState(BattleState.EnemySelected);
 
             Player.Attack(enemy.Enemy);
             BattleUIManager.I.StatusPanel.Move(false);
 
             yield return new WaitForSeconds(0.7f);
-
             yield return enemy.PlayDamageEffect();
 
             // Playerターン終了
@@ -117,11 +116,44 @@ namespace CCG
         /// </summary>
         private IEnumerator FinishBattle(bool isWin)
         {
-            if (!isWin)
+            if (isWin)
             {
-                // 敗北時はHPを1にしておく
-                Player.Status.Health = 1;
+                yield return OnWinBattle();
             }
+            else
+            {
+                yield return OnLoseBattle();
+            }
+        }
+
+        /// <summary>
+        /// 勝利時
+        /// </summary>
+        private IEnumerator OnWinBattle()
+        {
+            MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
+            MasterAudio.PlaySound("Jingle_001");
+
+            // 勝利・敗北メッセージ
+            int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
+                           .Sum();
+            var logMessage = BattleLog.GetBattleWinMessage(Player.CharaName, gainExpAmount);
+            BattleUIManager.I.BattleLog.SetMessage(logMessage);
+            yield return new WaitForSeconds(1.5f);
+
+            yield return GainExp(gainExpAmount);
+            yield return CheckDropItem();
+
+            OnEndFinishBattle();
+        }
+
+        /// <summary>
+        /// 敗北時
+        /// </summary>
+        private IEnumerator OnLoseBattle()
+        {
+            // 敗北時はHPを1にしておく
+            Player.Status.Health = 1;
 
             MasterAudio.FadeOutAllOfSound("Battle_001", 0.2f);
             MasterAudio.PlaySound("Jingle_001");
@@ -129,23 +161,9 @@ namespace CCG
             // 勝利・敗北メッセージ
             int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
                            .Sum();
-            string playerName = (Player as Player).CharaName;
-            var logMessage = isWin ? BattleLog.GetBattleWinMessage(playerName, gainExpAmount)
-                                              : BattleLog.GetBattleLoseMessage(playerName);
+            var logMessage = BattleLog.GetBattleLoseMessage(Player.CharaName);
             BattleUIManager.I.BattleLog.SetMessage(logMessage);
-
             yield return new WaitForSeconds(1.5f);
-
-            // 経験値加算処理・レベルアップ
-            yield return GainExp(gainExpAmount);
-
-            if (isWin)
-            {
-                //勝利時のみドロップ判定
-                yield return CheckDropItem();
-            }
-
-            yield return new WaitForSeconds(2.5f);
 
             OnEndFinishBattle();
         }
@@ -200,19 +218,16 @@ namespace CCG
 
         private IEnumerator StartEnemiesTurn()
         {
-            State = BattleState.Enemy;
+            ChangeState(BattleState.Enemy);
 
             var attackers = Enemies
-                .Select(enemy => enemy as Enemy)
                 .Where(enemy => !enemy.IsEmpty && !enemy.IsDead)
                 .ToList();
 
             foreach (var enemy in attackers)
             {
                 if (CheckPlayerDead())
-                {
                     break;
-                }
 
                 enemy.Attack(Player);
                 MasterAudio.PlaySound("EnemyHit");
@@ -229,7 +244,7 @@ namespace CCG
         /// </summary>
         private void OnStartPlayerTurn()
         {
-            State = BattleState.Player;
+            ChangeState(BattleState.Player);
             BattleUIManager.I.StatusPanel.Move(true);
         }
 
@@ -256,7 +271,8 @@ namespace CCG
             if (CheckPlayerDead())
             {
                 yield return FinishBattle(false);
-            } else
+            }
+            else
             {
                 OnStartPlayerTurn();
             }
@@ -269,8 +285,12 @@ namespace CCG
 
         private bool CheckEnemiesDead()
         {
-            return Enemies.Select(enemy => enemy as Enemy)
-                          .All(enemy => enemy.IsDead || enemy.IsEmpty);
+            return Enemies.All(enemy => enemy.IsDead || enemy.IsEmpty);
+        }
+
+        private void ChangeState(BattleState next)
+        {
+            State = next;
         }
 
         private void Init()

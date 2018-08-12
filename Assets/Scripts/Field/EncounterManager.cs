@@ -45,7 +45,7 @@ namespace CCG
         private void Encounter()
         {
             var battleGroup = EnemyGroupMaster.Instance.GetRow(EnemyGroupMaster.rowIds.ID_001);
-            var enemies = new List<IFightable>()
+            var enemies = new List<Enemy>()
                         {
                             (string.IsNullOrEmpty(battleGroup._Enemy1) ? Enemy.Empty() : new Enemy(battleGroup._Enemy1)),
                             (string.IsNullOrEmpty(battleGroup._Enemy2) ? Enemy.Empty() : new Enemy(battleGroup._Enemy2)),

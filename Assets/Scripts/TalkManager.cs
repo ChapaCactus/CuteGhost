@@ -158,7 +158,7 @@ namespace CCG
                                             .OrderBy(n => Guid.NewGuid())
                                             .First();
                     var battleGroup = EnemyGroupMaster.Instance.GetRow(battleGroupID);
-                    var enemies = new List<IFightable>()
+                    var enemies = new List<Enemy>()
                         {
                             (string.IsNullOrEmpty(battleGroup._Enemy1) ? Enemy.Empty() : new Enemy(battleGroup._Enemy1)),
                             (string.IsNullOrEmpty(battleGroup._Enemy2) ? Enemy.Empty() : new Enemy(battleGroup._Enemy2)),
