@@ -48,9 +48,8 @@ namespace CCG
 
         public void Move(bool isOn)
         {
-            var to = isOn ? 20 : -20;
+            var to = isOn ? -220 : -240;
             transform.DOLocalMoveY(to, 0.3f)
-                     .SetRelative()
                      .SetEase(Ease.InExpo);
         }
 

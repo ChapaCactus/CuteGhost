@@ -43,6 +43,11 @@ namespace CCG
                 this.StartSceneName = startSceneName;
                 this.StartPosition = startPosition;
             }
+
+            public static BattleSetting Empty()
+            {
+                return new BattleSetting(null, null, "None", "None", Vector2.zero);
+            }
         }
         #endregion
 
@@ -293,6 +298,7 @@ namespace CCG
         private void Init()
         {
             ExpTable = new ExpTable();
+            setting = BattleSetting.Empty();
         }
 
         private void Release()
