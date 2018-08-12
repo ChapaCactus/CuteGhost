@@ -84,6 +84,8 @@ namespace CCG
 
         public void StartBattle(BattleSetting setting)
         {
+            Init();
+
             this.setting = setting;
             SceneManager.LoadScene("Battle");
         }
