@@ -228,7 +228,8 @@ CanvasRenderer:
 --- !u!1 &584864283
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1169054239099808, guid: d622641b7bb4541d890079ffa0e93fd2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -244,7 +245,8 @@ GameObject:
 --- !u!4 &584864284
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4350835692904488, guid: d622641b7bb4541d890079ffa0e93fd2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584864283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -257,7 +259,8 @@ Transform:
 --- !u!114 &584864285
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 114233040650095428, guid: d622641b7bb4541d890079ffa0e93fd2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584864283}
   m_Enabled: 1
@@ -579,7 +582,7 @@ GameObject:
   - component: {fileID: 1246198218}
   - component: {fileID: 1246198219}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: TitleUIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,8 +1103,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
