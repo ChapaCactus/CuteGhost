@@ -22,18 +22,26 @@ namespace CCG
     public class BattleManager
     {
         #region inner classes
-        public class BattleSetupData
+        public struct BattleSetupData
         {
             public Player Player { get; private set; }
             public List<IFightable> Enemies { get; private set; }
 
             public string Background { get; private set; }
 
-            public BattleSetupData(Player player, List<IFightable> enemies, string background)
+            // 開始時シーンデータ
+            public string StartSceneName { get; private set; }
+            public Vector2 StartPosition { get; private set; }
+
+            public BattleSetupData(Player player, List<IFightable> enemies, string background
+                                  , string startSceneName, Vector2 startPosition)
             {
                 this.Player = player;
                 this.Enemies = enemies;
                 this.Background = background;
+
+                this.StartSceneName = startSceneName;
+                this.StartPosition = startPosition;
             }
         }
         #endregion
@@ -48,6 +56,9 @@ namespace CCG
         public bool IsEnemyTurn { get { return State == BattleState.Enemy; } }
 
         public ExpTable ExpTable { get; private set; }
+
+        public string StartScene { get; private set; } = "None";
+        public Vector2 StartPosition { get; private set; } = Vector2.zero;
         #endregion
 
         #region public methods
@@ -69,6 +80,9 @@ namespace CCG
             Player = setupData.Player;
             Enemies = setupData.Enemies;
             Background = setupData.Background;
+
+            StartScene = setupData.StartSceneName;
+            StartPosition = setupData.StartPosition;
 
             Init();
 
@@ -147,8 +161,9 @@ namespace CCG
 
             yield return new WaitForSeconds(2.5f);
 
-            // とりあえずMainシーンに返す
-            SceneManager.LoadScene("Main");
+            // 開始前に居たシーンに戻す
+            // 未設定の場合は、とりあえずMainシーンに戻す
+            SceneManager.LoadScene(StartScene != "None" ? StartScene : "Main");
         }
 
         private void OnFinishBattle()

@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 using System.Linq;
 using Google2u;
+using UnityEngine.SceneManagement;
 
 namespace CCG
 {
@@ -164,7 +165,10 @@ namespace CCG
                             (string.IsNullOrEmpty(battleGroup._Enemy3) ? Enemy.Empty() : new Enemy(battleGroup._Enemy3)),
                         };
 
-                    var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background);
+                    string sceneName = SceneManager.GetActiveScene().name;
+                    Vector2 encountedPlayerPosition = PlayerController.I.transform.position;
+                    var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background
+                                                                          , sceneName, encountedPlayerPosition);
                     Global.BattleManager.StartBattle(battleSetting);
 
                     return;

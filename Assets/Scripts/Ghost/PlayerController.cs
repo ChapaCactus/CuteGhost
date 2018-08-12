@@ -57,6 +57,11 @@ namespace CCG
         {
             this.isTalking = isTalking;
         }
+
+        public void SetPosition(Vector2 position)
+        {
+            transform.position = position;
+        }
         #endregion
 
         #region private methods

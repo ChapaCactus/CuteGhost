@@ -21,6 +21,11 @@ namespace CCG
             MainUIManager.I.SetupStatusPanel(Global.Player.Status);
             MasterAudio.PlaySound("Field_002");
 
+            if (Global.BattleManager.StartScene != "None")
+            {
+                PlayerController.I.SetPosition(Global.BattleManager.StartPosition);
+            }
+
             FadeCanvas.I.FadeIn(() => 
             {
                 FadeCanvas.I.SetRaycastTarget(false);
