@@ -167,7 +167,7 @@ namespace CCG
 
                     string sceneName = SceneManager.GetActiveScene().name;
                     Vector2 encountedPlayerPosition = PlayerController.I.transform.position;
-                    var battleSetting = new BattleManager.BattleSetupData(Global.Player, enemies, battleGroup._Background
+                    var battleSetting = new BattleManager.BattleSetting(Global.Player, enemies, battleGroup._Background
                                                                           , sceneName, encountedPlayerPosition);
                     Global.BattleManager.StartBattle(battleSetting);
 

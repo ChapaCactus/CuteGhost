@@ -22,7 +22,7 @@ namespace CCG
     public class BattleManager
     {
         #region inner classes
-        public struct BattleSetupData
+        public class BattleSetting
         {
             public Player Player { get; private set; }
             public List<IFightable> Enemies { get; private set; }
@@ -30,10 +30,10 @@ namespace CCG
             public string Background { get; private set; }
 
             // 開始時シーンデータ
-            public string StartSceneName { get; private set; }
+            public string StartSceneName { get; private set; } = "None";
             public Vector2 StartPosition { get; private set; }
 
-            public BattleSetupData(Player player, List<IFightable> enemies, string background
+            public BattleSetting(Player player, List<IFightable> enemies, string background
                                   , string startSceneName, Vector2 startPosition)
             {
                 this.Player = player;
@@ -47,9 +47,9 @@ namespace CCG
         #endregion
 
         #region properties
-        public Player Player { get; private set; }
-        public List<IFightable> Enemies { get; private set; }
-        public string Background { get; private set; }
+        public Player Player { get { return setting.Player; } }
+        public List<IFightable> Enemies { get { return setting.Enemies; } }
+        public string Background { get { return setting.Background; } }
 
         public BattleState State { get; private set; }
         public bool IsPlayerTurn { get { return State == BattleState.Player; } }
@@ -57,8 +57,10 @@ namespace CCG
 
         public ExpTable ExpTable { get; private set; }
 
-        public string StartScene { get; private set; } = "None";
-        public Vector2 StartPosition { get; private set; } = Vector2.zero;
+        public string StartScene { get { return setting.StartSceneName; } }
+        public Vector2 StartPosition { get { return setting.StartPosition; } }
+
+        private BattleSetting setting;
         #endregion
 
         #region public methods
@@ -67,6 +69,7 @@ namespace CCG
         /// </summary>
         public BattleManager()
         {
+            Init();
         }
 
         public static BattleManager Create()
@@ -74,17 +77,9 @@ namespace CCG
             return new BattleManager();
         }
 
-        public void StartBattle(BattleSetupData setupData)
+        public void StartBattle(BattleSetting setting)
         {
-            // シーン遷移前にデータを設定しておく
-            Player = setupData.Player;
-            Enemies = setupData.Enemies;
-            Background = setupData.Background;
-
-            StartScene = setupData.StartSceneName;
-            StartPosition = setupData.StartPosition;
-
-            Init();
+            this.setting = setting;
 
             // Battleシーンに遷移
             SceneManager.LoadScene("Battle");
