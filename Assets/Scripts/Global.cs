@@ -37,6 +37,10 @@ namespace CCG
             BattleManager = BattleManager.Create();
             QuestManager = QuestManager.Create();
 
+            // FadeCanvas初期化
+            var fadeCanvas = FadeCanvas.Create();
+            fadeCanvas.Init();
+
             SetInsightTarget(null);
 
             IsGameInitialized = true;

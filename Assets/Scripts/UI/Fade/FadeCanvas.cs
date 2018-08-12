@@ -32,6 +32,7 @@ namespace CCG
 
         public void Init()
         {
+            SetAlpha(0);
             DontDestroyOnLoad(this);
         }
 
