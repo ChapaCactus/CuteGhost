@@ -24,10 +24,10 @@ namespace CCG
         #endregion
 
         #region public methods
-        public static FadeCanvas Create()
+        public static FadeCanvas Create(Transform parent = null)
         {
             var prefab = Resources.Load<FadeCanvas>(PrefabPath);
-            return Instantiate(prefab, null);
+            return Instantiate(prefab, parent);
         }
 
         public void Init()
