@@ -37,12 +37,12 @@ namespace CCG
 
         private void OnClickStartGameButton()
         {
-            SceneManager.LoadScene("Main");
+            FadeCanvas.I.FadeOut(() => SceneManager.LoadScene("Main"));
         }
 
         private void OnClickFishingGameButton()
         {
-            SceneManager.LoadScene("Main");
+            FadeCanvas.I.FadeOut(() => SceneManager.LoadScene("Main"));
         }
         #endregion
     }

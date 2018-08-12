@@ -19,8 +19,12 @@ namespace CCG
             }
 
             MainUIManager.I.SetupStatusPanel(Global.Player.Status);
-
             MasterAudio.PlaySound("Field_002");
+
+            FadeCanvas.I.FadeIn(() => 
+            {
+                FadeCanvas.I.SetRaycastTarget(false);
+            });
         }
         #endregion
     }

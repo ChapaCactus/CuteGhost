@@ -32,18 +32,26 @@ namespace CCG
 
         public void Init()
         {
+            SetRaycastTarget(false);
             SetAlpha(0);
             DontDestroyOnLoad(this);
         }
 
-        public void FadeIn(Action onComplete)
+        public void FadeIn(Action onComplete = null)
         {
+            SetRaycastTarget(true);
+            Fade(1, 0, 1, onComplete);
+        }
+
+        public void FadeOut(Action onComplete = null)
+        {
+            SetRaycastTarget(true);
             Fade(0, 1, 1, onComplete);
         }
 
-        public void FadeOut(Action onComplete)
+        public void SetRaycastTarget(bool isRaycastTarget)
         {
-            Fade(1, 0, 1, onComplete);
+            image.raycastTarget = isRaycastTarget;
         }
         #endregion
 
