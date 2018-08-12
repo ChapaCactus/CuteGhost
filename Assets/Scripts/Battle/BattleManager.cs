@@ -80,8 +80,6 @@ namespace CCG
         public void StartBattle(BattleSetting setting)
         {
             this.setting = setting;
-
-            // Battleシーンに遷移
             SceneManager.LoadScene("Battle");
         }
 
@@ -96,16 +94,11 @@ namespace CCG
         /// </summary>
         public IEnumerator OnSelectEnemy(BattleEnemyController enemy)
         {
-            Debug.Log($"{enemy.Status.CharaName}を選択");
-
             if (!IsPlayerTurn)
-            {
-                Debug.Log("自分のターンではありません");
                 yield break;
-            }
+            
             State = BattleState.EnemySelected;
 
-            // ダメージを与える
             Player.Attack(enemy.Enemy);
             BattleUIManager.I.StatusPanel.Move(false);
 
@@ -152,16 +145,12 @@ namespace CCG
                 yield return CheckDropItem();
             }
 
-            OnFinishBattle();
-
             yield return new WaitForSeconds(2.5f);
 
-            // 開始前に居たシーンに戻す
-            // 未設定の場合は、とりあえずMainシーンに戻す
-            SceneManager.LoadScene(StartScene != "None" ? StartScene : "Main");
+            OnEndFinishBattle();
         }
 
-        private void OnFinishBattle()
+        private void OnEndFinishBattle()
         {
             // 終了時点のプレイヤーステータスを反映
             Global.Player.UpdateStatus(Player.Status);
@@ -170,6 +159,10 @@ namespace CCG
             Global.SaveDataManager.Save();
 
             Release();
+
+            // 開始前に居たシーンに戻す
+            // 未設定の場合は、とりあえずMainシーンに戻す
+            SceneManager.LoadScene(StartScene != "None" ? StartScene : "Main");
         }
 
         private IEnumerator GainExp(int gainExpAmount)
@@ -179,11 +172,8 @@ namespace CCG
             if (isLevelup)
             {
                 yield return Player.LevelUp();
-
-                yield return GainExp(0);
+                yield return GainExp(0);// レベルアップしなくなるまで再帰的に呼び出す
             }
-
-            yield break;
         }
 
         private IEnumerator CheckDropItem()
@@ -266,12 +256,10 @@ namespace CCG
             if (CheckPlayerDead())
             {
                 yield return FinishBattle(false);
-                yield break;
+            } else
+            {
+                OnStartPlayerTurn();
             }
-
-            OnStartPlayerTurn();
-
-            Debug.Log("OnEndEnemyTurn.");
         }
 
         private bool CheckPlayerDead()

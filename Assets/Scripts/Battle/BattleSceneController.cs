@@ -44,7 +44,7 @@ namespace CCG
         {
             MasterAudio.PlaySound("Battle_001");
 
-            Global.BattleManager.PrepareBattle();
+            Global.BattleManager.OnPrepareBattle();
 
             var setting = new BattleLog.Setting("バトルかいし！");
             BattleUIManager.I.BattleLog.SetMessage(setting);
