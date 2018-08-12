@@ -44,6 +44,18 @@ namespace CCG
             StartCoroutine(SetMessageCoroutine(setting, onEnd));
         }
 
+        public IEnumerator SetMessageCoroutine(Setting setting, Action onEnd = null)
+        {
+            foreach (var message in setting.messages)
+            {
+                text.text = message;
+
+                yield return WaitSec;
+            }
+
+            onEnd.SafeCall();
+        }
+
         /// <summary>
         /// レベルアップ時のメッセージ取得
         /// </summary>
@@ -102,17 +114,6 @@ namespace CCG
         #endregion
 
         #region private methods
-        private IEnumerator SetMessageCoroutine(Setting setting, Action onEnd = null)
-        {
-            foreach(var message in setting.messages)
-            {
-                text.text = message;
-
-                yield return WaitSec;
-            }
-
-            onEnd.SafeCall();
-        }
         #endregion
     }
 }

@@ -102,7 +102,7 @@ namespace CCG
             Player.Attack(enemy.Enemy);
             BattleUIManager.I.StatusPanel.Move(false);
 
-            yield return new WaitForSeconds(0.7f);
+            yield return WaitInterval();
             yield return enemy.PlayDamageEffect();
 
             // Playerターン終了
@@ -124,6 +124,8 @@ namespace CCG
             {
                 yield return OnLoseBattle();
             }
+
+            OnEndFinishBattle();
         }
 
         /// <summary>
@@ -137,14 +139,11 @@ namespace CCG
             // 勝利・敗北メッセージ
             int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
                            .Sum();
-            var logMessage = BattleLog.GetBattleWinMessage(Player.CharaName, gainExpAmount);
-            BattleUIManager.I.BattleLog.SetMessage(logMessage);
-            yield return new WaitForSeconds(1.5f);
+            var message = BattleLog.GetBattleWinMessage(Player.CharaName, gainExpAmount);
+            yield return BattleUIManager.I.BattleLog.SetMessageCoroutine(message);
 
             yield return GainExp(gainExpAmount);
             yield return CheckDropItem();
-
-            OnEndFinishBattle();
         }
 
         /// <summary>
@@ -161,11 +160,8 @@ namespace CCG
             // 勝利・敗北メッセージ
             int gainExpAmount = Enemies.Select(enemy => enemy.Status.Exp)
                            .Sum();
-            var logMessage = BattleLog.GetBattleLoseMessage(Player.CharaName);
-            BattleUIManager.I.BattleLog.SetMessage(logMessage);
-            yield return new WaitForSeconds(1.5f);
-
-            OnEndFinishBattle();
+            var message = BattleLog.GetBattleLoseMessage(Player.CharaName);
+            yield return BattleUIManager.I.BattleLog.SetMessageCoroutine(message);
         }
 
         private void OnEndFinishBattle()
@@ -196,21 +192,18 @@ namespace CCG
 
         private IEnumerator CheckDropItem()
         {
-            var wait = new WaitForSeconds(1);
             foreach (Enemy enemy in Enemies)
             {
                 if (!enemy.IsEmpty)
                 {
-                    var random = UnityEngine.Random.Range(0, 101);
+                    float random = UnityEngine.Random.Range(0f, 100f);
                     if (random <= enemy.DropItem.DropRate)
                     {
                         // ドロップした
                         Global.Inventory.AddItem(enemy.DropItem.Item);
 
                         var message = BattleLog.GetDropItemMessage(enemy.CharaName, enemy.DropItem.Item.Name);
-                        BattleUIManager.I.BattleLog.SetMessage(message);
-
-                        yield return wait;
+                        yield return BattleUIManager.I.BattleLog.SetMessageCoroutine(message);
                     }
                 }
             }
@@ -232,7 +225,7 @@ namespace CCG
                 enemy.Attack(Player);
                 MasterAudio.PlaySound("EnemyHit");
 
-                yield return new WaitForSeconds(1.0f);
+                yield return WaitInterval();
             }
 
             // Enemyターン終了
@@ -256,14 +249,12 @@ namespace CCG
             if (CheckEnemiesDead())
             {
                 yield return FinishBattle(true);
-                yield break;
             }
-
-            yield return new WaitForSeconds(1.0f);
-
-            yield return StartEnemiesTurn();
-
-            Debug.Log("OnEndPlayerTurn");
+            else
+            {
+                yield return WaitInterval();
+                yield return StartEnemiesTurn();
+            }
         }
 
         private IEnumerator OnEndEnemyTurn()
@@ -276,6 +267,12 @@ namespace CCG
             {
                 OnStartPlayerTurn();
             }
+        }
+
+        private IEnumerator WaitInterval()
+        {
+            var wait = new WaitForSeconds(1);
+            yield return wait;
         }
 
         private bool CheckPlayerDead()
