@@ -61,6 +61,9 @@ namespace CCG
 
         public void SetLevelText(int level)
         {
+            if (levelText == null)
+                return;
+
             string text = $"Lv {level}";
             levelText.text = text;
         }
@@ -76,6 +79,9 @@ namespace CCG
 
         public void SetHealthText(int current, int max)
         {
+            if (healthText == null)
+                return;
+
             string text = $"HP {current} / {max}";
             healthText.text = text;
         }
@@ -90,6 +96,9 @@ namespace CCG
 
         public void SetHealthBarValue(int value, int max)
         {
+            if (healthBar == null)
+                return;
+
             healthBar.maxValue = max;
             healthBar.value = value;
         }
