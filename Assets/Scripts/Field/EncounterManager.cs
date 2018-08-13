@@ -13,20 +13,23 @@ namespace CCG
         #region properties
         public int StepOfEncounter { get; private set; }
 
+        // 今プレイヤーが居るエンカウントエリア
+        private EncountArea CurrentArea { get; set; }
         private Action OnEncounter { get; set; }
         #endregion
 
         #region unity callbacks
         private void Awake()
         {
-            StepOfEncounter = 100;
+            Init();
         }
         #endregion
 
         #region public methods
         public void OnMove()
         {
-            if (StepOfEncounter <= 0)
+            if (CurrentArea == null
+                || StepOfEncounter <= 0)
                 return;
 
             StepOfEncounter--;
@@ -38,6 +41,14 @@ namespace CCG
                 OnEncounter.SafeCall();
                 Encounter();
             }
+        }
+
+        public void SetCurrentArea(EncountArea area)
+        {
+            Debug.Log($"SetEncountArea [{CurrentArea} -> {area}]");
+
+            CurrentArea = area;
+            StepOfEncounter = 500;// TODO: エリアごとにエンカウント率を設定し、そこから初期化するようにする
         }
         #endregion
 
@@ -57,6 +68,12 @@ namespace CCG
             var battleSetting = new BattleManager.BattleSetting(Global.Player, enemies, battleGroup._Background
                                                                   , sceneName, encountedPlayerPosition);
             Global.BattleManager.StartBattle(battleSetting);
+        }
+
+        private void Init()
+        {
+            CurrentArea = null;
+            StepOfEncounter = 0;
         }
         #endregion
     }
