@@ -33,12 +33,10 @@ namespace CCG
         #region public methods
         public void Setup(CharacterStatus status, int gold)
         {
-            if (curePopText != null
-               && healthCache != null
-               && status.Health > healthCache)
+            if (CheckIsCured(status.Health))
             {
                 int cure = (status.Health - (int)healthCache);
-                curePopText.Play(cure);
+                SetCurePopText(cure);
             }
 
             SetLevelText(status.Level);
@@ -49,9 +47,14 @@ namespace CCG
             healthCache = status.Health;
         }
 
+        public void SetActive(bool isActive)
+        {
+            gameObject.SetActive(isActive);
+        }
+
         public void Move(bool isOn)
         {
-            var to = isOn ? -220 : -240;
+            float to = isOn ? -220 : -240;
             transform.DOLocalMoveY(to, 0.3f)
                      .SetEase(Ease.InExpo);
         }
@@ -77,10 +80,28 @@ namespace CCG
             healthText.text = text;
         }
 
+        public void SetCurePopText(int cure)
+        {
+            if (curePopText == null)
+                return;
+
+            curePopText.Play(cure);
+        }
+
         public void SetHealthBarValue(int value, int max)
         {
             healthBar.maxValue = max;
             healthBar.value = value;
+        }
+        #endregion
+
+        #region private methods
+        /// <summary>
+        /// HPが増加しているか
+        /// </summary>
+        private bool CheckIsCured(int health)
+        {
+            return (healthCache != null) && (health > healthCache);
         }
         #endregion
     }
