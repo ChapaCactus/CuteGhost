@@ -34,7 +34,7 @@ namespace CCG
             }
 
             // ステータスパネル初期化
-            BattleUIManager.I.StatusPanel.Setup(Global.Player.Status);
+            BattleUIManager.I.StatusPanel.Setup(Global.Player.Status, Global.Inventory.Gold);
 
             // Enemyデータが設定されているControllerのみActive
             battleEnemies.ForEach(enemy => enemy.gameObject.SetActive(enemy.Enemy != null));

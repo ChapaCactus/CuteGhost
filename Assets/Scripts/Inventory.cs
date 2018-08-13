@@ -15,6 +15,7 @@ namespace CCG
 
         #region properties
         public Item[] Items { get; private set; }
+        public int Gold { get; private set; }
         #endregion
 
         #region public methods
@@ -27,6 +28,8 @@ namespace CCG
                 .ToList()
                 .Select(_ => Item.Empty())
                 .ToArray();
+
+            Gold = 0;
         }
 
         public static Inventory Load()

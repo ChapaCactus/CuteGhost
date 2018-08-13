@@ -90,7 +90,7 @@ namespace CCG
         #region public methods
         public void SetupStatusPanel(CharacterStatus status)
         {
-            statusPanel.Setup(status);
+            statusPanel.Setup(status, Global.Inventory.Gold);
         }
 
         /// <summary>

@@ -15,8 +15,10 @@ namespace CCG
         private Text levelText = null;
 
         [SerializeField]
-        private Text healthText = null;
+        private Text goldText = null;
 
+        [SerializeField]
+        private Text healthText = null;
         [SerializeField]
         private Slider healthBar = null;
 
@@ -29,7 +31,7 @@ namespace CCG
         #endregion
 
         #region public methods
-        public void Setup(CharacterStatus status)
+        public void Setup(CharacterStatus status, int gold)
         {
             if (curePopText != null
                && healthCache != null
@@ -40,6 +42,7 @@ namespace CCG
             }
 
             SetLevelText(status.Level);
+            SetGoldText(gold);
             SetHealthText(status.Health, status.MaxHealth);
             SetHealthBarValue(status.Health, status.MaxHealth);
 
@@ -55,13 +58,22 @@ namespace CCG
 
         public void SetLevelText(int level)
         {
-            var text = $"Lv {level}";
+            string text = $"Lv {level}";
             levelText.text = text;
+        }
+
+        public void SetGoldText(int gold)
+        {
+            if (goldText == null)
+                return;
+
+            string text = gold.ToString().PadLeft(10, '_');
+            goldText.text = text;
         }
 
         public void SetHealthText(int current, int max)
         {
-            var text = $"HP {current} / {max}";
+            string text = $"HP {current} / {max}";
             healthText.text = text;
         }
 

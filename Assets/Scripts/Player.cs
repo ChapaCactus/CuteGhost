@@ -49,7 +49,7 @@ namespace CCG
             var damage = attacker.Attack;
             Status.Damage(damage);
 
-            BattleUIManager.I.StatusPanel.Setup(Status);
+            BattleUIManager.I.StatusPanel.Setup(Status, Global.Inventory.Gold);
 
             // ログ表示
             var messages = new List<string>()
@@ -99,7 +99,7 @@ namespace CCG
             var statusRow = PlayerStatusTable.Instance.GetRow(statusTableKey);
             Status.UpdateStatus(statusRow);
             // ステータスパネル初期化
-            BattleUIManager.I.StatusPanel.Setup(Status);
+            BattleUIManager.I.StatusPanel.Setup(Status, Global.Inventory.Gold);
 
             var message = BattleLog.GetBattleLevelupMessage(CharaName, Status.Level);
             BattleUIManager.I.BattleLog.SetMessage(message);
