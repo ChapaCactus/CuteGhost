@@ -74,6 +74,8 @@ namespace CCG.FishingBoy
 
         private void GetFish()
         {
+            UIController.I.Get.Play();
+
             Debug.Log($"{FishingFloat.Fish.Name}を手に入れた。");
         }
 
