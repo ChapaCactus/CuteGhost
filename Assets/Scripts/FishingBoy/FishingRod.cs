@@ -15,6 +15,8 @@ namespace CCG.FishingBoy
         #region properties
         public FishingFloat FishingFloat { get; private set; }
 
+        public bool IsCasting { get; private set; }
+
         private Action OnHook { get; set; }
         #endregion
 
@@ -34,8 +36,8 @@ namespace CCG.FishingBoy
 
         public void Cast(Action onFinish)
         {
+            IsCasting = true;
             gameObject.SetActive(true);
-
             onFinish.SafeCall();
         }
 
@@ -44,6 +46,7 @@ namespace CCG.FishingBoy
         /// </summary>
         public void Hook()
         {
+            IsCasting = false;
             OnHook.SafeCall();
         }
         #endregion

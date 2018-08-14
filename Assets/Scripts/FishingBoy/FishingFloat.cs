@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using Google2u;
+
 namespace CCG.FishingBoy
 {
     public class FishingFloat : MonoBehaviour
@@ -27,6 +29,7 @@ namespace CCG.FishingBoy
 
         public void OnCast()
         {
+            Fish = new Fish($"{FishMaster.rowIds.Small}");
         }
 
         public bool IsBite()

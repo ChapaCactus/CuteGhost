@@ -32,11 +32,17 @@ namespace CCG.FishingBoy
         {
             if(Input.GetButtonDown("Jump"))
             {
-                FishingRod.Cast(() => 
+                if(FishingRod.IsCasting)
                 {
-                    FishingFloat.OnCast();
-                    FishingFloat.gameObject.SetActive(true);
-                });
+                    FishingRod.Hook();
+                } else
+                {
+                    FishingRod.Cast(() =>
+                    {
+                        FishingFloat.OnCast();
+                        FishingFloat.gameObject.SetActive(true);
+                    });
+                }
             }
         }
         #endregion
@@ -66,6 +72,7 @@ namespace CCG.FishingBoy
 
         private void GetFish()
         {
+            Debug.Log($"{FishingFloat.Fish.Name}を手に入れた。");
         }
         #endregion
     }
