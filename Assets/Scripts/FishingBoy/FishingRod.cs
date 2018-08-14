@@ -29,6 +29,12 @@ namespace CCG.FishingBoy
             return rod;
         }
 
+        public void Finish()
+        {
+            IsCasting = false;
+            gameObject.SetActive(false);
+        }
+
         public void SetOnHookCallback(Action onHook)
         {
             OnHook = onHook;

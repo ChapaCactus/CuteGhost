@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 212884730967915738}
+  waitSprite: {fileID: 21300000, guid: 0c5ce41878f074988ba61a6d763dc5fd, type: 3}
+  bitingSprite: {fileID: 21300000, guid: eaf4eb0c37ab94e05b8383a9bcb01f71, type: 3}
 --- !u!212 &212884730967915738
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,7 +90,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 771feae41ba4c4552b4e9ee3987e15d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c5ce41878f074988ba61a6d763dc5fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

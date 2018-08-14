@@ -22,6 +22,11 @@ namespace CCG.FishingBoy
         #region variables
         [SerializeField]
         private SpriteRenderer spriteRenderer = null;
+
+        [SerializeField]
+        private Sprite waitSprite = null;
+        [SerializeField]
+        private Sprite bitingSprite = null;
         #endregion
 
         #region properties
@@ -45,8 +50,7 @@ namespace CCG.FishingBoy
                         if (FloatTimer <= 0)
                         {
                             FloatTimer = 0;
-                            CurrentState = State.Biting;
-                            Debug.Log("食らいついた");
+                            OnBite();
                         }
                     }
                     break;
@@ -57,8 +61,7 @@ namespace CCG.FishingBoy
                         if (BiteTimer <= 0)
                         {
                             BiteTimer = 0;
-                            CurrentState = State.Away;
-                            Debug.Log("逃げた");
+                            OnAway();
                         }
                     }
                     break;
@@ -78,17 +81,23 @@ namespace CCG.FishingBoy
             return fishingFloat;
         }
 
+        public void Finish()
+        {
+            CurrentState = State.None;
+            gameObject.SetActive(false);
+        }
+
         public void OnCast()
         {
             Fish = new Fish($"{FishMaster.rowIds.Small}");
             FloatTimer = 3;// 仮
             BiteTimer = Fish.BiteTime;
-            CurrentState = State.Floating;
+            OnFloating();
         }
 
         public bool IsBite()
         {
-            return true;
+            return CurrentState == State.Biting;
         }
         #endregion
 
@@ -96,6 +105,28 @@ namespace CCG.FishingBoy
         private void OnCreate()
         {
             gameObject.SetActive(false);
+        }
+
+        private void OnFloating()
+        {
+            CurrentState = State.Floating;
+            spriteRenderer.sprite = waitSprite;
+        }
+
+        private void OnBite()
+        {
+            CurrentState = State.Biting;
+            spriteRenderer.sprite = bitingSprite;
+
+            Debug.Log($"{Fish.Name}が食らいついた。");
+        }
+
+        private void OnAway()
+        {
+            CurrentState = State.Away;
+            spriteRenderer.sprite = waitSprite;
+
+            Debug.Log($"{Fish.Name}が逃げた。。。");
         }
         #endregion
     }

@@ -61,18 +61,26 @@ namespace CCG.FishingBoy
 
         private void OnHook()
         {
-            FishingRod.gameObject.SetActive(false);
-            FishingFloat.gameObject.SetActive(false);
-
             if(FishingFloat.IsBite())
             {
                 GetFish();
+            } else
+            {
+                Debug.Log("魚がかかっていなかった...");
             }
+
+            OnEndFishing();
         }
 
         private void GetFish()
         {
             Debug.Log($"{FishingFloat.Fish.Name}を手に入れた。");
+        }
+
+        private void OnEndFishing()
+        {
+            FishingRod.Finish();
+            FishingFloat.Finish();
         }
         #endregion
     }
