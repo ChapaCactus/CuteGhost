@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CCG.FishingBoy
 {
-    public class FishingBoy : MonoBehaviour
+    public class FishingBoy : SingletonMonoBehaviour<FishingBoy>
     {
         #region variables
         [SerializeField]
@@ -48,6 +48,10 @@ namespace CCG.FishingBoy
         #endregion
 
         #region public methods
+        public void Flip(bool isRight)
+        {
+            spriteRenderer.flipX = !isRight;
+        }
         #endregion
 
         #region private methods
