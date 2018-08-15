@@ -94,7 +94,6 @@ namespace CCG.FishingBoy
             shopBobRenderer.enabled = false;
             FishingBoy.I.Flip(true);
             cameraTarget.DOMoveX(0, 1)
-                  .SetEase(Ease.Linear)
                   .OnComplete(() => 
             {
                 IsStateChanging = false;
@@ -107,7 +106,6 @@ namespace CCG.FishingBoy
             shopBobRenderer.enabled = true;
             FishingBoy.I.Flip(false);
             cameraTarget.DOMoveX(-1.2f, 1)
-                  .SetEase(Ease.Linear)
                   .OnComplete(() => 
             {
                 IsStateChanging = false;

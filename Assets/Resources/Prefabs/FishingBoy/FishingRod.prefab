@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4091717976807066
 Transform:
@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 212806898610818146}
+  waitSprite: {fileID: 21300000, guid: ae55c1c00f5a943d68cd2583baa7de13, type: 3}
+  hookSprite: {fileID: 21300000, guid: a810b9c33f61a41c385554c78da43ef8, type: 3}
 --- !u!212 &212806898610818146
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,12 +90,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 917f821b5a03f490796ee16a8f4bddbe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a810b9c33f61a41c385554c78da43ef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

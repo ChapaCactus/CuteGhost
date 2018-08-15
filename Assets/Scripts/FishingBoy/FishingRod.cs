@@ -10,6 +10,11 @@ namespace CCG.FishingBoy
         #region variables
         [SerializeField]
         private SpriteRenderer spriteRenderer = null;
+
+        [SerializeField]
+        private Sprite waitSprite = null;
+        [SerializeField]
+        private Sprite hookSprite = null;
         #endregion
 
         #region properties
@@ -32,7 +37,6 @@ namespace CCG.FishingBoy
         public void Finish()
         {
             IsCasting = false;
-            gameObject.SetActive(false);
         }
 
         public void SetOnHookCallback(Action onHook)
@@ -42,6 +46,7 @@ namespace CCG.FishingBoy
 
         public void Cast(Action onFinish)
         {
+            spriteRenderer.sprite = waitSprite;
             IsCasting = true;
             gameObject.SetActive(true);
             onFinish.SafeCall();
@@ -52,6 +57,7 @@ namespace CCG.FishingBoy
         /// </summary>
         public void Hook()
         {
+            spriteRenderer.sprite = hookSprite;
             IsCasting = false;
             OnHook.SafeCall();
         }
