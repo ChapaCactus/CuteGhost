@@ -30,15 +30,16 @@ namespace CCG
             fishRenderer.enabled = isActive;
         }
 
-        public void Play()
+        public void Play(Sprite fishSprite)
         {
-            StartCoroutine(PlayCoroutine());
+            StartCoroutine(PlayCoroutine(fishSprite));
         }
         #endregion
 
         #region private methods
-        private IEnumerator PlayCoroutine()
+        private IEnumerator PlayCoroutine(Sprite fishSprite)
         {
+            fishRenderer.sprite = fishSprite;
             SetActive(true);
 
             var wait = new WaitForSeconds(2);

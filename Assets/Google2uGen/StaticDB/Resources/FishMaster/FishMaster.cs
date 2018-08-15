@@ -16,7 +16,8 @@ namespace Google2u
 	{
 		public string _Name;
 		public float _BiteTime;
-		public FishMasterRow(string __ID, string __Name, string __BiteTime) 
+		public string _Sprite;
+		public FishMasterRow(string __ID, string __Name, string __BiteTime, string __Sprite) 
 		{
 			_Name = __Name.Trim();
 			{
@@ -26,9 +27,10 @@ namespace Google2u
 				else
 					Debug.LogError("Failed To Convert _BiteTime string: "+ __BiteTime +" to float");
 			}
+			_Sprite = __Sprite.Trim();
 		}
 
-		public int Length { get { return 2; } }
+		public int Length { get { return 3; } }
 
 		public string this[int i]
 		{
@@ -49,6 +51,9 @@ namespace Google2u
 				case 1:
 					ret = _BiteTime.ToString();
 					break;
+				case 2:
+					ret = _Sprite.ToString();
+					break;
 			}
 
 			return ret;
@@ -65,6 +70,9 @@ namespace Google2u
 				case "BiteTime":
 					ret = _BiteTime.ToString();
 					break;
+				case "Sprite":
+					ret = _Sprite.ToString();
+					break;
 			}
 
 			return ret;
@@ -74,6 +82,7 @@ namespace Google2u
 			string ret = System.String.Empty;
 			ret += "{" + "Name" + " : " + _Name.ToString() + "} ";
 			ret += "{" + "BiteTime" + " : " + _BiteTime.ToString() + "} ";
+			ret += "{" + "Sprite" + " : " + _Sprite.ToString() + "} ";
 			return ret;
 		}
 	}
@@ -100,8 +109,8 @@ namespace Google2u
 
 		private FishMaster()
 		{
-			Rows.Add( new FishMasterRow("Small", "ちいさなサカナ", "3.0"));
-			Rows.Add( new FishMasterRow("Big", "おおきなサカナ", "0.7"));
+			Rows.Add( new FishMasterRow("Small", "ちいさなサカナ", "3.0", "Fish"));
+			Rows.Add( new FishMasterRow("Big", "おおきなサカナ", "0.7", "Fish"));
 		}
 		public IGoogle2uRow GetGenRow(string in_RowString)
 		{
