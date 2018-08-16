@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4792706864335326, guid: aa3ebd4e9888a4be2a2d01dc73315c75, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4792706864335326, guid: aa3ebd4e9888a4be2a2d01dc73315c75, type: 2}
       propertyPath: m_LocalPosition.y
@@ -161,6 +161,19 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306799589067968, guid: aa3ebd4e9888a4be2a2d01dc73315c75, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850132380520806, guid: aa3ebd4e9888a4be2a2d01dc73315c75, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 212837098731278500, guid: aa3ebd4e9888a4be2a2d01dc73315c75,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3ebd4e9888a4be2a2d01dc73315c75, type: 2}
@@ -556,7 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571d95e02f4d43bfb2a86d18e3059a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopBobRenderer: {fileID: 1380000170}
   cameraTarget: {fileID: 1116443851}
 --- !u!4 &1142230759
 Transform:
@@ -697,12 +709,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1380000171}
   - component: {fileID: 1380000170}
+  - component: {fileID: 1380000172}
   m_Layer: 0
   m_Name: ShopBob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &1380000170
 SpriteRenderer:
@@ -757,12 +770,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1380000169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: -0.2, z: 0}
+  m_LocalPosition: {x: 1.2, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1539184616}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380000172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1380000169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2f4f163770841b8a78bd026875069b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messagePos: {fileID: 1539184616}
 --- !u!1 &1467787381
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +894,7 @@ MonoBehaviour:
   Zoom: 1
   SnapMovementToGrid: 1
   SnapCameraToGrid: 1
-  DrawGrid: 1
+  DrawGrid: 0
   GridColor: {r: 1, g: 0, b: 0, a: 1}
   GridDensity: 8.999999
 --- !u!114 &1467787385
@@ -975,6 +1001,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1539184615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539184616}
+  m_Layer: 0
+  m_Name: MessagePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1539184616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539184615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1380000171}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680555278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   get: {fileID: 1331179045}
+  mainCamera: {fileID: 1467787387}
+  uiCamera: {fileID: 1125395497}
+  canvasRect: {fileID: 2057796310}
 --- !u!4 &1680555280
 Transform:
   m_ObjectHideFlags: 0

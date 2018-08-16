@@ -79,7 +79,7 @@ namespace CCG.FishingBoy
         private void GetFish()
         {
             Sprite fishSprite = Resources.Load<Sprite>(FishingFloat.Fish.SpritePath);
-            UIController.I.Get.Play(fishSprite);
+            UIManager.I.Get.Play(fishSprite);
 
             Debug.Log($"{FishingFloat.Fish.Name}を手に入れた。");
         }

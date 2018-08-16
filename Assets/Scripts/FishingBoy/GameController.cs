@@ -20,9 +20,6 @@ namespace CCG.FishingBoy
 
         #region variables
         [SerializeField]
-        private SpriteRenderer shopBobRenderer = null;
-
-        [SerializeField]
         private Transform cameraTarget = null;
         #endregion
 
@@ -42,13 +39,13 @@ namespace CCG.FishingBoy
 
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.A))
+            if(Input.GetKeyDown(KeyCode.D))
             {
                 ChangeState(GameState.Shop);
                 return;
             }
 
-            if(Input.GetKeyDown(KeyCode.D))
+            if(Input.GetKeyDown(KeyCode.A))
             {
                 ChangeState(GameState.Fishing);
                 return;
@@ -72,7 +69,7 @@ namespace CCG.FishingBoy
         #region private methods
         private void Init()
         {
-            shopBobRenderer.enabled = false;
+            ShopBob.I.SetActive(false);
         }
 
         private void OnChangeState()
@@ -91,8 +88,8 @@ namespace CCG.FishingBoy
         private void OnChangeFishingState()
         {
             IsStateChanging = true;
-            shopBobRenderer.enabled = false;
-            FishingBoy.I.Flip(true);
+            ShopBob.I.SetActive(false);
+            FishingBoy.I.Flip(false);
             cameraTarget.DOMoveX(0, 1)
                   .OnComplete(() => 
             {
@@ -103,9 +100,9 @@ namespace CCG.FishingBoy
         private void OnChangeShopState()
         {
             IsStateChanging = true;
-            shopBobRenderer.enabled = true;
-            FishingBoy.I.Flip(false);
-            cameraTarget.DOMoveX(-1.2f, 1)
+            ShopBob.I.SetActive(true);
+            FishingBoy.I.Flip(true);
+            cameraTarget.DOMoveX(1.2f, 1)
                   .OnComplete(() => 
             {
                 IsStateChanging = false;

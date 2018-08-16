@@ -23,18 +23,13 @@ namespace CCG
         /// ワールド座標をスクリーン座標に変換
         /// </summary>
         /// <returns>スクリーン座標</returns>
-        public static Vector2 GetScreenPosition(Vector3 _worldPos)
+        public static Vector2 GetScreenPosition(Vector3 _worldPos, RectTransform canvasRect
+                                               ,Camera mainCamera, Camera uiCamera)
         {
             var pos = Vector2.zero;
-
-            var uiManager = MainUIManager.I;
-            var mainCanvasRect = uiManager.canvasRect;
-            var mainCamera = uiManager.GetMainCamera();
-            var uiCamera = uiManager.GetUICamera();
-
             var screenPos = RectTransformUtility.WorldToScreenPoint(mainCamera, _worldPos);
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                mainCanvasRect, screenPos, uiCamera, out pos);
+                canvasRect, screenPos, uiCamera, out pos);
 
             return pos;
         }
