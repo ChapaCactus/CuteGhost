@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-using System.Threading.Tasks;
 using System.Linq;
-using UnityEngine.SceneManagement;
 using Google2u;
 using DarkTonic.MasterAudio;
 
@@ -87,7 +85,7 @@ namespace CCG
             Init();
 
             this.setting = setting;
-            SceneManager.LoadScene("Battle");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Battle");
         }
 
         public void PrepareBattle()
@@ -183,7 +181,7 @@ namespace CCG
 
             // 開始前に居たシーンに戻す
             // 未設定の場合は、とりあえずMainシーンに戻す
-            SceneManager.LoadScene(StartScene != "None" ? StartScene : "Main");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(StartScene != "None" ? StartScene : "Main");
         }
 
         private IEnumerator GainExp(int gainExpAmount)
