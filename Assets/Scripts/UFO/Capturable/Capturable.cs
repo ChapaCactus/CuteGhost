@@ -15,10 +15,6 @@ namespace CCG.UFO
         #endregion
 
         #region unity callbacks
-        private void Awake()
-        {
-            PoolingManager.Register(this);
-        }
         #endregion
 
         #region public methods

@@ -14,22 +14,33 @@ namespace CCG.UFO
         #endregion
 
         #region public methods
-        public static void Register(IPoolable poolable)
+        public static void Pick(string identifier, Action<IPoolable> onSuccess)
         {
-            if (PoolingList.Any(element => element.GetUid() == poolable.GetUid()))
-                return;
+            var poolable = PoolingList.FirstOrDefault(element => element.GetIsPooling());
+            if (poolable != null)
+            {
+                onSuccess(poolable);
+            } else
+            {
+                Register(identifier);
+                Pick(identifier, onSuccess);
+            }
+        }
+        #endregion
 
+        #region private methods
+        private static void Register(string identifier)
+        {
+            var poolable = Create(identifier);
             var uid = PoolingIdentifierManager.CreateUid();
             poolable.SetUid(uid);
 
             PoolingList.Add(poolable);
         }
 
-        public static void Pick(Action<IPoolable> onSuccess)
+        private static IPoolable Create(string identifier)
         {
-            var poolable = PoolingList.FirstOrDefault(element => element.GetIsPooling());
-            if (poolable != null)
-                onSuccess(poolable);
+            return null;
         }
         #endregion
     }
