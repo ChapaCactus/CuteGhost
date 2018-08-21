@@ -7,6 +7,9 @@ namespace CCG.UFO
 {
     public interface IPoolable
     {
+        void Pool();
+        void Pick();
+
         void SetUid(string uid);
         string GetUid();
 

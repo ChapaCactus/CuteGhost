@@ -7,19 +7,31 @@ using System.Linq;
 
 namespace CCG.UFO
 {
-    public static class PoolingManager
+    public class PoolingManager : SingletonMonoBehaviour<PoolingManager>
     {
         #region properties
-        public static List<IPoolable> PoolingList { get; private set; }
+        public List<IPoolable> PoolingList { get; private set; } = new List<IPoolable>();
+        #endregion
+
+        #region unity callbacks
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                Pick("MaguroMan", poolable => {
+                    poolable.Pick();
+                });
+            }
+        }
         #endregion
 
         #region public methods
-        public static void Pick(string identifier, Action<IPoolable> onSuccess)
+        public void Pick(string identifier, Action<IPoolable> onSuccess)
         {
             var poolable = PoolingList.FirstOrDefault(element => element.GetIsPooling());
             if (poolable != null)
             {
-                onSuccess(poolable);
+                onSuccess.SafeCall(poolable);
             } else
             {
                 Register(identifier);
@@ -29,18 +41,21 @@ namespace CCG.UFO
         #endregion
 
         #region private methods
-        private static void Register(string identifier)
+        private void Register(string identifier)
         {
             var poolable = Create(identifier);
             var uid = PoolingIdentifierManager.CreateUid();
             poolable.SetUid(uid);
+            poolable.Pool();
 
             PoolingList.Add(poolable);
         }
 
-        private static IPoolable Create(string identifier)
+        private IPoolable Create(string identifier)
         {
-            return null;
+            var prefab = Resources.Load($"Prefabs/UFO/{identifier}") as GameObject;
+            var poolable = GameObject.Instantiate(prefab, null).GetComponent<IPoolable>();
+            return poolable;
         }
         #endregion
     }

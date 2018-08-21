@@ -29,6 +29,8 @@ namespace CCG.UFO
 
         public void Pick()
         {
+            transform.position = Vector2.zero;
+
             IsPooling = false;
             SetActive(true);
         }
