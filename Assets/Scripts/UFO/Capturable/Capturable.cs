@@ -29,7 +29,7 @@ namespace CCG.UFO
 
         public void Pick()
         {
-            transform.position = Vector2.zero;
+            ResetPosition();
 
             IsPooling = false;
             SetActive(true);
@@ -59,6 +59,13 @@ namespace CCG.UFO
             {
                 Gain();
             }
+        }
+
+        private void ResetPosition()
+        {
+            var x = UnityEngine.Random.Range(-1f, 1f);
+            var y = UnityEngine.Random.Range(-5.5f, -5f);
+            transform.position = new Vector2(x, y);
         }
         #endregion
     }
