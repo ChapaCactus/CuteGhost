@@ -5,10 +5,11 @@ using UnityEngine.Assertions;
 
 namespace CCG.UFO
 {
-    public interface ICapturable
+    public interface IPoolable
     {
-        CapturableStatus GetStatus();
-        void Gain();
-        void Pool();
+        void SetUid(string uid);
+        string GetUid();
+
+        bool GetIsPooling();
     }
 }

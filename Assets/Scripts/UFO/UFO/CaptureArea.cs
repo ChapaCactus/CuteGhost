@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace CCG
+namespace CCG.UFO
 {
     public class CaptureArea : MonoBehaviour
     {

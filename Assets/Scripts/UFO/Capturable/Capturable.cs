@@ -5,10 +5,20 @@ using UnityEngine.Assertions;
 
 namespace CCG.UFO
 {
-    public class Capturable : MonoBehaviour, ICapturable
+    public class Capturable : MonoBehaviour, ICapturable, IPoolable
     {
         #region properties
+        public bool IsPooling { get; private set; }
+        public string Uid { get; private set; }
+
         private CapturableStatus Status { get; set; }
+        #endregion
+
+        #region unity callbacks
+        private void Awake()
+        {
+            PoolingManager.Register(this);
+        }
         #endregion
 
         #region public methods
@@ -18,8 +28,25 @@ namespace CCG.UFO
         {
             UFO.I.Capture(this);
 
+            Pool();
+        }
+
+        public void Pick()
+        {
+            IsPooling = false;
+            SetActive(true);
+        }
+
+        public void Pool()
+        {
+            IsPooling = true;
             SetActive(false);
         }
+
+        public void SetUid(string uid) => Uid = uid;
+        public string GetUid() => Uid;
+
+        public bool GetIsPooling() => IsPooling;
 
         public void SetActive(bool isActive)
         {
