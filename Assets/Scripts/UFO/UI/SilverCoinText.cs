@@ -21,7 +21,7 @@ namespace CCG.UFO
         #region public methods
         public void Init()
         {
-            SetText(0);
+            SetText(Global.GameData.SilverCoin);
         }
 
         public void SetText(int count)

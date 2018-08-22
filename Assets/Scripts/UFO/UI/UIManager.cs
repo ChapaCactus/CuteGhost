@@ -26,6 +26,12 @@ namespace CCG.UFO
             silverCoinText.Init();
             goldCoinText.Init();
         }
+
+        public void OnUpdateCoin()
+        {
+            silverCoinText.SetText(Global.GameData.SilverCoin);
+            goldCoinText.SetText(Global.GameData.GoldCoin);
+        }
         #endregion
     }
 }

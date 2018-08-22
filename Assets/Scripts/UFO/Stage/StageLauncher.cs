@@ -20,6 +20,7 @@ namespace CCG.UFO
         #region private methods
         private void Launch()
         {
+            Global.Init();
             UIManager.I.Init();
 
             Debug.Log("Stage Launched.");

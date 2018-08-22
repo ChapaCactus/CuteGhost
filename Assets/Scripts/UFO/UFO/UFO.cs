@@ -24,6 +24,7 @@ namespace CCG.UFO
         #region public methods
         public void Capture(ICapturable capturable)
         {
+            Global.GameData.AddSilverCoin(1);
             Debug.Log($"Capture --> {capturable.GetStatus().CharaName}");
         }
         #endregion
