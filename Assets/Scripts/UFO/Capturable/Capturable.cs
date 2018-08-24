@@ -55,7 +55,7 @@ namespace CCG.UFO
         #region private methods
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.CompareTag(CaptureArea.TAG))
+            if (collision.CompareTag(CaptureArea.TAG))
             {
                 Gain();
             }
@@ -63,7 +63,7 @@ namespace CCG.UFO
 
         private void ResetPosition()
         {
-            var x = UnityEngine.Random.Range(-1f, 1f);
+            var x = UnityEngine.Random.Range(-2.0f, 2.0f);
             var y = UnityEngine.Random.Range(-5.5f, -5f);
             transform.position = new Vector2(x, y);
         }

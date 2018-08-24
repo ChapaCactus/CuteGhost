@@ -22,6 +22,7 @@ namespace CCG.UFO
         {
             Global.Init();
             UIManager.I.Init();
+            CapturableGenerator.I.StartTimer();
 
             Debug.Log("Stage Launched.");
         }

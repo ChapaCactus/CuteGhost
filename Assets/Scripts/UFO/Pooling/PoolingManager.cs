@@ -13,18 +13,6 @@ namespace CCG.UFO
         public List<IPoolable> PoolingList { get; private set; } = new List<IPoolable>();
         #endregion
 
-        #region unity callbacks
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                Pick("MaguroMan", poolable => {
-                    poolable.Pick();
-                });
-            }
-        }
-        #endregion
-
         #region public methods
         public void Pick(string identifier, Action<IPoolable> onSuccess)
         {
