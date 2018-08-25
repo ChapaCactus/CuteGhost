@@ -47,7 +47,7 @@ namespace CCG.UFO
         #region private methods
         private void Create()
         {
-            PoolingManager.I.Pick("MaguroMan", poolable =>
+            PoolingManager.I.Pick("Man", poolable =>
             {
                 poolable.Pick();
             });
