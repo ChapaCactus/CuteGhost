@@ -8,14 +8,14 @@ namespace CCG.UFO
     public class GameData
     {
         #region properties
-        public int SilverCoin { get; private set; }
+        public int Coin { get; private set; }
         public int GoldCoin { get; private set; }
         #endregion
 
         #region public methods
         public void AddSilverCoin(int add)
         {
-            SilverCoin += add;
+            Coin += add;
             UIManager.I.OnUpdateCoin();
         }
 

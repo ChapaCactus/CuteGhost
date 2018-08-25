@@ -14,23 +14,18 @@ namespace CCG.UFO
     {
         #region variables
         [SerializeField]
-        private SilverCoinText silverCoinText = null;
-
-        [SerializeField]
-        private GoldCoinText goldCoinText = null;
+        private CoinText coinText = null;
         #endregion
 
         #region public methods
         public void Init()
         {
-            silverCoinText.Init();
-            goldCoinText.Init();
+            coinText.Init();
         }
 
         public void OnUpdateCoin()
         {
-            silverCoinText.SetText(Global.GameData.SilverCoin);
-            goldCoinText.SetText(Global.GameData.GoldCoin);
+            coinText.SetText(Global.GameData.Coin);
         }
         #endregion
     }

@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+using System.Linq;
+
 namespace CCG.UFO
 {
     public class Capturable : MonoBehaviour, ICapturable, IPoolable
     {
+        #region variables
+        [SerializeField]
+        private List<Sprite> sprites = new List<Sprite>();
+        [SerializeField]
+        private SpriteRenderer spriteRenderer = null;
+        #endregion
+
         #region properties
         public bool IsPooling { get; private set; }
         public string Uid { get; private set; }
@@ -18,6 +27,14 @@ namespace CCG.UFO
         #endregion
 
         #region public methods
+        public void Init()
+        {
+            var sprite = sprites.OrderBy(i => Guid.NewGuid()).First();
+            spriteRenderer.sprite = sprite;
+
+            ResetPosition();
+        }
+
         public CapturableStatus GetStatus() => this.Status;
 
         public void Gain()
@@ -29,7 +46,7 @@ namespace CCG.UFO
 
         public void Pick()
         {
-            ResetPosition();
+            Init();
 
             IsPooling = false;
             SetActive(true);

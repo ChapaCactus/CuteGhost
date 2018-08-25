@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace CCG.UFO
 {
-    public class SilverCoinText : MonoBehaviour
+    public class CoinText : MonoBehaviour
     {
         #region constants
         private const string UNIT_NAME = "イイネ";
@@ -21,7 +21,7 @@ namespace CCG.UFO
         #region public methods
         public void Init()
         {
-            SetText(Global.GameData.SilverCoin);
+            SetText(Global.GameData.Coin);
         }
 
         public void SetText(int count)
